@@ -40,18 +40,18 @@ class LoginApp(QDialog):
         # cursor = db.cursor()
         # cursor.execute("select * from Login where username = '" +  un  +"'  and password = '" + pw +"'")
         # excute the sql query
-        result = cursor.fetchone()
+        #result = cursor.fetchone()
         self.tb1.setText("")
         self.tb2.setText("")
-        if result:
-            QMessageBox.information(self, "Login Output", "Congrats login successful")
-            print("Connect")
-            QApplication.processEvents()
-        else:
-            # If username and password are not in database, then
-            QMessageBox.information(self, "Login Output", "Invalid User.. Register for New Account")
-            print("not Connect")
-            QApplication.processEvents()
+        # if result:
+        #     QMessageBox.information(self, "Login Output", "Congrats login successful")
+        #     print("Connect")
+        #     QApplication.processEvents()
+        # else:
+        #     # If username and password are not in database, then
+        #     QMessageBox.information(self, "Login Output", "Invalid User.. Register for New Account")
+        #     print("not Connect")
+        #     QApplication.processEvents()
             
 
     def show_register(self):
@@ -84,16 +84,16 @@ class RegApp(QDialog):
         db = sqlite3.connect('softhealth.db')
         cursor = db.cursor()
         cursor.execute('''
-                       CREATE TABLE IF NOT EXISTS login (
+                       CREATE TABLE IF NOT EXISTS Login (
                            'username' TEXT,
                            'password' TEXT,
                            'email' TEXT,
                        ''')
-        cursor.execute('''
-                       INSERT INTO login (username, password, email)
-                       VALUES ( '" +  un  + "'  , '" + pw +"' , '" + em+ "' ")
+        user = cursor.execute('''
+                       INSERT INTO Login (username, password, email)
+                       VALUES (un, pw, em)
                        ''')
-        
+        print(user.fetchall())
         db.commit()
         db.close()
         # cursor.execute("select * from Login where username = '" +  un  +"'  and password = '" + pw + "'")
@@ -101,20 +101,20 @@ class RegApp(QDialog):
         # cursor = db.cursor()
         # cursor.execute("select * from Login where username = '" +  un  +"'  and password = '" + pw +"' ")
         # excute the sql query
-        result = cursor.fetchone()
-        if result:
-            QMessageBox.information(self, "Login Output", "User already registered")
-            print("Connect")
-            QApplication.processEvents()
-        else:
-            # If username and password are not in database, then
-            cursor.execute("insert into Login values( '" +  un  + "'  , '" + pw +"' , '" + em+ "' ")
-            db.commit()
-            QMessageBox.information(self, "Login Output", "User registered successfully login now>>")
-            QApplication.processEvents()
-            self.tb3.setText("")
-            self.tb4.setText("")
-            self.tb5.setText("")
+        # result = cursor.fetchone()
+        # if result:
+        #     QMessageBox.information(self, "Login Output", "User already registered")
+        #     print("Connect")
+        #     QApplication.processEvents()
+        # else:
+        #     # If username and password are not in database, then
+        #     cursor.execute("insert into Login values( '" +  un  + "'  , '" + pw +"' , '" + em+ "' ")
+        #     db.commit()
+        #     QMessageBox.information(self, "Login Output", "User registered successfully login now>>")
+        #     QApplication.processEvents()
+        #     self.tb3.setText("")
+        #     self.tb4.setText("")
+        #     self.tb5.setText("")
             
     def show_login(self):
         widget.setCurrentIndex(0)
