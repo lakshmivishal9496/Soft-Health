@@ -136,32 +136,3 @@ sys.exit(app.exec_())
 
 
 
-
-
-
-
-
-# neccessary packages to be installed after activating venv
-# pip install PyQt5
-# pip install PyQt5-tools
-# pip install PyQt5Designer
-#activate venv
-# inside venv/ Scripts paste the following
-# login. ui and register.ui
-# paste all the images used in the qt designer into the Scripts folder
-# What does this command does? pyuic5 register.ui -o reg.py
-# convert the register.ui in pyqt designer into code and create reg.py
-# What does this command does?  pyuic5 login.ui -o res.py
-# convert the login.ui in pyqt designer into code and create res.py
-# after all these steps are done ,  there will be no errors such as 
-# pyuic5 not recognized as internal and external commands
-# login.ui file not found error
-
-
-# pip install mysql-connector-python
-# By default mysql wil be installed in venv/Lib 
-# CTRL  X  mysql directory from the lib directory and paste it into the Script folder
-# That will help to overcome the error 
-#  File "c:\Users\laksh\pyqt\.venv\Scripts\main.py", line 5, in <module>
-# import mysql.connector as connector
-# ModuleNotFoundError: No module named 'mysql'
