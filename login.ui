@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>382</width>
+    <height>487</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>380</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:qlineargradient(spread:pad, x1:0.614, y1:0.607955, x2:0.994318, y2:0, stop:0 rgba(164, 164, 246, 255), stop:1 rgba(255, 255, 255, 255));
+border-radius: 9px;</string>
+   </property>
+   <widget class="QLineEdit" name="tb1">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>150</y>
+      <width>211</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(47,42,52,200);
+color:rgb(255,255,255);
+border-radius: 9px;
+padding-left: 10px;
+border: 1px solid rgba(0,0,0,0);
+border-bottom-color: rgba(46,82,101,255);
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>Enter the username here.........</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tb2">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>220</y>
+      <width>211</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(47,42,52,200);
+color:rgb(255,255,255);
+border-radius: 9px;
+padding-left: 10px;
+border: 1px solid rgba(0,0,0,0);
+border-bottom-color: rgba(46,82,101,255);
+</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter the password  here.........</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b1">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>290</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#b1{
+background-color:rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font-size: 13px;
+border-radius : 7px;
+
+}
+QPushButton#b1: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Login</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>20</y>
+      <width>121</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:url(:/Prefix1/logo_200x200.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>logo_200x200.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>400</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#b2{
+background-color:rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font-size: 13px;
+border-radius : 7px;
+
+}
+QPushButton#b2: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Sign Up</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="l1">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>340</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-align:center;
+font-size:10px;
+color: rgb(85, 0, 255);
+background: rgb(166, 166, 249);
+border-radius:2px;</string>
+    </property>
+    <property name="text">
+     <string notr="true">New User</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="l2_2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>370</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-align:center;
+font-size:10px;
+color: rgb(85, 0, 255);
+background: rgb(166, 166, 249);
+border-radius:2px;</string>
+    </property>
+    <property name="text">
+     <string>Sign up Here</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="test.qrc"/>
+  <include location="logo1.qrc"/>
+ </resources>
+ <connections/>
+</ui>

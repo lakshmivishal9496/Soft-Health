@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="Prefix2">
+    <file>user1.jpg</file>
+  </qresource>
+</RCC>
