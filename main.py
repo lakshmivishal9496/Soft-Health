@@ -2,10 +2,8 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
 from PyQt5.uic import loadUi, loadUiType
-import mysql.connector as connector
 import sqlite3
-#To install mysql-connector-python, open a terminal and type the following command:
-# pip install mysql-connector-python
+
 
 import os
 
