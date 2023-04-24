@@ -14,14 +14,20 @@ class LoginApp(QDialog):
     def __init__(self):
         super(LoginApp, self).__init__()
         loadUi(r"login.ui", self)
+        # If button id b1 (Login) button in Login Page is clicked
+        # Button click will execute the login() function
         self.b1.clicked.connect(self.login)
+        # If button id b2 (SignUP) button in Login Page is clicked
+        # Button click will execute the show_register() function
+        # Take the user to Sign up window
         self.b2.clicked.connect(self.show_register)
 
     def login(self):
-        un = self.tb1.text()
-        pw = self.tb2.text()
         # tb1 is the name of LineEdit component from desinger UI login.ui
         # tb2 is the name of LineEdit component from desinger UI login.ui
+        un = self.tb1.text()
+        pw = self.tb2.text()
+        
         msgBox = QMessageBox()
         msgBox.setIcon(QMessageBox.Information)
         msgBox.setText("Welcome " + self.tb1.text() + '\n'
