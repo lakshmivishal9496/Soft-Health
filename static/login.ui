@@ -208,7 +208,7 @@ border-radius:2px;</string>
   </widget>
  </widget>
  <resources>
-  <include location="qrf_files/test.qrc"/>
+  <include location="qrc_files/test.qrc"/>
   <include location="qrc_files/logo1.qrc"/>
  </resources>
  <connections/>
