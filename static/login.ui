@@ -233,7 +233,12 @@ border-radius:2px;</string>
   </widget>
  </widget>
  <resources>
+<<<<<<< HEAD
   <include location="../qrc_files/test.qrc"/>
+=======
+  <include location="qrc_files/test.qrc"/>
+  <include location="qrc_files/logo1.qrc"/>
+>>>>>>> 9275a2a99e065ef03d4a77df0f79a0c300597635
  </resources>
  <connections/>
 </ui>
