@@ -110,28 +110,6 @@ border-radius:2px;</string>
      <string>New User!!!!</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>50</y>
-      <width>71</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:url(:/image1/images/logo_200x200.png);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="../qrc_files/test.qrc">:/image1/images/logo_200x200.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QPushButton" name="b5">
     <property name="geometry">
      <rect>
@@ -230,15 +208,33 @@ border-radius:2px;</string>
      <string>OR</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>60</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(85, 0, 127);
+border: 3px solid rgb(85, 0, 127);
+font-size : 30px;
+font-weight:300;
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(183, 65, 255, 255), stop:1 rgba(255, 255, 255, 255))</string>
+    </property>
+    <property name="text">
+     <string>Soft Health</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>
-<<<<<<< HEAD
   <include location="../qrc_files/test.qrc"/>
-=======
-  <include location="qrc_files/test.qrc"/>
-  <include location="qrc_files/logo1.qrc"/>
->>>>>>> 9275a2a99e065ef03d4a77df0f79a0c300597635
  </resources>
  <connections/>
 </ui>

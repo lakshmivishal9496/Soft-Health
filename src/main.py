@@ -14,6 +14,7 @@ class LoginApp(QDialog):
         loadUi(r"static\login.ui", self)
         self.b1.clicked.connect(self.login)
         self.b2.clicked.connect(self.show_register)
+        self.b5.clicked.connect(self.guest_login)
 
     def login(self):
         print("Login")
@@ -56,6 +57,18 @@ class LoginApp(QDialog):
 
     def show_register(self):
         widget.setCurrentIndex(1)
+    def guest_login(self):
+        msgBox = QMessageBox()
+        msgBox.setIcon(QMessageBox.Information)
+        msgBox.setText("Welcome " + 'guest user' + '\n'
+                       "Do you want to take personality assessment")
+        msgBox.setWindowTitle("Guest User login")
+        msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+        
+        # show the message box and wait for a button to be clicked
+        buttonClicked = msgBox.exec()
+        if buttonClicked == QMessageBox.Ok:
+            print("OK button clicked")
 
 
 class RegApp(QDialog):
