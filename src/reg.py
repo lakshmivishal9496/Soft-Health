@@ -126,5 +126,5 @@ class Ui_Form(object):
         self.b4.setText(_translate("Form", "Log In"))
         self.label_2.setText(_translate("Form", "Registered User"))
         self.label_4.setText(_translate("Form", "Login Here"))
-import test1_rc
-import test_rc
+from qrc_files import test1_rc
+from qrc_files import test_rc

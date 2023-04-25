@@ -113,13 +113,13 @@ background-color: rgb(117, 71, 255);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:url(:/Prefix1/logo_200x200.png);</string>
+     <string notr="true">background-color:url(images/logo_200x200.png);</string>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>logo_200x200.png</pixmap>
+     <pixmap>images/logo_200x200.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -208,8 +208,8 @@ border-radius:2px;</string>
   </widget>
  </widget>
  <resources>
-  <include location="test.qrc"/>
-  <include location="logo1.qrc"/>
+  <include location="qrf_files/test.qrc"/>
+  <include location="qrc_files/logo1.qrc"/>
  </resources>
  <connections/>
 </ui>

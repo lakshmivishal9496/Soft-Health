@@ -59,9 +59,9 @@ class Ui_Form(object):
         self.b1.setObjectName("b1")
         self.label = QtWidgets.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(130, 20, 121, 101))
-        self.label.setStyleSheet("background-color:url(:/Prefix1/logo_200x200.png);")
+        self.label.setStyleSheet("background-color:url(/images/logo_200x200.png);")
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("logo_200x200.png"))
+        self.label.setPixmap(QtGui.QPixmap("/images/logo_200x200.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.b2 = QtWidgets.QPushButton(self.widget)
@@ -115,5 +115,5 @@ class Ui_Form(object):
         self.b1.setText(_translate("Form", "Login"))
         self.b2.setText(_translate("Form", "Sign Up"))
         self.l2_2.setText(_translate("Form", "Sign up Here"))
-import logo1_rc
-import test_rc
+from qrc_files import logo1_rc
+from qrc_files import test_rc

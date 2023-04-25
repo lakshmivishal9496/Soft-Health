@@ -113,13 +113,13 @@ background-color: rgb(117, 71, 255);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:url(:/Prefix2/user1.jpg);</string>
+     <string notr="true">background-color:url(images/user1.jpg);</string>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>user1.jpg</pixmap>
+     <pixmap>images/user1.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -230,8 +230,8 @@ border-radius:2px;</string>
   </widget>
  </widget>
  <resources>
-  <include location="test.qrc"/>
-  <include location="test1.qrc"/>
+  <include location="qrc_files/test.qrc"/>
+  <include location="qrc_files/test1.qrc"/>
  </resources>
  <connections/>
 </ui>
