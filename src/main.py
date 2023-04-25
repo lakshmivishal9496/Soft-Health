@@ -16,21 +16,43 @@ class LoginApp(QDialog):
         self.b2.clicked.connect(self.show_register)
 
     def login(self):
+        print("Login")
+        un = self.tb1.text()
+        pw = self.tb2.text()
+        print(un)
+        print(pw)        
+        # connect to the database and check if the username and password are valid
+        db = sqlite3.connect('softhealth.db')
+        cursor = db.cursor()
+        cursor.execute('SELECT * FROM login WHERE username = ? AND password = ?', (un, pw))
+        user = cursor.fetchone()
+        print(user)
+        # check if username and password are provided
+        if not un or not pw:
+            QMessageBox.warning(self, "Login Error", "Username and password are required")
+            return
+
+        # display an error message if the username and password are not valid
+        if user is None:
+            QMessageBox.warning(self, "Login Error", "Invalid username or password")
+            return
+        
+        # display a message box asking the user if they want to take a personality assessment
         msgBox = QMessageBox()
         msgBox.setIcon(QMessageBox.Information)
-        msgBox.setText("Welcome " + self.tb1.text() + '\n'
+        msgBox.setText("Welcome " + un + '\n'
                        "Do you want to take personality assessment")
         msgBox.setWindowTitle("User login")
         msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-# show the message box and wait for a button to be clicked
+        
+        # show the message box and wait for a button to be clicked
         buttonClicked = msgBox.exec()
         if buttonClicked == QMessageBox.Ok:
             print("OK button clicked")
-        un = self.tb1.text()
-        pw = self.tb2.text()
+        
+        db.close()
         self.tb1.setText("")
         self.tb2.setText("")
-       
 
     def show_register(self):
         widget.setCurrentIndex(1)
@@ -41,8 +63,8 @@ class RegApp(QDialog):
         super(RegApp, self).__init__()
         # pass super class LoginApp to parent class
         loadUi(r"static\register.ui", self)
+        
         self.b3.clicked.connect(self.reg)
-        self.b4.clicked.connect(self.show_login)
 
     def reg(self):
         un = self.tb3.text()
@@ -63,8 +85,6 @@ class RegApp(QDialog):
                 INSERT INTO login (username, password, email)
                 VALUES (?,?,?)
                 ''', (un, pw, em))
-        user = cursor.execute(''' select username, password, email from login''')
-        print(user.fetchall())
         db.commit()
         db.close()
         QMessageBox.information(self, "Login Output", "User registered successfully login now>>")
@@ -73,8 +93,6 @@ class RegApp(QDialog):
         self.tb4.setText("")
         self.tb5.setText("")
 
-    def show_login(self):
-        widget.setCurrentIndex(0)
 
 
 app = QApplication(sys.argv)
