@@ -59,8 +59,8 @@ background-color: rgb(117, 71, 255);
    <widget class="QPushButton" name="b2">
     <property name="geometry">
      <rect>
-      <x>65</x>
-      <y>360</y>
+      <x>70</x>
+      <y>370</y>
       <width>250</width>
       <height>35</height>
      </rect>
@@ -89,8 +89,8 @@ background-color: rgb(117, 71, 255);
    <widget class="QLabel" name="l2_2">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>330</y>
+      <x>170</x>
+      <y>350</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -188,7 +188,7 @@ border-bottom-color: rgba(46,82,101,255);
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>400</y>
+      <y>410</y>
       <width>61</width>
       <height>20</height>
      </rect>
@@ -231,6 +231,31 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>130</y>
+      <width>281</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(170, 85, 255,50)</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+   </widget>
+   <zorder>groupBox</zorder>
+   <zorder>b1</zorder>
+   <zorder>b2</zorder>
+   <zorder>l2_2</zorder>
+   <zorder>b5</zorder>
+   <zorder>tb1</zorder>
+   <zorder>tb2</zorder>
+   <zorder>l2_3</zorder>
+   <zorder>label</zorder>
   </widget>
  </widget>
  <resources>
