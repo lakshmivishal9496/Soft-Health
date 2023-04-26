@@ -128,6 +128,13 @@ class RegApp(QDialog):
     def show_login(self):
         widget.setCurrentIndex(0)
 
+class Verify:
+    def __init__(self, password):
+        self.password = password
+
+    def compare(self, other_password):
+        return self.password == other_password
+
 
 
 app = QApplication(sys.argv)

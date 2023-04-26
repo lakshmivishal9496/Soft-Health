@@ -1,2 +1,4 @@
 PyQt5
 PyQt5-tools
+flake8
+pylint
