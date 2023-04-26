@@ -38,6 +38,8 @@ install:
 installed:
 	$(PYTHON) -m pip list
 
+run:
+	$(PYTHON) src/main.py
 
 # ---------------------------------------------------------
 # Cleanup generated and installed files.
