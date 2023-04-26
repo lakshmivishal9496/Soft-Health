@@ -39,17 +39,18 @@ class LoginApp(QDialog):
             return
         
         # display a message box asking the user if they want to take a personality assessment
-        msgBox = QMessageBox()
-        msgBox.setIcon(QMessageBox.Information)
-        msgBox.setText("Welcome " + un + '\n'
-                       "Do you want to take personality assessment")
-        msgBox.setWindowTitle("User login")
-        msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+        widget.setCurrentIndex(2)
+        # msgBox = QMessageBox()
+        # msgBox.setIcon(QMessageBox.Information)
+        # msgBox.setText("Welcome " + un + '\n'
+        #                "Do you want to take personality assessment")
+        # msgBox.setWindowTitle("User login")
+        # msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
         
-        # show the message box and wait for a button to be clicked
-        buttonClicked = msgBox.exec()
-        if buttonClicked == QMessageBox.Ok:
-            print("OK button clicked")
+        # # show the message box and wait for a button to be clicked
+        # buttonClicked = msgBox.exec()
+        # if buttonClicked == QMessageBox.Ok:
+        #     print("OK button clicked")
         
         db.close()
         self.tb1.setText("")
@@ -58,17 +59,18 @@ class LoginApp(QDialog):
     def show_register(self):
         widget.setCurrentIndex(1)
     def guest_login(self):
+        widget.setCurrentIndex(3)
         msgBox = QMessageBox()
-        msgBox.setIcon(QMessageBox.Information)
-        msgBox.setText("Welcome " + 'guest user' + '\n'
-                       "Do you want to take personality assessment")
-        msgBox.setWindowTitle("Guest User login")
-        msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+        # msgBox.setIcon(QMessageBox.Information)
+        # msgBox.setText("Welcome " + 'guest user' + '\n'
+        #                "Do you want to take personality assessment")
+        # msgBox.setWindowTitle("Guest User login")
+        # msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
         
-        # show the message box and wait for a button to be clicked
-        buttonClicked = msgBox.exec()
-        if buttonClicked == QMessageBox.Ok:
-            print("OK button clicked")
+        # # show the message box and wait for a button to be clicked
+        # buttonClicked = msgBox.exec()
+        # if buttonClicked == QMessageBox.Ok:
+        #     print("OK button clicked")
 
 
 class RegApp(QDialog):
@@ -127,6 +129,18 @@ class RegApp(QDialog):
 
     def show_login(self):
         widget.setCurrentIndex(0)
+        
+class HomeApp(QDialog):
+    def __init__(self):
+        super(HomeApp, self).__init__()
+        # pass super class LoginApp to parent class
+        loadUi(r"static\home.ui", self)
+
+class GuestApp(QDialog):
+    def __init__(self):
+        super(GuestApp, self).__init__()
+        # pass super class LoginApp to parent class
+        loadUi(r"static\guest.ui", self)
 
 
 
@@ -135,8 +149,12 @@ widget = QtWidgets.QStackedWidget()
 # Connects both login and register widgets together
 loginform = LoginApp()
 registrationform = RegApp()
+Homeform = HomeApp()
+guestform = GuestApp()
 widget.addWidget(loginform)
 widget.addWidget(registrationform)
+widget.addWidget(Homeform)
+widget.addWidget(guestform)
 widget.setCurrentIndex(0)
 widget.setFixedWidth(800)
 widget.setFixedHeight(600)
