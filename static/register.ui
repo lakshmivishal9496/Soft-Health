@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>380</width>
-    <height>480</height>
+    <width>587</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,121 +18,19 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>380</width>
-     <height>480</height>
+     <width>800</width>
+     <height>600</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color:rgb(207, 197, 255);
 border-radius: 9px;</string>
    </property>
-   <widget class="QLineEdit" name="tb3">
-    <property name="geometry">
-     <rect>
-      <x>65</x>
-      <y>150</y>
-      <width>250</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(47,42,52,200);
-color:rgb(255,255,255);
-padding-left: 10px;
-border-bottom-color: rgba(46,82,101,255);
-</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="placeholderText">
-     <string>Enter username here.........</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="tb4">
-    <property name="geometry">
-     <rect>
-      <x>65</x>
-      <y>210</y>
-      <width>250</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(47,42,52,200);
-color:rgb(255,255,255);
-padding-left: 10px;
-border-bottom-color: rgba(46,82,101,255);
-</string>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="placeholderText">
-     <string>Enter password  here.........</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="b3">
-    <property name="geometry">
-     <rect>
-      <x>65</x>
-      <y>340</y>
-      <width>250</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton#b3{
-background-color:rgb(85, 0, 127);
-color: rgb(255, 255, 255);
-font-size: 13px;
-border-radius : 7px;
-
-}
-QPushButton#b3: pressed {
-background-color: rgb(117, 71, 255);
-}</string>
-    </property>
-    <property name="text">
-     <string>Submit</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="tb5">
-    <property name="geometry">
-     <rect>
-      <x>65</x>
-      <y>270</y>
-      <width>250</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(47,42,52,200);
-color:rgb(255,255,255);
-padding-left: 10px;
-border-bottom-color: rgba(46,82,101,255);
-</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="placeholderText">
-     <string>Enter email here.........       </string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>60</y>
+      <x>320</x>
+      <y>40</y>
       <width>161</width>
       <height>51</height>
      </rect>
@@ -154,10 +52,10 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>130</y>
-      <width>301</width>
-      <height>261</height>
+      <x>170</x>
+      <y>120</y>
+      <width>446</width>
+      <height>345</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -166,13 +64,188 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="title">
      <string/>
     </property>
+    <widget class="QPushButton" name="b3">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>265</y>
+       <width>250</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#b3{
+background-color:rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font-size: 13px;
+border-radius : 7px;
+
+}
+QPushButton#b3: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Submit</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tb5">
+     <property name="geometry">
+      <rect>
+       <x>58</x>
+       <y>200</y>
+       <width>320</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(47,42,52,200);
+color:rgb(255,255,255);
+padding-left: 10px;
+border-bottom-color: rgba(46,82,101,255);
+</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Enter email here.........       </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tb6">
+     <property name="geometry">
+      <rect>
+       <x>58</x>
+       <y>140</y>
+       <width>320</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(47,42,52,200);
+color:rgb(255,255,255);
+padding-left: 10px;
+border-bottom-color: rgba(46,82,101,255);
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Repeat password .........   </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tb3">
+     <property name="geometry">
+      <rect>
+       <x>58</x>
+       <y>30</y>
+       <width>320</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(47,42,52,200);
+color:rgb(255,255,255);
+padding-left: 10px;
+border-bottom-color: rgba(46,82,101,255);
+</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Enter username here.........</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tb4">
+     <property name="geometry">
+      <rect>
+       <x>58</x>
+       <y>83</y>
+       <width>320</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(47,42,52,200);
+color:rgb(255,255,255);
+padding-left: 10px;
+border-bottom-color: rgba(46,82,101,255);
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Enter password  here.........</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="b4">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>520</y>
+      <width>250</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#b4{
+background-color:rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font-size: 13px;
+border-radius : 7px;
+
+}
+QPushButton#b4: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Login</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="l8">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>470</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-align:center;
+font-size:20px;
+color: rgb(85, 0, 255);
+border-radius:2px;</string>
+    </property>
+    <property name="text">
+     <string>Already have an account?</string>
+    </property>
    </widget>
    <zorder>groupBox</zorder>
-   <zorder>tb3</zorder>
-   <zorder>tb4</zorder>
-   <zorder>b3</zorder>
-   <zorder>tb5</zorder>
    <zorder>label</zorder>
+   <zorder>b4</zorder>
+   <zorder>l8</zorder>
   </widget>
  </widget>
  <resources>

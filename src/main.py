@@ -3,7 +3,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
 from PyQt5.uic import loadUi, loadUiType
 import sqlite3
-
+import re
 
 class LoginApp(QDialog):
     # Deals with login screen for the app
@@ -78,11 +78,19 @@ class RegApp(QDialog):
         loadUi(r"static\register.ui", self)
         
         self.b3.clicked.connect(self.reg)
+        self.b4.clicked.connect(self.show_login)
+
+    def verify_password(self, password):
+        if len(password) < 8 and re.search('[0-9]', password) is None and re.search('[A-Z]', password) is None:
+            return "Password must contain: \n " + "*minimum 8 characters,\n " +  "*a number \n " + "*a uppercase letter"
+        else:
+            return None
 
     def reg(self):
         un = self.tb3.text()
         pw = self.tb4.text()
         em = self.tb5.text()
+        repw = self.tb6.text()
         print(un)
         print(pw)
         print(em)
@@ -94,17 +102,31 @@ class RegApp(QDialog):
                            password TEXT,
                            email TEXT)
                        ''')
-        cursor.execute('''
-                INSERT INTO login (username, password, email)
-                VALUES (?,?,?)
-                ''', (un, pw, em))
-        db.commit()
-        db.close()
-        QMessageBox.information(self, "Login Output", "User registered successfully login now>>")
-        QApplication.processEvents()
-        self.tb3.setText("")
-        self.tb4.setText("")
-        self.tb5.setText("")
+        
+        error_message = self.verify_password(pw)
+        if not un or not pw or not em:
+            QMessageBox.warning(self, "Registration Error", "Please fill in all the fields")
+        else:
+            if error_message:
+                QMessageBox.warning(self, "Registration Error", error_message)
+            elif pw != repw:
+                QMessageBox.warning(self, "Registration Error", "Passwords do not match.")
+            else:
+                cursor.execute('''
+                    INSERT INTO login (username, password, email)
+                    VALUES (?,?,?)
+                    ''', (un, pw, em))
+                db.commit()
+                db.close()
+                QMessageBox.information(self, "Login Output", "User registered successfully login now>>")
+            QApplication.processEvents()
+            self.tb3.setText("")
+            self.tb4.setText("")
+            self.tb5.setText("")
+            self.tb6.setText("")
+
+    def show_login(self):
+        widget.setCurrentIndex(0)
 
 
 
@@ -116,8 +138,8 @@ registrationform = RegApp()
 widget.addWidget(loginform)
 widget.addWidget(registrationform)
 widget.setCurrentIndex(0)
-widget.setFixedWidth(400)
-widget.setFixedHeight(500)
+widget.setFixedWidth(800)
+widget.setFixedHeight(600)
 
 widget.show()
 sys.exit(app.exec_())

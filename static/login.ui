@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>363</width>
-    <height>487</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,51 +18,21 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>381</width>
-     <height>501</height>
+     <width>800</width>
+     <height>600</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color:rgb(207, 197, 255);
 border-radius: 9px;</string>
    </property>
-   <widget class="QPushButton" name="b1">
-    <property name="geometry">
-     <rect>
-      <x>65</x>
-      <y>290</y>
-      <width>250</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton#b1{
-background-color:rgb(85, 0, 127);
-color: rgb(255, 255, 255);
-font-size: 13px;
-border-radius : 7px;
-
-}
-QPushButton#b1: pressed {
-background-color: rgb(117, 71, 255);
-}</string>
-    </property>
-    <property name="text">
-     <string>Login</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="b2">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>370</y>
-      <width>250</width>
-      <height>35</height>
+      <x>230</x>
+      <y>440</y>
+      <width>360</width>
+      <height>42</height>
      </rect>
     </property>
     <property name="font">
@@ -74,7 +44,7 @@ background-color: rgb(117, 71, 255);
      <string notr="true">QPushButton#b2{
 background-color:rgb(85, 0, 127);
 color: rgb(255, 255, 255);
-font-size: 13px;
+font-size: 19px;
 border-radius : 7px;
 
 }
@@ -89,9 +59,9 @@ background-color: rgb(117, 71, 255);
    <widget class="QLabel" name="l2_2">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>350</y>
-      <width>71</width>
+      <x>360</x>
+      <y>410</y>
+      <width>121</width>
       <height>20</height>
      </rect>
     </property>
@@ -102,28 +72,31 @@ background-color: rgb(117, 71, 255);
     </property>
     <property name="styleSheet">
      <string notr="true">text-align:center;
-font-size:10px;
+font-size:20px;
 color: rgb(85, 0, 255);
 border-radius:2px;</string>
     </property>
     <property name="text">
      <string>New User!!!!</string>
     </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
    </widget>
    <widget class="QPushButton" name="b5">
     <property name="geometry">
      <rect>
-      <x>65</x>
-      <y>430</y>
-      <width>250</width>
-      <height>35</height>
+      <x>230</x>
+      <y>530</y>
+      <width>360</width>
+      <height>42</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton#b5{
 background-color:rgb(85, 0, 127);
 color: rgb(255, 255, 255);
-font-size: 13px;
+font-size: 19px;
 border-radius : 7px;
 
 }
@@ -135,61 +108,12 @@ background-color: rgb(117, 71, 255);
      <string>Continue as a Guest</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tb1">
-    <property name="geometry">
-     <rect>
-      <x>65</x>
-      <y>150</y>
-      <width>250</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(47,42,52,200);
-color:rgb(255,255,255);
-padding-left: 10px;
-border-bottom-color: rgba(46,82,101,255);
-</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="placeholderText">
-     <string>Enter the username....</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="tb2">
-    <property name="geometry">
-     <rect>
-      <x>65</x>
-      <y>220</y>
-      <width>250</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(47,42,52,200);
-color:rgb(255,255,255);
-padding-left: 10px;
-border-bottom-color: rgba(46,82,101,255);
-</string>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="placeholderText">
-     <string>Enter the password.....</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="l2_3">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>410</y>
-      <width>61</width>
+      <x>400</x>
+      <y>500</y>
+      <width>41</width>
       <height>20</height>
      </rect>
     </property>
@@ -200,7 +124,7 @@ border-bottom-color: rgba(46,82,101,255);
     </property>
     <property name="styleSheet">
      <string notr="true">text-align:center;
-font-size:10px;
+font-size:20px;
 color: rgb(85, 0, 255);
 border-radius:2px;</string>
     </property>
@@ -211,8 +135,8 @@ border-radius:2px;</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>60</y>
+      <x>330</x>
+      <y>40</y>
       <width>161</width>
       <height>51</height>
      </rect>
@@ -234,10 +158,10 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>130</y>
-      <width>281</width>
-      <height>211</height>
+      <x>150</x>
+      <y>140</y>
+      <width>520</width>
+      <height>251</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -246,14 +170,90 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="title">
      <string/>
     </property>
+    <widget class="QLineEdit" name="tb1">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>40</y>
+       <width>360</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(47,42,52,200);
+color:rgb(255,255,255);
+padding-left: 10px;
+border-bottom-color: rgba(46,82,101,255);
+</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Enter the username....</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tb2">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>110</y>
+       <width>360</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(47,42,52,200);
+color:rgb(255,255,255);
+padding-left: 10px;
+border-bottom-color: rgba(46,82,101,255);
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Enter the password.....</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="b1">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>180</y>
+       <width>360</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#b1{
+background-color:rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font-size: 19px;
+border-radius : 7px;
+
+}
+QPushButton#b1: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
    </widget>
    <zorder>groupBox</zorder>
-   <zorder>b1</zorder>
    <zorder>b2</zorder>
    <zorder>l2_2</zorder>
    <zorder>b5</zorder>
-   <zorder>tb1</zorder>
-   <zorder>tb2</zorder>
    <zorder>l2_3</zorder>
    <zorder>label</zorder>
   </widget>
