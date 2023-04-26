@@ -42,7 +42,7 @@ class Ui_Form(object):
         self.b3 = QtWidgets.QPushButton(self.widget)
         self.b3.setGeometry(QtCore.QRect(65, 340, 250, 35))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setPointSize(1)
         self.b3.setFont(font)
         self.b3.setStyleSheet("QPushButton#b3{\n"
 "background-color:rgb(85, 0, 127);\n"

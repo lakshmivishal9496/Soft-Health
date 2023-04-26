@@ -23,7 +23,7 @@ class Ui_Form(object):
         self.b1 = QtWidgets.QPushButton(self.widget)
         self.b1.setGeometry(QtCore.QRect(65, 290, 250, 35))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setPointSize(1)
         self.b1.setFont(font)
         self.b1.setStyleSheet("QPushButton#b1{\n"
 "background-color:rgb(85, 0, 127);\n"
@@ -39,7 +39,7 @@ class Ui_Form(object):
         self.b2 = QtWidgets.QPushButton(self.widget)
         self.b2.setGeometry(QtCore.QRect(65, 380, 250, 35))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setPointSize(1)
         self.b2.setFont(font)
         self.b2.setStyleSheet("QPushButton#b2{\n"
 "background-color:rgb(85, 0, 127);\n"
@@ -55,7 +55,7 @@ class Ui_Form(object):
         self.l2_2 = QtWidgets.QLabel(self.widget)
         self.l2_2.setGeometry(QtCore.QRect(160, 350, 81, 20))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setPointSize(1)
         self.l2_2.setFont(font)
         self.l2_2.setStyleSheet("text-align:center;\n"
 "font-size:10px;\n"
@@ -72,7 +72,7 @@ class Ui_Form(object):
         self.b5 = QtWidgets.QPushButton(self.widget)
         self.b5.setGeometry(QtCore.QRect(65, 440, 250, 35))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setPointSize(1)
         self.b5.setFont(font)
         self.b5.setStyleSheet("QPushButton#b5{\n"
 "background-color:rgb(85, 0, 127);\n"
@@ -107,7 +107,7 @@ class Ui_Form(object):
         self.l2_3 = QtWidgets.QLabel(self.widget)
         self.l2_3.setGeometry(QtCore.QRect(180, 420, 16, 16))
         font = QtGui.QFont()
-        font.setPointSize(-1)
+        font.setPointSize(1)
         self.l2_3.setFont(font)
         self.l2_3.setStyleSheet("text-align:center;\n"
 "font-size:10px;\n"
@@ -146,7 +146,7 @@ class Ui_Form(object):
         self.tb1.setPlaceholderText(_translate("Form", "Enter username...."))
         self.lineEdit.setPlaceholderText(_translate("Form", "Enter password....."))
         self.l2_3.setText(_translate("Form", "OR"))
-import test_rc
+
 
 
 if __name__ == "__main__":

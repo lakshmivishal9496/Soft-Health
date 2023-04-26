@@ -93,9 +93,9 @@ class RegApp(QDialog):
         pw = self.tb4.text()
         em = self.tb5.text()
         repw = self.tb6.text()
-        print(un)
-        print(pw)
-        print(em)
+        # print(un)
+        # print(pw)
+        # print(em)
         db = sqlite3.connect('softhealth.db')
         cursor = db.cursor()
         cursor.execute('''

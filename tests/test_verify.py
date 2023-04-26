@@ -20,6 +20,7 @@ class TestVerify(unittest.TestCase):
         verify = Verify('Psw1')
         self.assertFalse(verify.compare('psw2'))
 
+
 if __name__ == '__main__':
     app = RegApp()
     app.get_password()
