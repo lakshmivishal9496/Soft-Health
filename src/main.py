@@ -142,6 +142,13 @@ class GuestApp(QDialog):
         # pass super class LoginApp to parent class
         loadUi(r"static\guest.ui", self)
 
+class Verify:
+    def __init__(self, password):
+        self.password = password
+
+    def compare(self, other_password):
+        return self.password == other_password
+
 
 
 app = QApplication(sys.argv)
