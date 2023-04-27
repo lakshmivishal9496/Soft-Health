@@ -43,6 +43,9 @@ installed:
 run:
 	$(PYTHON) src/main.py
 
+design:
+	-PyQt5-tools.exe designer
+
 # ---------------------------------------------------------
 # Cleanup generated and installed files.
 #
