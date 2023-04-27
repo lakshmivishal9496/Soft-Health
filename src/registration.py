@@ -89,7 +89,6 @@ class Ui_Form(object):
         self.tb4.setPlaceholderText(_translate("Form", "Enter password  here........."))
         self.b3.setText(_translate("Form", "Submit"))
         self.tb5.setPlaceholderText(_translate("Form", "Enter email here.........       "))
-import new1_rc
 
 
 if __name__ == "__main__":
