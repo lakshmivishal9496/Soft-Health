@@ -33,7 +33,9 @@ venv:
 	@printf "Type 'deactivate' to deactivate.\n"
 
 install:
+	$(PYTHON) -m pip install --upgrade pip
 	$(PYTHON) -m pip install -r requirements.txt
+
 
 installed:
 	$(PYTHON) -m pip list
@@ -72,6 +74,9 @@ flake8:
 
 lint: flake8 pylint
 
+black:
+	@$(call MESSAGE,$@)
+	@$(PYTHON) -m black src/
 
 # ---------------------------------------------------------
 # Work with unit test and code coverage.

@@ -17,25 +17,30 @@ class Ui_Form(object):
         Form.resize(380, 480)
         self.widget = QtWidgets.QWidget(Form)
         self.widget.setGeometry(QtCore.QRect(0, 0, 380, 480))
-        self.widget.setStyleSheet("background-color:rgb(207, 197, 255);\n"
-"border-radius: 9px;")
+        self.widget.setStyleSheet(
+            "background-color:rgb(207, 197, 255);\n" "border-radius: 9px;"
+        )
         self.widget.setObjectName("widget")
         self.tb3 = QtWidgets.QLineEdit(self.widget)
         self.tb3.setGeometry(QtCore.QRect(65, 150, 250, 35))
-        self.tb3.setStyleSheet("background-color: rgba(47,42,52,200);\n"
-"color:rgb(255,255,255);\n"
-"padding-left: 10px;\n"
-"border-bottom-color: rgba(46,82,101,255);\n"
-"")
+        self.tb3.setStyleSheet(
+            "background-color: rgba(47,42,52,200);\n"
+            "color:rgb(255,255,255);\n"
+            "padding-left: 10px;\n"
+            "border-bottom-color: rgba(46,82,101,255);\n"
+            ""
+        )
         self.tb3.setAlignment(QtCore.Qt.AlignCenter)
         self.tb3.setObjectName("tb3")
         self.tb4 = QtWidgets.QLineEdit(self.widget)
         self.tb4.setGeometry(QtCore.QRect(65, 210, 250, 35))
-        self.tb4.setStyleSheet("background-color: rgba(47,42,52,200);\n"
-"color:rgb(255,255,255);\n"
-"padding-left: 10px;\n"
-"border-bottom-color: rgba(46,82,101,255);\n"
-"")
+        self.tb4.setStyleSheet(
+            "background-color: rgba(47,42,52,200);\n"
+            "color:rgb(255,255,255);\n"
+            "padding-left: 10px;\n"
+            "border-bottom-color: rgba(46,82,101,255);\n"
+            ""
+        )
         self.tb4.setEchoMode(QtWidgets.QLineEdit.Password)
         self.tb4.setAlignment(QtCore.Qt.AlignCenter)
         self.tb4.setObjectName("tb4")
@@ -44,16 +49,18 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(1)
         self.b3.setFont(font)
-        self.b3.setStyleSheet("QPushButton#b3{\n"
-"background-color:rgb(85, 0, 127);\n"
-"color: rgb(255, 255, 255);\n"
-"font-size: 13px;\n"
-"border-radius : 7px;\n"
-"\n"
-"}\n"
-"QPushButton#b3: pressed {\n"
-"background-color: rgb(117, 71, 255);\n"
-"}")
+        self.b3.setStyleSheet(
+            "QPushButton#b3{\n"
+            "background-color:rgb(85, 0, 127);\n"
+            "color: rgb(255, 255, 255);\n"
+            "font-size: 13px;\n"
+            "border-radius : 7px;\n"
+            "\n"
+            "}\n"
+            "QPushButton#b3: pressed {\n"
+            "background-color: rgb(117, 71, 255);\n"
+            "}"
+        )
         self.b3.setObjectName("b3")
         self.label_3 = QtWidgets.QLabel(self.widget)
         self.label_3.setGeometry(QtCore.QRect(140, 40, 101, 91))
@@ -64,11 +71,13 @@ class Ui_Form(object):
         self.label_3.setObjectName("label_3")
         self.tb5 = QtWidgets.QLineEdit(self.widget)
         self.tb5.setGeometry(QtCore.QRect(65, 270, 250, 35))
-        self.tb5.setStyleSheet("background-color: rgba(47,42,52,200);\n"
-"color:rgb(255,255,255);\n"
-"padding-left: 10px;\n"
-"border-bottom-color: rgba(46,82,101,255);\n"
-"")
+        self.tb5.setStyleSheet(
+            "background-color: rgba(47,42,52,200);\n"
+            "color:rgb(255,255,255);\n"
+            "padding-left: 10px;\n"
+            "border-bottom-color: rgba(46,82,101,255);\n"
+            ""
+        )
         self.tb5.setAlignment(QtCore.Qt.AlignCenter)
         self.tb5.setObjectName("tb5")
         self.label = QtWidgets.QLabel(self.widget)
@@ -88,11 +97,14 @@ class Ui_Form(object):
         self.tb3.setPlaceholderText(_translate("Form", "Enter username here........."))
         self.tb4.setPlaceholderText(_translate("Form", "Enter password  here........."))
         self.b3.setText(_translate("Form", "Submit"))
-        self.tb5.setPlaceholderText(_translate("Form", "Enter email here.........       "))
+        self.tb5.setPlaceholderText(
+            _translate("Form", "Enter email here.........       ")
+        )
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Form = QtWidgets.QWidget()
     ui = Ui_Form()

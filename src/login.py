@@ -17,54 +17,63 @@ class Ui_Form(object):
         Form.resize(363, 487)
         self.widget = QtWidgets.QWidget(Form)
         self.widget.setGeometry(QtCore.QRect(0, 0, 381, 501))
-        self.widget.setStyleSheet("background-color:rgb(207, 197, 255);\n"
-"border-radius: 9px;")
+        self.widget.setStyleSheet(
+            "background-color:rgb(207, 197, 255);\n" "border-radius: 9px;"
+        )
         self.widget.setObjectName("widget")
         self.b1 = QtWidgets.QPushButton(self.widget)
         self.b1.setGeometry(QtCore.QRect(65, 290, 250, 35))
         font = QtGui.QFont()
         font.setPointSize(1)
         self.b1.setFont(font)
-        self.b1.setStyleSheet("QPushButton#b1{\n"
-"background-color:rgb(85, 0, 127);\n"
-"color: rgb(255, 255, 255);\n"
-"font-size: 13px;\n"
-"border-radius : 7px;\n"
-"\n"
-"}\n"
-"QPushButton#b1: pressed {\n"
-"background-color: rgb(117, 71, 255);\n"
-"}")
+        self.b1.setStyleSheet(
+            "QPushButton#b1{\n"
+            "background-color:rgb(85, 0, 127);\n"
+            "color: rgb(255, 255, 255);\n"
+            "font-size: 13px;\n"
+            "border-radius : 7px;\n"
+            "\n"
+            "}\n"
+            "QPushButton#b1: pressed {\n"
+            "background-color: rgb(117, 71, 255);\n"
+            "}"
+        )
         self.b1.setObjectName("b1")
         self.b2 = QtWidgets.QPushButton(self.widget)
         self.b2.setGeometry(QtCore.QRect(65, 380, 250, 35))
         font = QtGui.QFont()
         font.setPointSize(1)
         self.b2.setFont(font)
-        self.b2.setStyleSheet("QPushButton#b2{\n"
-"background-color:rgb(85, 0, 127);\n"
-"color: rgb(255, 255, 255);\n"
-"font-size: 13px;\n"
-"border-radius : 7px;\n"
-"\n"
-"}\n"
-"QPushButton#b2: pressed {\n"
-"background-color: rgb(117, 71, 255);\n"
-"}")
+        self.b2.setStyleSheet(
+            "QPushButton#b2{\n"
+            "background-color:rgb(85, 0, 127);\n"
+            "color: rgb(255, 255, 255);\n"
+            "font-size: 13px;\n"
+            "border-radius : 7px;\n"
+            "\n"
+            "}\n"
+            "QPushButton#b2: pressed {\n"
+            "background-color: rgb(117, 71, 255);\n"
+            "}"
+        )
         self.b2.setObjectName("b2")
         self.l2_2 = QtWidgets.QLabel(self.widget)
         self.l2_2.setGeometry(QtCore.QRect(160, 350, 81, 20))
         font = QtGui.QFont()
         font.setPointSize(1)
         self.l2_2.setFont(font)
-        self.l2_2.setStyleSheet("text-align:center;\n"
-"font-size:10px;\n"
-"color: rgb(85, 0, 255);\n"
-"border-radius:2px;")
+        self.l2_2.setStyleSheet(
+            "text-align:center;\n"
+            "font-size:10px;\n"
+            "color: rgb(85, 0, 255);\n"
+            "border-radius:2px;"
+        )
         self.l2_2.setObjectName("l2_2")
         self.label = QtWidgets.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(150, 50, 71, 71))
-        self.label.setStyleSheet("background-color:url(:/image1/images/logo_200x200.png);")
+        self.label.setStyleSheet(
+            "background-color:url(:/image1/images/logo_200x200.png);"
+        )
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap(":/image1/images/logo_200x200.png"))
         self.label.setScaledContents(True)
@@ -74,33 +83,39 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(1)
         self.b5.setFont(font)
-        self.b5.setStyleSheet("QPushButton#b5{\n"
-"background-color:rgb(85, 0, 127);\n"
-"color: rgb(255, 255, 255);\n"
-"font-size: 13px;\n"
-"border-radius : 7px;\n"
-"\n"
-"}\n"
-"QPushButton#b5: pressed {\n"
-"background-color: rgb(117, 71, 255);\n"
-"}")
+        self.b5.setStyleSheet(
+            "QPushButton#b5{\n"
+            "background-color:rgb(85, 0, 127);\n"
+            "color: rgb(255, 255, 255);\n"
+            "font-size: 13px;\n"
+            "border-radius : 7px;\n"
+            "\n"
+            "}\n"
+            "QPushButton#b5: pressed {\n"
+            "background-color: rgb(117, 71, 255);\n"
+            "}"
+        )
         self.b5.setObjectName("b5")
         self.tb1 = QtWidgets.QLineEdit(self.widget)
         self.tb1.setGeometry(QtCore.QRect(65, 150, 250, 35))
-        self.tb1.setStyleSheet("background-color: rgba(47,42,52,200);\n"
-"color:rgb(255,255,255);\n"
-"padding-left: 10px;\n"
-"border-bottom-color: rgba(46,82,101,255);\n"
-"")
+        self.tb1.setStyleSheet(
+            "background-color: rgba(47,42,52,200);\n"
+            "color:rgb(255,255,255);\n"
+            "padding-left: 10px;\n"
+            "border-bottom-color: rgba(46,82,101,255);\n"
+            ""
+        )
         self.tb1.setAlignment(QtCore.Qt.AlignCenter)
         self.tb1.setObjectName("tb1")
         self.lineEdit = QtWidgets.QLineEdit(self.widget)
         self.lineEdit.setGeometry(QtCore.QRect(65, 220, 250, 35))
-        self.lineEdit.setStyleSheet("background-color: rgba(47,42,52,200);\n"
-"color:rgb(255,255,255);\n"
-"padding-left: 10px;\n"
-"border-bottom-color: rgba(46,82,101,255);\n"
-"")
+        self.lineEdit.setStyleSheet(
+            "background-color: rgba(47,42,52,200);\n"
+            "color:rgb(255,255,255);\n"
+            "padding-left: 10px;\n"
+            "border-bottom-color: rgba(46,82,101,255);\n"
+            ""
+        )
         self.lineEdit.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lineEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit.setObjectName("lineEdit")
@@ -109,18 +124,20 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(1)
         self.l2_3.setFont(font)
-        self.l2_3.setStyleSheet("text-align:center;\n"
-"font-size:10px;\n"
-"color: rgb(85, 0, 255);\n"
-"border-radius:2px;")
+        self.l2_3.setStyleSheet(
+            "text-align:center;\n"
+            "font-size:10px;\n"
+            "color: rgb(85, 0, 255);\n"
+            "border-radius:2px;"
+        )
         self.l2_3.setObjectName("l2_3")
         self.groupBox = QtWidgets.QGroupBox(self.widget)
         self.groupBox.setGeometry(QtCore.QRect(50, 130, 281, 211))
         font = QtGui.QFont()
         font.setPointSize(17)
         self.groupBox.setFont(font)
-        self.groupBox.setStyleSheet("background-color:rgba(255, 255, 255, 60);\n"
-"")
+        self.groupBox.setStyleSheet(
+            "background-color:rgba(255, 255, 255, 60);\n" "")
         self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.groupBox.raise_()
@@ -144,13 +161,14 @@ class Ui_Form(object):
         self.l2_2.setText(_translate("Form", "Need an account?"))
         self.b5.setText(_translate("Form", "Continue as a Guest"))
         self.tb1.setPlaceholderText(_translate("Form", "Enter username...."))
-        self.lineEdit.setPlaceholderText(_translate("Form", "Enter password....."))
+        self.lineEdit.setPlaceholderText(_translate("Form",
+                                                    "Enter password....."))
         self.l2_3.setText(_translate("Form", "OR"))
-
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Form = QtWidgets.QWidget()
     ui = Ui_Form()
