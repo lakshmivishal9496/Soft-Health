@@ -135,6 +135,10 @@ class HomeApp(QDialog):
         super(HomeApp, self).__init__()
         # pass super class LoginApp to parent class
         loadUi(r"static\home.ui", self)
+        self.b5_2.clicked.connect(self.show_back)
+
+    def show_back(self):
+        widget.setCurrentIndex(0)
 
 class mainMenuApp(QDialog):
     def __init__(self):
@@ -142,6 +146,10 @@ class mainMenuApp(QDialog):
         # pass super class LoginApp to parent class
         loadUi(r"static\mainmenu.ui", self)
         self.b9.clicked.connect(self.menu)
+        self.b5_2.clicked.connect(self.show_back)
+
+    def show_back(self):
+        widget.setCurrentIndex(0)
     
     def menu(self):
         widget.setCurrentIndex(2)

@@ -121,6 +121,36 @@ background-color: rgb(117, 71, 255);
     <string>Member's Area</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="b5_2">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>20</y>
+     <width>101</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#b5_2{
+background-color:rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font-size: 19px;
+border-radius : 7px;
+
+}
+QPushButton#b5_2: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Log Out</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
