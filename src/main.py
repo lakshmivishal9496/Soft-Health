@@ -39,7 +39,7 @@ class LoginApp(QDialog):
             return
         
         # display a message box asking the user if they want to take a personality assessment
-        widget.setCurrentIndex(2)
+        widget.setCurrentIndex(4)
         # msgBox = QMessageBox()
         # msgBox.setIcon(QMessageBox.Information)
         # msgBox.setText("Welcome " + un + '\n'
@@ -136,6 +136,16 @@ class HomeApp(QDialog):
         # pass super class LoginApp to parent class
         loadUi(r"static\home.ui", self)
 
+class mainMenuApp(QDialog):
+    def __init__(self):
+        super(mainMenuApp, self).__init__()
+        # pass super class LoginApp to parent class
+        loadUi(r"static\mainmenu.ui", self)
+        self.b9.clicked.connect(self.menu)
+    
+    def menu(self):
+        widget.setCurrentIndex(2)
+
 class GuestApp(QDialog):
     def __init__(self):
         super(GuestApp, self).__init__()
@@ -158,10 +168,12 @@ loginform = LoginApp()
 registrationform = RegApp()
 Homeform = HomeApp()
 guestform = GuestApp()
+mainMenuform = mainMenuApp()
 widget.addWidget(loginform)
 widget.addWidget(registrationform)
 widget.addWidget(Homeform)
 widget.addWidget(guestform)
+widget.addWidget(mainMenuform)
 widget.setCurrentIndex(0)
 widget.setFixedWidth(800)
 widget.setFixedHeight(600)
