@@ -152,13 +152,13 @@ font-family:Sura</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image:url(:/image1/images/logo_200x200.png)</string>
+     <string notr="true">background-image:url(/logo_200x200.png)</string>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../qrc_files/test.qrc">:/image1/images/logo_200x200.png</pixmap>
+     <pixmap resource="../qrc_files/test.qrc">:/logo_200x200.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
