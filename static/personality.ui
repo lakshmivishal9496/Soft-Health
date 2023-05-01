@@ -275,7 +275,7 @@ font-weight:200;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image:url(/logo_200x200.png);</string>
+    <string notr="true">background-image:url(logo_200x200.png);</string>
    </property>
    <property name="text">
     <string/>
