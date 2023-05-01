@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>870</width>
+    <height>762</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,19 +18,19 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>600</height>
+     <width>1024</width>
+     <height>768</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(207, 197, 255);
+    <string notr="true">background-color:rgb(235, 226, 244);
 border-radius: 9px;</string>
    </property>
    <widget class="QPushButton" name="b2">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>440</y>
+      <x>337</x>
+      <y>595</y>
       <width>360</width>
       <height>42</height>
      </rect>
@@ -42,7 +42,7 @@ border-radius: 9px;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton#b2{
-background-color:rgb(85, 0, 127);
+background-color:rgb(124, 0, 186);
 color: rgb(255, 255, 255);
 font-size: 19px;
 border-radius : 7px;
@@ -59,25 +59,30 @@ background-color: rgb(117, 71, 255);
    <widget class="QLabel" name="l2_2">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>410</y>
-      <width>121</width>
+      <x>391</x>
+      <y>561</y>
+      <width>261</width>
       <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Sura</family>
       <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">text-align:center;
-font-size:20px;
-color: rgb(85, 0, 255);
-border-radius:2px;</string>
+font-size:24px;
+font-weight:400;
+color:rgb(0, 0, 0) ;
+border-radius:2px;
+font-family:Sura;</string>
     </property>
     <property name="text">
-     <string>New User!!!!</string>
+     <string>Don't have an account?</string>
     </property>
     <property name="textFormat">
      <enum>Qt::PlainText</enum>
@@ -86,15 +91,15 @@ border-radius:2px;</string>
    <widget class="QPushButton" name="b5">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>530</y>
+      <x>337</x>
+      <y>680</y>
       <width>360</width>
       <height>42</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton#b5{
-background-color:rgb(85, 0, 127);
+background-color:rgb(124, 0, 186);
 color: rgb(255, 255, 255);
 font-size: 19px;
 border-radius : 7px;
@@ -111,45 +116,52 @@ background-color: rgb(117, 71, 255);
    <widget class="QLabel" name="l2_3">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>500</y>
+      <x>498</x>
+      <y>646</y>
       <width>41</width>
       <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Sura</family>
       <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">text-align:center;
-font-size:20px;
-color: rgb(85, 0, 255);
-border-radius:2px;</string>
+font-size:24px;
+font-weight:400;
+color: rgb(0, 0, 0);
+border-radius:2px;
+font-family:Sura</string>
     </property>
     <property name="text">
-     <string>OR</string>
+     <string>Or</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>40</y>
-      <width>161</width>
-      <height>51</height>
+      <x>430</x>
+      <y>10</y>
+      <width>191</width>
+      <height>181</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(85, 0, 127);
-border: 3px solid rgb(85, 0, 127);
-font-size : 30px;
-font-weight:300;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(183, 65, 255, 255), stop:1 rgba(255, 255, 255, 255))</string>
+     <string notr="true">background-image:url(:/image1/images/logo_200x200.png)</string>
     </property>
     <property name="text">
-     <string>Soft Health</string>
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../qrc_files/test.qrc">:/image1/images/logo_200x200.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -158,36 +170,39 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>140</y>
-      <width>520</width>
-      <height>251</height>
+      <x>259</x>
+      <y>210</y>
+      <width>500</width>
+      <height>320</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(170, 85, 255,50)</string>
+     <string notr="true">background-color:rgb(192, 192, 192,50)</string>
     </property>
     <property name="title">
      <string/>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
     <widget class="QLineEdit" name="tb1">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>40</y>
+       <x>70</x>
+       <y>60</y>
        <width>360</width>
-       <height>42</height>
+       <height>40</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgba(47,42,52,200);
+      <string notr="true">background-color: rgb(177, 178, 181);
 color:rgb(255,255,255);
 padding-left: 10px;
 border-bottom-color: rgba(46,82,101,255);
 </string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
      <property name="placeholderText">
       <string>Enter the username....</string>
@@ -196,14 +211,14 @@ border-bottom-color: rgba(46,82,101,255);
     <widget class="QLineEdit" name="tb2">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>110</y>
+       <x>70</x>
+       <y>140</y>
        <width>360</width>
-       <height>42</height>
+       <height>40</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgba(47,42,52,200);
+      <string notr="true">background-color: rgb(177, 178, 181);
 color:rgb(255,255,255);
 padding-left: 10px;
 border-bottom-color: rgba(46,82,101,255);
@@ -213,7 +228,7 @@ border-bottom-color: rgba(46,82,101,255);
       <enum>QLineEdit::Password</enum>
      </property>
      <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
      <property name="placeholderText">
       <string>Enter the password.....</string>
@@ -222,10 +237,10 @@ border-bottom-color: rgba(46,82,101,255);
     <widget class="QPushButton" name="b1">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>180</y>
+       <x>70</x>
+       <y>220</y>
        <width>360</width>
-       <height>42</height>
+       <height>40</height>
       </rect>
      </property>
      <property name="font">
@@ -235,7 +250,7 @@ border-bottom-color: rgba(46,82,101,255);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton#b1{
-background-color:rgb(85, 0, 127);
+background-color:rgb(124, 0, 186);
 color: rgb(255, 255, 255);
 font-size: 19px;
 border-radius : 7px;

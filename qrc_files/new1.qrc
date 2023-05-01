@@ -2,4 +2,7 @@
   <qresource prefix="newPrefix">
     <file>../images/user1.jpg</file>
   </qresource>
+  <qresource prefix="newPrefix">
+    <file>../../OneDrive/Desktop/logo_200x200.png</file>
+  </qresource>
 </RCC>

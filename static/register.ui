@@ -26,29 +26,6 @@
     <string notr="true">background-color:rgb(207, 197, 255);
 border-radius: 9px;</string>
    </property>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>40</y>
-      <width>161</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(85, 0, 127);
-border: 3px solid rgb(85, 0, 127);
-font-size : 30px;
-font-weight:300;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(183, 65, 255, 255), stop:1 rgba(255, 255, 255, 255))</string>
-    </property>
-    <property name="text">
-     <string>Sign Up</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
@@ -242,10 +219,25 @@ border-radius:2px;</string>
      <string>Already have an account?</string>
     </property>
    </widget>
-   <zorder>groupBox</zorder>
-   <zorder>label</zorder>
-   <zorder>b4</zorder>
-   <zorder>l8</zorder>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>-20</y>
+      <width>191</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image:url(images/logo_200x200.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>
