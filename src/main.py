@@ -140,6 +140,16 @@ class HomeApp(QDialog):
     def show_back(self):
         widget.setCurrentIndex(0)
 
+class PersonalityApp(QDialog):
+    def __init__(self):
+        super(PersonalityApp, self).__init__()
+        # pass super class LoginApp to parent class
+        loadUi(r"static\personality.ui", self)
+        self.logout.clicked.connect(self.show_back)
+
+    def show_back(self):
+        widget.setCurrentIndex(0)
+
 class mainMenuApp(QDialog):
     def __init__(self):
         super(mainMenuApp, self).__init__()
@@ -147,6 +157,10 @@ class mainMenuApp(QDialog):
         loadUi(r"static\mainmenu.ui", self)
         self.b9.clicked.connect(self.menu)
         self.b5_2.clicked.connect(self.show_back)
+        self.b5.clicked.connect(self.show_personality)
+
+    def show_personality(self):
+        widget.setCurrentIndex(5)
 
     def show_back(self):
         widget.setCurrentIndex(0)
@@ -177,11 +191,13 @@ registrationform = RegApp()
 Homeform = HomeApp()
 guestform = GuestApp()
 mainMenuform = mainMenuApp()
+personalityform = PersonalityApp()
 widget.addWidget(loginform)
 widget.addWidget(registrationform)
 widget.addWidget(Homeform)
 widget.addWidget(guestform)
 widget.addWidget(mainMenuform)
+widget.addWidget(personalityform)
 widget.setCurrentIndex(0)
 widget.setFixedWidth(1024)
 widget.setFixedHeight(768)

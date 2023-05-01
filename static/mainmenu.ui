@@ -14,39 +14,16 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(207, 197, 255);
+   <string notr="true">background-color:rgb(235, 226, 244);
 border-radius: 9px;</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>130</y>
-     <width>261</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(85, 0, 127);
-border: 3px solid rgb(85, 0, 127);
-font-size : 30px;
-font-weight:300;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(183, 65, 255, 255), stop:1 rgba(255, 255, 255, 255))</string>
-   </property>
-   <property name="text">
-    <string>Soft Health</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
   <widget class="QPushButton" name="b5">
    <property name="geometry">
     <rect>
      <x>337</x>
      <y>538</y>
-     <width>350</width>
-     <height>40</height>
+     <width>320</width>
+     <height>35</height>
     </rect>
    </property>
    <property name="font">
@@ -56,8 +33,9 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton#b5{
-background-color:rgb(85, 0, 127);
-color: rgb(255, 255, 255);
+background-color:rgb(192, 192, 192);
+
+color: rgb(100, 79, 130);
 font-size: 19px;
 border-radius : 7px;
 
@@ -75,8 +53,8 @@ background-color: rgb(117, 71, 255);
     <rect>
      <x>337</x>
      <y>618</y>
-     <width>350</width>
-     <height>40</height>
+     <width>320</width>
+     <height>35</height>
     </rect>
    </property>
    <property name="font">
@@ -86,10 +64,12 @@ background-color: rgb(117, 71, 255);
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton#b9{
-background-color:rgb(85, 0, 127);
-color: rgb(255, 255, 255);
+background-color:rgb(192, 192, 192);
+
+color: rgb(100, 79, 130);
 font-size: 19px;
 border-radius : 7px;
+
 
 }
 QPushButton#b9: pressed {
@@ -117,7 +97,9 @@ background-color: rgb(117, 71, 255);
    <property name="styleSheet">
     <string notr="true">QPushButton#b5_2{
 background-color:rgb(192, 192, 192,200);
-color:rgb(124, 0, 186);
+
+color: rgb(100, 79, 130);
+
 font-size: 18px;
 border-radius : 7px;
 
@@ -144,13 +126,35 @@ background-color: rgb(117, 71, 255);
     <string notr="true">background-color:rgb(192, 192, 192,0);
 font-size: 24px;
 font-family:Sura;
-color:rgb(124, 0, 186);</string>
+
+color: rgb(100, 79, 130);
+
+font-weight:400;</string>
    </property>
    <property name="text">
     <string>Soft health is a mental app that makes it easier for people to take care of their mental health. It helps users manage their stress and feelings in a way that works best for them. The app gives personalized advice according to personality types. This way, users can feel supported and take control of their mental health.</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>70</y>
+     <width>191</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image:url(/logo_200x200.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>
