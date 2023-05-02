@@ -1,6 +1,7 @@
 import sys
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
+import typing
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QWidget
 from PyQt5.uic import loadUi
 import sqlite3
 import re
@@ -245,6 +246,13 @@ class PersonalityApp(QDialog):
 #     def goback(self):
 #         widget.setCurrentIndex(0)
 
+class QuotesApp(QDialog):
+    def __init__(self):
+        super(QuotesApp, self).__init__()
+        # pass super class LoginApp to parent class
+        loadUi(r"static\quotes.ui", self)
+
+
 class mainMenuApp(QDialog):
     def __init__(self):
         super(mainMenuApp, self).__init__()
@@ -269,6 +277,14 @@ class GuestApp(QDialog):
         super(GuestApp, self).__init__()
         # pass super class GuestApp to parent class
         loadUi(r"static\guest.ui", self)
+        self.quotes_btn.clicked.connect(self.show_quotes)
+        self.signupmore_btn.clicked.connect(self.show_sign_up)
+
+    def show_quotes(self):
+        widget.setCurrentIndex(6)
+
+    def show_sign_up(self):
+        widget.setCurrentIndex(1)
 
 
 class Verify:
@@ -288,6 +304,7 @@ Homeform = HomeApp()
 guestform = GuestApp()
 mainMenuform = mainMenuApp()
 personalityform = PersonalityApp()
+quotes = QuotesApp()
 # recommendationform = RecommendationApp()
 widget.addWidget(loginform)
 widget.addWidget(registrationform)
@@ -295,6 +312,7 @@ widget.addWidget(Homeform)
 widget.addWidget(guestform)
 widget.addWidget(mainMenuform)
 widget.addWidget(personalityform)
+widget.addWidget(quotes)
 # widget.addWidget(recommendationform)
 widget.setCurrentIndex(0)
 widget.setFixedWidth(1024)
