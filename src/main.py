@@ -177,9 +177,12 @@ class PersonalityApp(QDialog):
             self.current_question += 1
 
             if self.current_question < len(self.questions):
-                self.display_question()
-                self.radioButton1.setChecked(False)
-                self.radioButton2.setChecked(False)
+                if self.current_question == 0:
+                    self.next_btn.setDisabled(True)
+                else:
+                    self.display_question()
+                    self.radioButton1.setChecked(False)
+                    self.radioButton2.setChecked(False)
             else:
                 self.show_result()
         else:
@@ -205,14 +208,11 @@ class PersonalityApp(QDialog):
             # Display the result or perform any other actions based on the result
             # QMessageBox.setGeometry(self, 100, 100, 400, 200)
             if self.result in personality.personality_recommendation:
-            
-                
                 QMessageBox.information(self, "Personality Result", f"Your personality result is: {self.result} - {personality.personality_list[self.result]} \n Recommendation for you:\
                     {personality.personality_recommendation[self.result]}")
         self.show_main_menu()
             #self.show_recommendation()
-            # return self.result
-            
+            # return self.result      
 
     def show_back(self):
         widget.setCurrentIndex(0)
