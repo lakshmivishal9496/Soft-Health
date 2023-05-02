@@ -156,7 +156,3 @@ personality_recommendation = {
 
 
 
-<<<<<<< HEAD
-}
-=======
->>>>>>> 177cac87c09f5c0bbf78429f9aacb7285bee5941

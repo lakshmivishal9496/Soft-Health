@@ -196,23 +196,38 @@ class PersonalityApp(QDialog):
             QMessageBox.warning(self, "Error",
                                 "Please answer all the questions.")
             return
-
-        result = self.selected_answers[0] +\
+        else:
+            result = self.selected_answers[0] +\
             self.selected_answers[1] + self.selected_answers[2] +\
             self.selected_answers[3]  # Call the appropriate function
-        # to calculate the personality result
-        # Display the result or perform any other actions based on the result
-        # QMessageBox.setGeometry(self, 100, 100, 400, 200)
-        QMessageBox.information(self, "Personality Result", f"Your personality\
-                                 result is: {result}")
-        self.show_back()
+            # to calculate the personality result
+            # Display the result or perform any other actions based on the result
+            # QMessageBox.setGeometry(self, 100, 100, 400, 200)
+            # QMessageBox.information(self, "Personality Result", f"Your personality\
+            #                         result is: {result}")
+            #self.show_back()
+            self.show_recommendation()
+            
 
     def show_back(self):
         widget.setCurrentIndex(0)
+    def show_recommendation(self):
+        widget.setCurrentIndex(6)
 
     def show_main_menu(self):
         widget.setCurrentIndex(4)
+    
 
+
+class RecommendationApp(QDialog):
+    def __init__(self):
+        super(RecommendationApp, self).__init__()
+        # pass super class Recommendation to parent class
+        loadUi(r"static\recommendation.ui", self)
+        self.logout.clicked.connect(self.goback)
+
+    def goback(self):
+        widget.setCurrentIndex(0)
 
 class mainMenuApp(QDialog):
     def __init__(self):
@@ -236,7 +251,7 @@ class mainMenuApp(QDialog):
 class GuestApp(QDialog):
     def __init__(self):
         super(GuestApp, self).__init__()
-        # pass super class LoginApp to parent class
+        # pass super class GuestApp to parent class
         loadUi(r"static\guest.ui", self)
 
 
@@ -257,12 +272,14 @@ Homeform = HomeApp()
 guestform = GuestApp()
 mainMenuform = mainMenuApp()
 personalityform = PersonalityApp()
+recommendationform = RecommendationApp()
 widget.addWidget(loginform)
 widget.addWidget(registrationform)
 widget.addWidget(Homeform)
 widget.addWidget(guestform)
 widget.addWidget(mainMenuform)
 widget.addWidget(personalityform)
+widget.addWidget(recommendationform)
 widget.setCurrentIndex(0)
 widget.setFixedWidth(1024)
 widget.setFixedHeight(768)
