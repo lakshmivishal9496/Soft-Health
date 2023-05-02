@@ -1,10 +1,10 @@
 import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
-from PyQt5.uic import loadUi, loadUiType
+from PyQt5.uic import loadUi
 import sqlite3
 import re
-import personality 
+import personality
 
 
 class LoginApp(QDialog):
@@ -19,30 +19,31 @@ class LoginApp(QDialog):
         self.b5.clicked.connect(self.guest_login)
 
     def login(self):
-        print("Login")
         un = self.tb1.text()
         pw = self.tb2.text()
-        print(un)
-        print(pw)        
-        # connect to the database and check if the username and password are valid
+        # connect to the database and
+        # check if the username and password are valid
         db = sqlite3.connect('softhealth.db')
         cursor = db.cursor()
-        cursor.execute('SELECT * FROM login WHERE username = ? AND password = ?', (un, pw))
+        cursor.execute('SELECT * FROM login \
+                       WHERE username = ? AND password = ?', (un, pw))
         user = cursor.fetchone()
-        print(user)
         # check if username and password are provided
         if not un or not pw:
-            QMessageBox.warning(self, "Login Error", "Username and password are required")
+            QMessageBox.warning(self, "Login Error",
+                                "Username and password are required")
             return
 
         # display an error message if the username and password are not valid
         if user is None:
-            QMessageBox.warning(self, "Login Error", "Invalid username or password")
+            QMessageBox.warning(self, "Login Error",
+                                "Invalid username or password")
             return
-        
-        # display a message box asking the user if they want to take a personality assessment
+
+        # display a message box asking the user
+        #  if they want to take a personality assessment
         widget.setCurrentIndex(4)
-        
+
         db.close()
         self.tb1.setText("")
         self.tb2.setText("")
@@ -59,7 +60,7 @@ class RegApp(QDialog):
         super(RegApp, self).__init__()
         # pass super class LoginApp to parent class
         loadUi(r"static\register.ui", self)
-        
+
         self.b3.clicked.connect(self.reg)
         self.b4.clicked.connect(self.show_login)
 
@@ -85,15 +86,17 @@ class RegApp(QDialog):
                            password TEXT,
                            email TEXT)
                        ''')
-   
+
         error_message = self.verify_password(pw)
         if not un or not pw or not em:
-            QMessageBox.warning(self, "Registration Error", "Please fill in all the fields")
+            QMessageBox.warning(self, "Registration Error",
+                                "Please fill in all the fields")
         else:
             if error_message:
                 QMessageBox.warning(self, "Registration Error", error_message)
             elif pw != repw:
-                QMessageBox.warning(self, "Registration Error", "Passwords do not match.")
+                QMessageBox.warning(self, "Registration Error",
+                                    "Passwords do not match.")
             else:
                 cursor.execute('''
                     INSERT INTO login (username, password, email)
@@ -101,7 +104,9 @@ class RegApp(QDialog):
                     ''', (un, pw, em))
                 db.commit()
                 db.close()
-                QMessageBox.information(self, "Login Output", "User registered successfully login now>>")
+                QMessageBox.information(self, "Login Output",
+                                        "User registered successfully.\
+                                        Please login to continue.")
             QApplication.processEvents()
             self.tb3.setText("")
             self.tb4.setText("")
@@ -135,34 +140,14 @@ class HomeApp(QDialog):
 
 #     def show_back(self):
 #         widget.setCurrentIndex(0)
+
+
 class PersonalityApp(QDialog):
     def __init__(self):
         super(PersonalityApp, self).__init__()
         loadUi(r"static\personality.ui", self)
         self.logout.clicked.connect(self.show_back)
-        self.questions = [
-            {
-                'question': 'You feel more energetic when:',
-                'options': ['Socializing with others', 'Spending time alone'],
-                'traits': ['E', 'I']
-            },
-            {
-                'question': 'You focus more on:',
-                'options': ['Facts and details', 'Big picture and possibilities'],
-                'traits': ['S', 'N']
-            },
-            {
-                'question': 'You usually make decisions based on:',
-                'options': ['Logical analysis', 'Personal values and emotions'],
-                'traits': ['T', 'F']
-            },
-            {
-                'question': 'You prefer:',
-                'options': ['A structured and organized lifestyle', 'A spontaneous and flexible lifestyle'],
-                'traits': ['J', 'P']
-            }
-            # Add more questions here...
-        ]
+        self.questions = personality.questions
         self.current_question = 0
         self.selected_answers = []
 
@@ -185,7 +170,7 @@ class PersonalityApp(QDialog):
             selected_answer = self.questions[self.current_question]['traits'][0]
         elif self.radioButton2.isChecked():
             selected_answer = self.questions[self.current_question]['traits'][1]
-        
+
         if selected_answer:
             self.selected_answers.append(selected_answer)
             self.current_question += 1
@@ -208,17 +193,23 @@ class PersonalityApp(QDialog):
 
     def show_result(self):
         if len(self.selected_answers) < len(self.questions):
-            QMessageBox.warning(self, "Error", "Please answer all the questions.")
+            QMessageBox.warning(self, "Error",
+                                "Please answer all the questions.")
             return
 
-        result = self.selected_answers[0] + self.selected_answers[1] + self.selected_answers[2] + self.selected_answers[3] # Call the appropriate function to calculate the personality result
+        result = self.selected_answers[0] +\
+            self.selected_answers[1] + self.selected_answers[2] +\
+            self.selected_answers[3]  # Call the appropriate function
+        # to calculate the personality result
         # Display the result or perform any other actions based on the result
         # QMessageBox.setGeometry(self, 100, 100, 400, 200)
-        QMessageBox.information(self, "Personality Result", f"Your personality result is: {result}")
+        QMessageBox.information(self, "Personality Result", f"Your personality\
+                                 result is: {result}")
         self.show_back()
 
     def show_back(self):
         widget.setCurrentIndex(0)
+
     def show_main_menu(self):
         widget.setCurrentIndex(4)
 
@@ -237,9 +228,10 @@ class mainMenuApp(QDialog):
 
     def show_back(self):
         widget.setCurrentIndex(0)
-    
+
     def menu(self):
         widget.setCurrentIndex(2)
+
 
 class GuestApp(QDialog):
     def __init__(self):
@@ -247,13 +239,13 @@ class GuestApp(QDialog):
         # pass super class LoginApp to parent class
         loadUi(r"static\guest.ui", self)
 
+
 class Verify:
     def __init__(self, password):
         self.password = password
 
     def compare(self, other_password):
         return self.password == other_password
-
 
 
 app = QApplication(sys.argv)

@@ -1,3 +1,29 @@
+questions = [
+    {
+        'question': 'You feel more energetic when:',
+        'options': ['Socializing with others', 'Spending time alone'],
+        'traits': ['E', 'I']
+    },
+    {
+        'question': 'You focus more on:',
+        'options': ['Facts and details', 'Big picture and possibilities'],
+        'traits': ['S', 'N']
+    },
+    {
+        'question': 'You usually make decisions based on:',
+        'options': ['Logical analysis', 'Personal values and emotions'],
+        'traits': ['T', 'F']
+    },
+    {
+        'question': 'You prefer:',
+        'options': ['A structured and organized lifestyle',
+                    'A spontaneous and flexible lifestyle'],
+        'traits': ['J', 'P']
+    }
+
+]
+
+
 personality_list = {
     "ISTJ": "Introverted, Sensing, Thinking, Judging",
     "ISFJ": "Introverted, Sensing, Feeling, Judging",
