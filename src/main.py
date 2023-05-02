@@ -150,7 +150,7 @@ class PersonalityApp(QDialog):
         self.questions = personality.questions
         self.current_question = 0
         self.selected_answers = []
-
+        self.result = ''
         self.display_question()
 
         self.next_btn.clicked.connect(self.next_question)
@@ -197,37 +197,53 @@ class PersonalityApp(QDialog):
                                 "Please answer all the questions.")
             return
         else:
-            result = self.selected_answers[0] +\
+            self.result = self.selected_answers[0] +\
             self.selected_answers[1] + self.selected_answers[2] +\
             self.selected_answers[3]  # Call the appropriate function
             # to calculate the personality result
             # Display the result or perform any other actions based on the result
             # QMessageBox.setGeometry(self, 100, 100, 400, 200)
-            # QMessageBox.information(self, "Personality Result", f"Your personality\
-            #                         result is: {result}")
-            #self.show_back()
-            self.show_recommendation()
+            if self.result in personality.personality_recommendation:
+            
+                
+                QMessageBox.information(self, "Personality Result", f"Your personality result is: {self.result} - {personality.personality_list[self.result]} \n Recommendation for you:\
+                    {personality.personality_recommendation[self.result]}")
+        self.show_main_menu()
+            #self.show_recommendation()
+            # return self.result
             
 
     def show_back(self):
         widget.setCurrentIndex(0)
-    def show_recommendation(self):
-        widget.setCurrentIndex(6)
+    # def show_recommendation(self):
+    #     widget.setCurrentIndex(6)
+        # recom = RecommendationApp()
+        # recom.display_recommendation(self.result)
 
     def show_main_menu(self):
         widget.setCurrentIndex(4)
     
 
 
-class RecommendationApp(QDialog):
-    def __init__(self):
-        super(RecommendationApp, self).__init__()
-        # pass super class Recommendation to parent class
-        loadUi(r"static\recommendation.ui", self)
-        self.logout.clicked.connect(self.goback)
+# class RecommendationApp(QDialog):
+#     def __init__(self):
+#         super(RecommendationApp, self).__init__()
+#         # pass super class Recommendation to parent class
+#         loadUi(r"static\recommendation.ui", self)
+#         self.logout.clicked.connect(self.goback)
+#         # self.b1.clicked.connect(self.display_recommendation)
+#         personality_type = PersonalityApp()
+#         # p_type = personality_type.show_result()
+#     def display_recommendation(self, personality_result):
+#         # Assuming `personality_result` is the variable storing the personality type
+#         recommendation = personality.personality_recommendation.get(personality_result)
+#         if recommendation:
+#             self.recom_area.setText(recommendation)
+#         else:
+#             self.recom_area.setText("No recommendation found for this personality type.")
 
-    def goback(self):
-        widget.setCurrentIndex(0)
+#     def goback(self):
+#         widget.setCurrentIndex(0)
 
 class mainMenuApp(QDialog):
     def __init__(self):
@@ -272,14 +288,14 @@ Homeform = HomeApp()
 guestform = GuestApp()
 mainMenuform = mainMenuApp()
 personalityform = PersonalityApp()
-recommendationform = RecommendationApp()
+# recommendationform = RecommendationApp()
 widget.addWidget(loginform)
 widget.addWidget(registrationform)
 widget.addWidget(Homeform)
 widget.addWidget(guestform)
 widget.addWidget(mainMenuform)
 widget.addWidget(personalityform)
-widget.addWidget(recommendationform)
+# widget.addWidget(recommendationform)
 widget.setCurrentIndex(0)
 widget.setFixedWidth(1024)
 widget.setFixedHeight(768)
