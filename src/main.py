@@ -125,6 +125,10 @@ class HomeApp(QDialog):
         loadUi(r"static\home.ui", self)
         self.b5_2.clicked.connect(self.show_back)
         self.b5.clicked.connect(self.p_test)
+        self.b8.clicked.connect(self.show_quotes)
+
+    def show_quotes(self):
+        widget.setCurrentIndex(6)
 
     def show_back(self):
         widget.setCurrentIndex(0)
@@ -251,6 +255,13 @@ class QuotesApp(QDialog):
         super(QuotesApp, self).__init__()
         # pass super class LoginApp to parent class
         loadUi(r"static\quotes.ui", self)
+        self.main_btn.clicked.connect(self.show_main_menu)
+        self.logout.clicked.connect(self.show_logout)
+    def show_main_menu(self):
+        widget.setCurrentIndex(4)
+
+    def show_logout(self):
+        widget.setCurrentIndex(0)
 
 
 class mainMenuApp(QDialog):
