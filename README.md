@@ -29,22 +29,25 @@ Technologies
 
 Our app is built using:
 Python (Object-Oriented Programming)
+
 PyQt5 for GUI
+
 SQLite for database management
 
 Installation
 
 Clone the repository:
-bash
-Copy code
 git clone https://github.com/lakshmivishal9496/Soft-Health
+
 Create a virtual environment:
 Make venv
+
 Activate the environment:
 . .venv/Scripts/activate
 
 Install the required dependencies:
 make install
+
 Run the application:
 make run
 
