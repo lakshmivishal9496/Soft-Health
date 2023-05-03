@@ -5,7 +5,7 @@ SoftHealth App
 SoftHealth is a user-friendly application designed to help individuals better understand and manage their mental health. 
 Softhealth makes it easier for people to take care of their mental health. It helps users manage their stress and feelings in a way that works best for them. The app gives personalized advice according to personality types. This way, users can feel supported and take control of their mental health.
 
-Features
+<b>Features</b>
 
 🔐 Login System
 
@@ -25,7 +25,7 @@ Get daily inspiring quotes to boost your mood and motivate you to take positive 
 
 
 
-Technologies
+<b>Technologies</b>
 
 Our app is built using:
 Python (Object-Oriented Programming)
@@ -34,22 +34,22 @@ PyQt5 for GUI
 
 SQLite for database management
 
-Installation
+<b>Installation</b>
 
-Clone the repository:
+<b>Clone the repository:</b>
 git clone https://github.com/lakshmivishal9496/Soft-Health
 
-Create a virtual environment:
+<b>Create a virtual environment:</b>
 Make venv
 
-Activate the environment:
+<b>Activate the environment:</b>
 . .venv/Scripts/activate
 
-Install the required dependencies:
+<b>Install the required dependencies:</b>
 make install
 
-Run the application:
+<b>Run the application:</b>
 make run
 
-License:
+<b>License:</b>
 This project is licensed under the MIT License. See the LICENSE file for more information.
