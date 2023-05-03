@@ -36,7 +36,7 @@ border-radius: 9px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(192, 192, 192, 50);</string>
+     <string notr="true">background-color:rgba(192, 192, 192, 50);</string>
     </property>
     <property name="title">
      <string/>
@@ -52,7 +52,7 @@ border-radius: 9px;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
+       <pointsize>1</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -218,7 +218,7 @@ border-radius:2px;</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>-1</pointsize>
+      <pointsize>1</pointsize>
      </font>
     </property>
     <property name="styleSheet">

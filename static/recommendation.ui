@@ -47,12 +47,12 @@ border-radius: 9px;</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>-1</pointsize>
+     <pointsize>1</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton#logout{
-background-color:rgb(192, 192, 192,200);
+background-color:rgba(192, 192, 192,200);
 
 color: rgb(100, 79, 130);
 
@@ -96,13 +96,13 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>-1</pointsize>
+      <pointsize>1</pointsize>
       <weight>62</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(192, 192, 192,0);
+     <string notr="true">background-color:rgba(192, 192, 192,0);
 
 color: rgb(100, 79, 130);
 font-size: 26px;
@@ -132,13 +132,13 @@ font-weight:500;</string>
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>-1</pointsize>
+      <pointsize>1</pointsize>
       <weight>25</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(192, 192, 192,0);
+     <string notr="true">background-color:rgba(192, 192, 192,0);
 
 color: rgb(100, 79, 130);
 font-size: 20px;
@@ -166,7 +166,7 @@ font-weight:200;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(192, 192, 192,0);
+     <string notr="true">background-color:rgba(192, 192, 192,0);
 
 color: rgb(100, 79, 130);
 font-size: 16px;
@@ -190,13 +190,13 @@ font-weight:600;</string>
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>-1</pointsize>
+      <pointsize>1</pointsize>
       <weight>25</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(192, 192, 192,0);
+     <string notr="true">background-color:rgba(192, 192, 192,0);
 
 color: rgb(100, 79, 130);
 font-size: 20px;
@@ -226,13 +226,13 @@ font-weight:200;</string>
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>-1</pointsize>
+      <pointsize>1</pointsize>
       <weight>25</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(192, 192, 192,0);
+     <string notr="true">background-color:rgba(192, 192, 192,0);
 
 color: rgb(100, 79, 130);
 font-size: 20px;
@@ -260,7 +260,7 @@ font-weight:200;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(192, 192, 192,0);
+     <string notr="true">background-color:rgba(192, 192, 192,0);
 font-size: 15px;
 font-family:Sura;
 font-weight:300;
