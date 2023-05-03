@@ -33,14 +33,14 @@ personality_list = {
     "ISFP": "Introverted, Sensing, Feeling, Perceiving",
     "INFP": "Introverted, Intuitive, Feeling, Perceiving",
     "INTP": "Introverted, Intuitive, Thinking, Perceiving",
-    "ESTP": "Extraverted, Sensing, Thinking, Perceiving",
-    "ESFP": "Extraverted, Sensing, Feeling, Perceiving",
-    "ENFP": "Extraverted, Intuitive, Feeling, Perceiving",
-    "ENTP": "Extraverted, Intuitive, Thinking, Perceiving",
-    "ESTJ": "Extraverted, Sensing, Thinking, Judging",
-    "ESFJ": "Extraverted, Sensing, Feeling, Judging",
-    "ENFJ": "Extraverted, Intuitive, Feeling, Judging",
-    "ENTJ": "Extraverted, Intuitive, Thinking, Judging"
+    "ESTP": "Extroverted, Sensing, Thinking, Perceiving",
+    "ESFP": "Extroverted, Sensing, Feeling, Perceiving",
+    "ENFP": "Extroverted, Intuitive, Feeling, Perceiving",
+    "ENTP": "Extroverted, Intuitive, Thinking, Perceiving",
+    "ESTJ": "Extroverted, Sensing, Thinking, Judging",
+    "ESFJ": "Extroverted, Sensing, Feeling, Judging",
+    "ENFJ": "Extroverted, Intuitive, Feeling, Judging",
+    "ENTJ": "Extroverted, Intuitive, Thinking, Judging"
 }
 
 
