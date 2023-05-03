@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QWidget
 from PyQt5.uic import loadUi
 import sqlite3
 import re
-import personality
+import personality_quiz
 
 
 class LoginApp(QDialog):
@@ -152,7 +152,7 @@ class PersonalityApp(QDialog):
         super(PersonalityApp, self).__init__()
         loadUi(r"static\personality.ui", self)
         self.logout.clicked.connect(self.show_back)
-        self.questions = personality.questions
+        self.questions = personality_quiz.questions
         self.current_question = 0
         self.selected_answers = []
         self.result = ''
@@ -211,9 +211,9 @@ class PersonalityApp(QDialog):
             # to calculate the personality result
             # Display the result or perform any other actions based on the result
             # QMessageBox.setGeometry(self, 100, 100, 400, 200)
-            if self.result in personality.personality_recommendation:
-                QMessageBox.information(self, "Personality Result", f"Your personality result is: {self.result} - {personality.personality_list[self.result]} \n Recommendation for you:\
-                    {personality.personality_recommendation[self.result]}")
+            if self.result in personality_quiz.personality_recommendation:
+                QMessageBox.information(self, "Personality Result", f"Your personality result is: {self.result} - {personality_quiz.personality_list[self.result]} \n Recommendation for you:\
+                    {personality_quiz.personality_recommendation[self.result]}")
         self.show_main_menu()
             #self.show_recommendation()
             # return self.result      
