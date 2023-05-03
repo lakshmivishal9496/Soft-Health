@@ -1,4 +1,7 @@
-personality_list = {
+
+class Personality:
+
+    personality_list = {
     "ISTJ": "Introverted, Sensing, Thinking, Judging",
     "ISFJ": "Introverted, Sensing, Feeling, Judging",
     "INFJ": "Introverted, Intuitive, Feeling, Judging",
@@ -7,19 +10,19 @@ personality_list = {
     "ISFP": "Introverted, Sensing, Feeling, Perceiving",
     "INFP": "Introverted, Intuitive, Feeling, Perceiving",
     "INTP": "Introverted, Intuitive, Thinking, Perceiving",
-    "ESTP": "Extraverted, Sensing, Thinking, Perceiving",
-    "ESFP": "Extraverted, Sensing, Feeling, Perceiving",
-    "ENFP": "Extraverted, Intuitive, Feeling, Perceiving",
-    "ENTP": "Extraverted, Intuitive, Thinking, Perceiving",
-    "ESTJ": "Extraverted, Sensing, Thinking, Judging",
-    "ESFJ": "Extraverted, Sensing, Feeling, Judging",
-    "ENFJ": "Extraverted, Intuitive, Feeling, Judging",
-    "ENTJ": "Extraverted, Intuitive, Thinking, Judging"
-}
+    "ESTP": "Extroverted, Sensing, Thinking, Perceiving",
+    "ESFP": "Extroverted, Sensing, Feeling, Perceiving",
+    "ENFP": "Extroverted, Intuitive, Feeling, Perceiving",
+    "ENTP": "Extroverted, Intuitive, Thinking, Perceiving",
+    "ESTJ": "Extroverted, Sensing, Thinking, Judging",
+    "ESFJ": "Extroverted, Sensing, Feeling, Judging",
+    "ENFJ": "Extroverted, Intuitive, Feeling, Judging",
+    "ENTJ": "Extroverted, Intuitive, Thinking, Judging"
+    }
 
 
-personality_recommendation = {
- "ISTJ": "Practice adaptability,\
+    personality_recommendation = {
+    "ISTJ": "Practice adaptability,\
     embrace change, and explore creative problem-solving. \
     Make time for leisure and social activities\
     to balance work and personal life.\
@@ -27,7 +30,7 @@ personality_recommendation = {
     Revised NEO Personality Inventory (NEO-PI-R) and\
     NEO Five-Factor Inventory (NEO-FFI) manual.\
     Psychological Assessment Resources.)",
-    
+
     "ISFJ": "Develop assertiveness, set boundaries, and\
     engage in self-care practices.\
     Explore new experiences and ideas to expand perspectives.\
@@ -36,7 +39,7 @@ personality_recommendation = {
     generalized self-efficacy, locus of control, and emotional stability\
     --with job satisfaction and job performance: A meta-analysis.\
     Journal of Applied Psychology, 86(1), 80-92.)",
-    
+
     "ISFJ": "Develop assertiveness, set boundaries, and engage \
         in self-care practices. Explore new experiences and ideas \
         to expand perspectives. (source: Judge, T. A., & Bono, J. E. (2001).\
@@ -124,7 +127,7 @@ personality_recommendation = {
         and engage in team-building activities. Balance work and\
         personal life with leisure activities and self-care. \
         (source: Goleman, D. (1995). Emotional intelligence. Bantam Books.)"
-}
+    }
 
 
 
