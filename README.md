@@ -8,7 +8,7 @@ Soft health is a mental app that makes it easier for people to take care of thei
 Features
 
 🔐 Login System
-Securely register and log in to your account to access personalized recommendations and track your progress.
+Securely register and log in to your account to access personalized recommendations.
 
 🧠 Personality Test
 Take a comprehensive personality test based on the Myers-Briggs Type Indicator (MBTI) to gain insights into your personality traits and how they may impact your mental health.
