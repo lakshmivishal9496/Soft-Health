@@ -202,6 +202,7 @@ class PersonalityApp(QDialog):
     def previous_question(self):
         if self.current_question > 0:
             self.current_question -= 1
+            self.selected_answers.pop()
             self.display_question()
             self.radioButton1.setChecked(False)
             self.radioButton2.setChecked(False)
