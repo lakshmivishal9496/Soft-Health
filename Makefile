@@ -43,6 +43,9 @@ installed:
 run:
 	$(PYTHON) src/main.py
 
+pytest:
+	@pytest tests/Flogintest.py tests/testp.py
+
 design:
 	@-PyQt5-tools.exe designer
 
@@ -86,7 +89,7 @@ black:
 #
 unittest:
 	@$(call MESSAGE,$@)
-	 $(PYTHON) -m unittest discover tests
+	 $(PYTHON) -m unittest tests/test_login.py tests/test_reg.py
 
 coverage:
 	@$(call MESSAGE,$@)
