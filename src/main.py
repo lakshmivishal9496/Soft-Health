@@ -66,8 +66,8 @@ class RegApp(QDialog):
         self.b4.clicked.connect(self.show_login)
 
     def verify_password(self, password):
-        if len(password) < 8 and re.search('[0-9]', password) is None and re.search('[A-Z]', password) is None:
-            return "Password must contain: \n " + "*minimum 8 characters,\n " +  "*a number \n " + "*a uppercase letter"
+        if len(password) < 8 and re.search('[0-9]', password) is None and re.search('[A-Z]', password) is None and re.search('[a-z]', password) is None and re.search('[@#&]', password) is None:
+            return "Password must contain: \n " + "*minimum 8 characters,\n " +  "*a number \n " + "*a uppercase letter"+ "*a lowercase letter"
         else:
             return None
 
@@ -161,8 +161,15 @@ class PersonalityApp(QDialog):
         self.next_btn.clicked.connect(self.next_question)
         self.back_btn.clicked.connect(self.previous_question)
         self.main_btn.clicked.connect(self.show_main_menu)
+    
+    def reset(self):
+        self.current_question = 0
+        self.selected_answers = []
+        self.result = ''
+        self.display_question()
 
     def display_question(self):
+
         question = self.questions[self.current_question]
         self.Question_No.setText(f"Question {self.current_question + 1}")
         self.Question_area.setText(question['question'])
@@ -201,20 +208,33 @@ class PersonalityApp(QDialog):
 
     def show_result(self):
         if len(self.selected_answers) < len(self.questions):
-            QMessageBox.warning(self, "Error",
-                                "Please answer all the questions.")
+            QMessageBox.warning(self, "Error", "Please answer all the questions.")
             return
         else:
-            self.result = self.selected_answers[0] +\
-            self.selected_answers[1] + self.selected_answers[2] +\
-            self.selected_answers[3]  # Call the appropriate function
-            # to calculate the personality result
-            # Display the result or perform any other actions based on the result
-            # QMessageBox.setGeometry(self, 100, 100, 400, 200)
-            if self.result in personality_quiz.personality_recommendation:
-                QMessageBox.information(self, "Personality Result", f"Your personality result is: {self.result} - {personality_quiz.personality_list[self.result]} \n Recommendation for you:\
-                    {personality_quiz.personality_recommendation[self.result]}")
+            self.result = self.selected_answers[0] + self.selected_answers[1] + self.selected_answers[2] + self.selected_answers[3]
+            personality_result = personality_quiz.personality_list.get(self.result)
+            recommendation = personality_quiz.personality_recommendation.get(self.result)
+
+            message_box = QMessageBox()
+            message_box.setWindowTitle("Personality Result")
+
+            # Set the text format to display HTML
+            message_box.setTextFormat(QtCore.Qt.RichText)
+
+            # Construct the message using HTML formatting
+            message = f"<p><b>Your personality result is:</b> {self.result} - {personality_result}</p>"
+            message += f"<p><b>Recommendation for you:</b></p>"
+            message += f"<p>{recommendation}</p>"
+
+            message_box.setText(message)
+
+            # Add a custom Ok button and apply stylesheet
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(131, 53, 151); color: white; font-weight: bold; padding: 5px 10px;")
+
+            message_box.exec_()
         self.show_main_menu()
+        self.current_question = 0
             #self.show_recommendation()
             # return self.result      
 
@@ -226,7 +246,9 @@ class PersonalityApp(QDialog):
         # recom.display_recommendation(self.result)
 
     def show_main_menu(self):
+        self.reset()
         widget.setCurrentIndex(4)
+
     
 
 
@@ -274,6 +296,7 @@ class mainMenuApp(QDialog):
         self.b5.clicked.connect(self.show_personality)
 
     def show_personality(self):
+        personalityform.current_question = 0
         widget.setCurrentIndex(5)
 
     def show_back(self):

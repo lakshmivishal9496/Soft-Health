@@ -28,7 +28,7 @@ border-radius: 9px;</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>1</pointsize>
+     <pointsize>-1</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -77,7 +77,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -109,7 +109,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -141,7 +141,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -165,7 +165,7 @@ background-color: rgb(117, 71, 255);
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>30</y>
+      <y>20</y>
       <width>201</width>
       <height>51</height>
      </rect>
@@ -173,7 +173,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
       <weight>25</weight>
       <bold>false</bold>
      </font>
@@ -200,17 +200,17 @@ font-weight:200;</string>
    <widget class="QLineEdit" name="Question_area">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>100</y>
+      <x>80</x>
+      <y>80</y>
       <width>521</width>
-      <height>20</height>
+      <height>35</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color:rgba(192, 192, 192,0);
 
 color: rgb(100, 79, 130);
-font-size: 16px;
+font-size: 20px;
 border-radius : 7px;
 font-family:Sura;
 font-weight:400;</string>
@@ -222,15 +222,15 @@ font-weight:400;</string>
    <widget class="QRadioButton" name="radioButton1">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>140</y>
+      <x>80</x>
+      <y>130</y>
       <width>451</width>
-      <height>16</height>
+      <height>35</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color:rgba(192, 192, 192,0);
-font-size: 12px;
+font-size: 16px;
 
 color: rgb(100, 79, 130);
 
@@ -245,15 +245,15 @@ font-weight:200;</string>
    <widget class="QRadioButton" name="radioButton2">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>80</x>
       <y>170</y>
       <width>451</width>
-      <height>16</height>
+      <height>35</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color:rgba(192, 192, 192,0);
-font-size: 12px;
+font-size: 16px;
 font-family: Sura;
 color: rgb(100, 79, 130);
 
