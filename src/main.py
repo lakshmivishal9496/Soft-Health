@@ -192,8 +192,12 @@ class PersonalityApp(QDialog):
                     self.next_btn.setDisabled(True)
                 else:
                     self.display_question()
+                    self.radioButton1.setAutoExclusive(False)
+                    self.radioButton2.setAutoExclusive(False)
                     self.radioButton1.setChecked(False)
                     self.radioButton2.setChecked(False)
+                    self.radioButton1.setAutoExclusive(True)
+                    self.radioButton2.setAutoExclusive(True)
             else:
                 self.show_result()
         else:
