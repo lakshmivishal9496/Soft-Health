@@ -1,7 +1,7 @@
 import unittest
-from PyQt5.QtWidgets import QApplication, QPushButton, QRadioButton, QLineEdit
+from PyQt5.QtWidgets import QApplication, QPushButton, QWidget
 
-from personality import Ui_PersonalityTest
+from src.personality import Ui_PersonalityTest
 
 
 class TestUiPersonalityTest(unittest.TestCase):
@@ -41,6 +41,7 @@ class TestUiPersonalityTest(unittest.TestCase):
         self.assertEqual(self.ui.Question_area.text(), "You feel more energetic when:")
         self.assertEqual(self.ui.radioButton1.text(), "Socializing with others")
         self.assertEqual(self.ui.radioButton2.text(), "Spending time alone")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -41,7 +41,7 @@ installed:
 	$(PYTHON) -m pip list
 
 run:
-	$(PYTHON) src/main.py
+	@$(PYTHON) src/main.py
 
 pytest:
 	@pytest tests/Flogintest.py tests/testp.py
@@ -89,7 +89,7 @@ black:
 #
 unittest:
 	@$(call MESSAGE,$@)
-	 $(PYTHON) -m unittest tests/test_login.py tests/test_reg.py
+	@$(PYTHON) -m unittest tests/test_login.py tests/test_reg.py 
 
 coverage:
 	@$(call MESSAGE,$@)
