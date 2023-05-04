@@ -23,9 +23,11 @@ Receive tailored recommendations to improve your mental health, based on your pe
 
 Get daily inspiring quotes to boost your mood and motivate you to take positive actions towards better mental health.
 
+:book: <b>References</b>
 
+SoftHealth features were built from the beginning based on actual facts and scientific research. Articles and studies supporting SoftHealth app features are found in the References document within the repository.
 
-<b>Technologies</b>
+:information_source: <b>Technologies</b>
 
 Our app is built using:
 
