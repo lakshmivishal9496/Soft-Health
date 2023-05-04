@@ -118,7 +118,7 @@ background-color: rgb(117, 71, 255);
 }</string>
    </property>
    <property name="text">
-    <string>Stress Releive Exercise</string>
+    <string>Stress Relief Exercise</string>
    </property>
   </widget>
   <widget class="QPushButton" name="resource_btn">
