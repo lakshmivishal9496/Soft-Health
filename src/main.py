@@ -66,7 +66,7 @@ class RegApp(QDialog):
         self.b4.clicked.connect(self.show_login)
 
     def verify_password(self, password):
-        if len(password) < 8 and re.search('[0-9]', password) is None and re.search('[A-Z]', password) is None and re.search('[a-z]', password) is None and re.search('[@#&]', password) is None:
+        if len(password) < 8 and (re.search('[0-9]', password) is None or re.search('[A-Z]', password) is None or re.search('[a-z]', password) is None or re.search('[@#&]', password) is None):
             return "Password must contain: \n " + "*minimum 8 characters,\n " +  "*a number \n " + "*a uppercase letter"+ "*a lowercase letter"
         else:
             return None
