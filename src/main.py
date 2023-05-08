@@ -257,7 +257,48 @@ class PersonalityApp(QDialog):
         self.reset()
         widget.setCurrentIndex(4)
 
-    
+class QuotesApp(QDialog):
+    def __init__(self):
+        super(QuotesApp, self).__init__()
+        loadUi(r"static\quotes.ui", self)
+        self.logout.clicked.connect(self.show_back)
+        self.quotes = ["I'm not a product of my circumstances. I am a product of my decisions.", 
+                    "It's not what we have in life, but who we have in our life that matters.",
+                    "Life is either a daring adventure or nothing at all.",
+                    "Your time is limited, don't waste it living someone else's life."]
+        self.authors = ["Stephen Covey", "Unknown", "Helen Keller", "Steve Jobs"]
+        self.current_quote = 0
+        self.display_quote()
+
+        self.next_btn.clicked.connect(self.next_quote)
+        self.back_btn.clicked.connect(self.previous_quote)
+        self.main_btn.clicked.connect(self.show_main_menu)
+
+    def display_quote(self):
+        quote = self.quotes[self.current_quote]
+        author = self.authors[self.current_quote]
+        self.quote_area.setText(quote)
+        self.label_2.setText(author)
+
+    def next_quote(self):
+        if self.current_quote < len(self.quotes) - 1:
+            self.current_quote += 1
+            self.display_quote()
+        else:
+            QMessageBox.warning(self, "End of Quotes", "You have reached the end of the quotes.")
+
+    def previous_quote(self):
+        if self.current_quote > 0:
+            self.current_quote -= 1
+            self.display_quote()
+        else:
+            QMessageBox.warning(self, "Error", "This is the first quote.")
+
+    def show_main_menu(self):
+        pass
+
+    def show_back(self):
+        pass
 
 
 # class RecommendationApp(QDialog):
@@ -280,7 +321,7 @@ class PersonalityApp(QDialog):
 #     def goback(self):
 #         widget.setCurrentIndex(0)
 
-class QuotesApp(QDialog):
+""" class QuotesApp(QDialog):
     def __init__(self):
         super(QuotesApp, self).__init__()
         # pass super class LoginApp to parent class
@@ -291,7 +332,7 @@ class QuotesApp(QDialog):
         widget.setCurrentIndex(4)
 
     def show_logout(self):
-        widget.setCurrentIndex(0)
+        widget.setCurrentIndex(0) """
 
 
 class mainMenuApp(QDialog):
@@ -336,7 +377,10 @@ class Verify:
     def compare(self, other_password):
         return self.password == other_password
 
-
+    def show_quotes_app(self):
+        self.quotes_app = QuotesApp()
+        self.quotes_app.exec_()
+        
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()
 # Connects both login and register widgets together

@@ -44,7 +44,7 @@ border-radius: 9px;</string>
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -76,7 +76,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -108,7 +108,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -140,7 +140,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
       <weight>25</weight>
       <bold>false</bold>
      </font>
@@ -155,7 +155,7 @@ font-family:Sura;
 font-weight:200;</string>
     </property>
     <property name="text">
-     <string>Quote 1:</string>
+     <string>Inspiring Quotes</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -239,7 +239,7 @@ font-weight:400;</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>1</pointsize>
+     <pointsize>-1</pointsize>
     </font>
    </property>
    <property name="styleSheet">
