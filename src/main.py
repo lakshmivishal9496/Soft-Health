@@ -219,17 +219,20 @@ class PersonalityApp(QDialog):
             self.result = self.selected_answers[0] + self.selected_answers[1] + self.selected_answers[2] + self.selected_answers[3]
             personality_result = personality_quiz.personality_list.get(self.result)
             recommendation = personality_quiz.personality_recommendation.get(self.result)
+            quote = personality_quiz.personality_quote.get(self.result)
 
             message_box = QMessageBox()
-            message_box.setWindowTitle("Personality Result")
+            message_box.setWindowTitle("Personality Test Result - SoftHealth")
 
             # Set the text format to display HTML
             message_box.setTextFormat(QtCore.Qt.RichText)
 
             # Construct the message using HTML formatting
-            message = f"<p><b>Your personality result is:</b> {self.result} - {personality_result}</p>"
-            message += f"<p><b>Recommendation for you:</b></p>"
-            message += f"<p>{recommendation}</p>"
+            message = f"<b>Your personality result is:</b><br>{self.result} - {personality_result}<br><br>"
+            message += f"<b>Recommendation to improve your mental health:</b><br>"
+            message += f"{recommendation}<br><br>"
+            message += f"<b>Your personality quote:<br></b>"
+            message += f"{quote}"
 
             message_box.setText(message)
 
