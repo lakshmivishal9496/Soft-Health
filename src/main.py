@@ -9,10 +9,11 @@ import personality_quiz
 
 
 class LoginApp(QDialog):
-    # Deals with login screen for the app
+    ''' Deals with login screen for the app'''
 
     # load the UI file using an relative path
     def __init__(self):
+        ''' Initialize login screen for the app'''
         super(LoginApp, self).__init__()
         loadUi(r"static\login.ui", self)
         self.b1.clicked.connect(self.login)
@@ -20,6 +21,7 @@ class LoginApp(QDialog):
         self.b5.clicked.connect(self.guest_login)
 
     def login(self):
+        ''' Deals with login function for the app'''
         un = self.tb1.text()
         pw = self.tb2.text()
         # connect to the database and
@@ -50,14 +52,18 @@ class LoginApp(QDialog):
         self.tb2.setText("")
 
     def show_register(self):
+        ''' Deals with registration screen for the app'''
         widget.setCurrentIndex(1)
 
     def guest_login(self):
+        ''' Deals with guest login screen for the app'''
         widget.setCurrentIndex(3)
 
 
 class RegApp(QDialog):
+    ''' Deals with registration screen for the app'''
     def __init__(self):
+        ''' Initialize registration screen for the app'''
         super(RegApp, self).__init__()
         # pass super class LoginApp to parent class
         loadUi(r"static\register.ui", self)
@@ -66,12 +72,14 @@ class RegApp(QDialog):
         self.b4.clicked.connect(self.show_login)
 
     def verify_password(self, password):
+        ''' Deals with password validation'''
         if len(password) < 8 and (re.search('[0-9]', password) is None or re.search('[A-Z]', password) is None or re.search('[a-z]', password) is None or re.search('[@#&]', password) is None):
             return "Password must contain: \n " + "*minimum 8 characters,\n " +  "*a number \n " + "*a uppercase letter \n"+ "*a lowercase letter \n"+ "*a special character \n"
         else:
             return None
 
     def reg(self):
+        ''' Deals with registration'''
         un = self.tb3.text()
         pw = self.tb4.text()
         em = self.tb5.text()
@@ -115,11 +123,14 @@ class RegApp(QDialog):
             self.tb6.setText("")
 
     def show_login(self):
+        ''' Deals with showing login screen for the app'''
         widget.setCurrentIndex(0)
 
 
 class HomeApp(QDialog):
+    ''' Deals with Home screen for the app'''
     def __init__(self):
+        '''Initializes home screen for the app'''
         super(HomeApp, self).__init__()
         # pass super class LoginApp to parent class
         loadUi(r"static\home.ui", self)
@@ -129,30 +140,26 @@ class HomeApp(QDialog):
         self.b7.clicked.connect(self.show_stress)
 
     def show_quotes(self):
+        ''' Deals with showing quotes for the app'''
         widget.setCurrentIndex(6)
 
     def show_back(self):
+        ''' Deals with back button for the app'''
         widget.setCurrentIndex(0)
 
     def p_test(self):
+        ''' Deals with personality test for the app'''
         widget.setCurrentIndex(5)
 
     def show_stress(self):
+        ''' Deals with stress relief for the app'''
         widget.setCurrentIndex(7)
-
-# class PersonalityApp(QDialog):
-#     def __init__(self):
-#         super(PersonalityApp, self).__init__()
-#         # pass super class LoginApp to parent class
-#         loadUi(r"static\personality.ui", self)
-#         self.logout.clicked.connect(self.show_back)
-
-#     def show_back(self):
-#         widget.setCurrentIndex(0)
 
 
 class PersonalityApp(QDialog):
+    ''' Deals with personality screen for the app'''
     def __init__(self):
+        ''' Initializes personality screen for the app'''
         super(PersonalityApp, self).__init__()
         loadUi(r"static\personality.ui", self)
         self.logout.clicked.connect(self.show_back)
@@ -167,12 +174,14 @@ class PersonalityApp(QDialog):
         self.main_btn.clicked.connect(self.show_main_menu)
     
     def reset(self):
+        ''' Deals with reset option for the personality'''
         self.current_question = 0
         self.selected_answers = []
         self.result = ''
         self.display_question()
 
     def display_question(self):
+        ''' Deals with question for the personlaity app'''
 
         question = self.questions[self.current_question]
         self.Question_No.setText(f"Question {self.current_question + 1}")
@@ -181,6 +190,7 @@ class PersonalityApp(QDialog):
         self.radioButton2.setText(question['options'][1])
 
     def next_question(self):
+        ''' Deals with next button for the personality app'''
         selected_answer = ""
         if self.radioButton1.isChecked():
             selected_answer = self.questions[self.current_question]['traits'][0]
@@ -208,6 +218,7 @@ class PersonalityApp(QDialog):
             QMessageBox.warning(self, "Error", "Please select an option.")
 
     def previous_question(self):
+        ''' Set previous question'''
         if self.current_question > 0:
             self.current_question -= 1
             self.selected_answers.pop()
@@ -216,6 +227,7 @@ class PersonalityApp(QDialog):
             self.radioButton2.setChecked(False)
 
     def show_result(self):
+        '''Display the result'''
         if len(self.selected_answers) < len(self.questions):
             QMessageBox.warning(self, "Error", "Please answer all the questions.")
             return
@@ -247,15 +259,10 @@ class PersonalityApp(QDialog):
             message_box.exec_()
         self.show_main_menu()
         self.current_question = 0
-            #self.show_recommendation()
-            # return self.result      
+  
 
     def show_back(self):
         widget.setCurrentIndex(0)
-    # def show_recommendation(self):
-    #     widget.setCurrentIndex(6)
-        # recom = RecommendationApp()
-        # recom.display_recommendation(self.result)
 
     def show_main_menu(self):
         self.reset()
@@ -308,46 +315,6 @@ class ExercisesApp(QDialog):
     def __init__(self):
         super(ExercisesApp, self).__init__()
         loadUi(r"static\exercises.ui", self)
-        
-
-
-
-
-
-
-# class RecommendationApp(QDialog):
-#     def __init__(self):
-#         super(RecommendationApp, self).__init__()
-#         # pass super class Recommendation to parent class
-#         loadUi(r"static\recommendation.ui", self)
-#         self.logout.clicked.connect(self.goback)
-#         # self.b1.clicked.connect(self.display_recommendation)
-#         personality_type = PersonalityApp()
-#         # p_type = personality_type.show_result()
-#     def display_recommendation(self, personality_result):
-#         # Assuming `personality_result` is the variable storing the personality type
-#         recommendation = personality.personality_recommendation.get(personality_result)
-#         if recommendation:
-#             self.recom_area.setText(recommendation)
-#         else:
-#             self.recom_area.setText("No recommendation found for this personality type.")
-
-#     def goback(self):
-#         widget.setCurrentIndex(0)
-
-""" class QuotesApp(QDialog):
-    def __init__(self):
-        super(QuotesApp, self).__init__()
-        # pass super class LoginApp to parent class
-        loadUi(r"static\quotes.ui", self)
-        self.main_btn.clicked.connect(self.show_main_menu)
-        self.logout.clicked.connect(self.show_logout)
-    def show_main_menu(self):
-        widget.setCurrentIndex(4)
-
-    def show_logout(self):
-        widget.setCurrentIndex(0) """
-
 
 class mainMenuApp(QDialog):
     def __init__(self):
@@ -410,7 +377,6 @@ mainMenuform = mainMenuApp()
 personalityform = PersonalityApp()
 quotes = QuotesApp()
 exercises = ExercisesApp()
-# recommendationform = RecommendationApp()
 widget.addWidget(loginform)
 widget.addWidget(registrationform)
 widget.addWidget(Homeform)
@@ -419,7 +385,6 @@ widget.addWidget(mainMenuform)
 widget.addWidget(personalityform)
 widget.addWidget(quotes)
 widget.addWidget(exercises)
-# widget.addWidget(recommendationform)
 widget.setCurrentIndex(0)
 widget.setFixedWidth(1024)
 widget.setFixedHeight(768)
