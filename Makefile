@@ -72,7 +72,7 @@ clean-all: clean clean-doc
 #
 pylint:
 	@$(call MESSAGE,$@)
-	-cd src && $(PYTHON) -m pylint *.py
+	-cd src && $(PYTHON) -m pylint main.py
 
 flake8:
 	@$(call MESSAGE,$@)

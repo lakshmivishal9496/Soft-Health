@@ -1,10 +1,10 @@
+'''Main program to run the application'''
 import sys
-import typing
-from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QWidget
-from PyQt5.uic import loadUi
-import sqlite3
 import re
+import sqlite3
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
+from PyQt5.uic import loadUi
 import personality_quiz
 
 
@@ -73,10 +73,12 @@ class RegApp(QDialog):
 
     def verify_password(self, password):
         ''' Deals with password validation'''
-        if len(password) < 8 and (re.search('[0-9]', password) is None or re.search('[A-Z]', password) is None or re.search('[a-z]', password) is None or re.search('[@#&]', password) is None):
+        if len(password) < 8 and (re.search('[0-9]', password) is None or
+                           re.search('[A-Z]', password) is None or
+                           re.search('[a-z]', password) is None or
+                           re.search('[@#&]', password) is None):
             return "Password must contain: \n " + "*minimum 8 characters,\n " +  "*a number \n " + "*a uppercase letter \n"+ "*a lowercase letter \n"+ "*a special character \n"
-        else:
-            return None
+        return None
 
     def reg(self):
         ''' Deals with registration'''
@@ -172,7 +174,7 @@ class PersonalityApp(QDialog):
         self.next_btn.clicked.connect(self.next_question)
         self.back_btn.clicked.connect(self.previous_question)
         self.main_btn.clicked.connect(self.show_main_menu)
-    
+
     def reset(self):
         ''' Deals with reset option for the personality'''
         self.current_question = 0
@@ -232,34 +234,31 @@ class PersonalityApp(QDialog):
             QMessageBox.warning(self, "Error", "Please answer all the questions.")
             return
         else:
-            self.result = self.selected_answers[0] + self.selected_answers[1] + self.selected_answers[2] + self.selected_answers[3]
+            self.result = self.selected_answers[0] \
+              + self.selected_answers[1] \
+              + self.selected_answers[2] \
+              + self.selected_answers[3]
             personality_result = personality_quiz.personality_list.get(self.result)
             recommendation = personality_quiz.personality_recommendation.get(self.result)
             quote = personality_quiz.personality_quote.get(self.result)
-
             message_box = QMessageBox()
             message_box.setWindowTitle("Personality Test Result - SoftHealth")
-
-            # Set the text format to display HTML
             message_box.setTextFormat(QtCore.Qt.RichText)
-
             # Construct the message using HTML formatting
-            message = f"<b>Your personality result is:</b><br>{self.result} - {personality_result}<br><br>"
+            message = f"<b>Your personality result is:</b>\
+<br>{self.result} - {personality_result}<br><br>"
             message += f"<b>Recommendation to improve your mental health:</b><br>"
             message += f"{recommendation}<br><br>"
             message += f"<b>Your personality quote:<br></b>"
             message += f"{quote}"
-
             message_box.setText(message)
-
             # Add a custom Ok button and apply stylesheet
             ok_button = message_box.addButton(QMessageBox.Ok)
-            ok_button.setStyleSheet("background-color: rgb(131, 53, 151); color: white; font-weight: bold; padding: 5px 10px;")
-
+            ok_button.setStyleSheet("background-color: rgb(131, 53, 151);\
+color: white; font-weight: bold; padding: 5px 10px;")
             message_box.exec_()
         self.show_main_menu()
         self.current_question = 0
-  
 
     def show_back(self):
         ''' Show the back button    '''
@@ -277,7 +276,7 @@ class QuotesApp(QDialog):
         super(QuotesApp, self).__init__()
         loadUi(r"static\quotes.ui", self)
         self.logout.clicked.connect(self.show_back)
-        self.quotes = ["I'm not a product of my circumstances. I am a product of my decisions.", 
+        self.quotes = ["I'm not a product of my circumstances. I am a product of my decisions.",
                     "It's not what we have in life, but who we have in our life that matters.",
                     "Life is either a daring adventure or nothing at all.",
                     "Your time is limited, don't waste it living someone else's life."]
@@ -312,13 +311,13 @@ class QuotesApp(QDialog):
         else:
             QMessageBox.warning(self, "Error", "This is the first quote.")
 
-    def show_main_menu(self):
-        ''' Show the main menu'''
-        pass
-
     def show_back(self):
-        ''' Show the back button'''
-        pass
+        ''' Show the back button''' 
+        widget.setCurrentIndex(0)
+
+    def show_main_menu(self):
+        ''' Menu function'''
+        widget.setCurrentIndex(2)
 
 class ExercisesApp(QDialog):
     '''Exercises App'''
@@ -390,7 +389,7 @@ class Verify:
         ''' Show quotes'''
         self.quotes_app = QuotesApp()
         self.quotes_app.exec_()
-        
+    
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()
 # Connects both login and register widgets together
