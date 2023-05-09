@@ -77,7 +77,10 @@ class RegApp(QDialog):
                            re.search('[A-Z]', password) is None or
                            re.search('[a-z]', password) is None or
                            re.search('[@#&]', password) is None):
-            return "Password must contain: \n " + "*minimum 8 characters,\n " +  "*a number \n " + "*a uppercase letter \n"+ "*a lowercase letter \n"+ "*a special character \n"
+            return "Password must contain: \n "\
++ "*minimum 8 characters,\n " +  "*a number \n "\
++ "*a uppercase letter \n"+ "*a lowercase letter \n"\
++ "*a special character \n"
         return None
 
     def reg(self):
@@ -232,7 +235,6 @@ class PersonalityApp(QDialog):
         '''Display the result'''
         if len(self.selected_answers) < len(self.questions):
             QMessageBox.warning(self, "Error", "Please answer all the questions.")
-            return
         else:
             self.result = self.selected_answers[0] \
               + self.selected_answers[1] \
@@ -313,11 +315,11 @@ class QuotesApp(QDialog):
 
     def show_back(self):
         ''' Show the back button''' 
-        widget.setCurrentIndex(0)
+        pass
 
     def show_main_menu(self):
         ''' Menu function'''
-        widget.setCurrentIndex(2)
+        pass
 
 class ExercisesApp(QDialog):
     '''Exercises App'''
@@ -326,11 +328,11 @@ class ExercisesApp(QDialog):
         super(ExercisesApp, self).__init__()
         loadUi(r"static\exercises.ui", self)
 
-class mainMenuApp(QDialog):
+class MainMenuApp(QDialog):
     '''Main Menu App'''
     def __init__(self):
         ''' Initialize the menu'''
-        super(mainMenuApp, self).__init__()
+        super(MainMenuApp, self).__init__()
         # pass super class LoginApp to parent class
         loadUi(r"static\mainmenu.ui", self)
         self.b9.clicked.connect(self.menu)
@@ -397,7 +399,7 @@ loginform = LoginApp()
 registrationform = RegApp()
 Homeform = HomeApp()
 guestform = GuestApp()
-mainMenuform = mainMenuApp()
+mainMenuform = MainMenuApp()
 personalityform = PersonalityApp()
 quotes = QuotesApp()
 exercises = ExercisesApp()
