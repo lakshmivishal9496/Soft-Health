@@ -12,6 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_PersonalityTest(object):
+    ''' This class provides information about a personality'''
     def setupUi(self, PersonalityTest):
         PersonalityTest.setObjectName("PersonalityTest")
         PersonalityTest.resize(1024, 768)
@@ -32,9 +33,7 @@ class Ui_PersonalityTest(object):
 "\n"
 "\n"
 "}\n"
-"QPushButton#logout: pressed {\n"
-"background-color: rgb(117, 71, 255);\n"
-"}")
+)
         self.logout.setObjectName("logout")
         self.groupBox = QtWidgets.QGroupBox(PersonalityTest)
         self.groupBox.setGeometry(QtCore.QRect(190, 350, 625, 300))
@@ -87,9 +86,7 @@ class Ui_PersonalityTest(object):
 "border-radius : 7px;\n"
 "\n"
 "}\n"
-"QPushButton#main_btn: pressed {\n"
-"background-color: rgb(117, 71, 255);\n"
-"}")
+)
         self.main_btn.setObjectName("main_btn")
         self.Question_No = QtWidgets.QLineEdit(self.groupBox)
         self.Question_No.setGeometry(QtCore.QRect(80, 30, 201, 51))
@@ -151,6 +148,7 @@ class Ui_PersonalityTest(object):
         QtCore.QMetaObject.connectSlotsByName(PersonalityTest)
 
     def retranslateUi(self, PersonalityTest):
+        ''' Initialize the personality'''
         _translate = QtCore.QCoreApplication.translate
         PersonalityTest.setWindowTitle(_translate("PersonalityTest", "Form"))
         self.logout.setText(_translate("PersonalityTest", "Logout"))
@@ -162,12 +160,3 @@ class Ui_PersonalityTest(object):
         self.radioButton1.setText(_translate("PersonalityTest", "Socializing with others"))
         self.radioButton2.setText(_translate("PersonalityTest", "Spending time alone"))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    PersonalityTest = QtWidgets.QWidget()
-    ui = Ui_PersonalityTest()
-    ui.setupUi(PersonalityTest)
-    PersonalityTest.show()
-    sys.exit(app.exec_())

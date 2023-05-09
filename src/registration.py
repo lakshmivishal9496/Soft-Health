@@ -9,10 +9,13 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import sys
 
 
 class Ui_Form(object):
+    ''' The ui widget class'''
     def setupUi(self, Form):
+        ''' Initialize the ui widget class'''
         Form.setObjectName("Form")
         Form.resize(380, 480)
         self.widget = QtWidgets.QWidget(Form)
@@ -89,6 +92,7 @@ class Ui_Form(object):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
+        '''Initialize the  form'''
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.tb3.setPlaceholderText(_translate("Form", "Enter username here........."))
@@ -99,12 +103,3 @@ class Ui_Form(object):
         )
 
 
-if __name__ == "__main__":
-    import sys
-
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())

@@ -34,9 +34,7 @@ class Ui_Form(object):
             "border-radius : 7px;\n"
             "\n"
             "}\n"
-            "QPushButton#b1: pressed {\n"
-            "background-color: rgb(117, 71, 255);\n"
-            "}"
+           
         )
         self.b1.setObjectName("b1")
         self.b2 = QtWidgets.QPushButton(self.widget)
@@ -52,9 +50,6 @@ class Ui_Form(object):
             "border-radius : 7px;\n"
             "\n"
             "}\n"
-            "QPushButton#b2: pressed {\n"
-            "background-color: rgb(117, 71, 255);\n"
-            "}"
         )
         self.b2.setObjectName("b2")
         self.l2_2 = QtWidgets.QLabel(self.widget)
@@ -91,9 +86,6 @@ class Ui_Form(object):
             "border-radius : 7px;\n"
             "\n"
             "}\n"
-            "QPushButton#b5: pressed {\n"
-            "background-color: rgb(117, 71, 255);\n"
-            "}"
         )
         self.b5.setObjectName("b5")
         self.tb1 = QtWidgets.QLineEdit(self.widget)
@@ -166,12 +158,4 @@ class Ui_Form(object):
         self.l2_3.setText(_translate("Form", "OR"))
 
 
-if __name__ == "__main__":
-    import sys
 
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())

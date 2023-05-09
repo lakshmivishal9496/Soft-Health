@@ -11,6 +11,7 @@ from login import Ui_Form
 
 @pytest.fixture
 def ui_form():
+    '''Test the form'''
     app = QApplication(sys.argv)
     ui = QtWidgets.QWidget()
     form = Ui_Form()
@@ -20,7 +21,9 @@ def ui_form():
     app.quit()
 
 class TestLoginUI:
+    '''Test Login UI class'''
     def test_loginButton(self, ui_form):
+        '''Test Login'''
         assert ui_form.b1.text() == "Login"
         QTest.mouseClick(ui_form.b1, Qt.LeftButton)
     
@@ -29,10 +32,12 @@ class TestLoginUI:
         QTest.mouseClick(ui_form.b2, Qt.LeftButton)
     
     def test_guestButton(self, ui_form):
+        ''' Test that the guest button'''
         assert ui_form.b5.text() == "Continue as a Guest"
         QTest.mouseClick(ui_form.b5, Qt.LeftButton)
 
     def test_textBox(self, ui_form):
+        '''Test that the text box is correctly displayed'''
         ui_form.tb1.setText("Username")
         ui_form.lineEdit.setText("Password")
         assert ui_form.tb1.text() == "Username"
