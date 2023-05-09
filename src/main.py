@@ -126,6 +126,7 @@ class HomeApp(QDialog):
         self.b5_2.clicked.connect(self.show_back)
         self.b5.clicked.connect(self.p_test)
         self.b8.clicked.connect(self.show_quotes)
+        self.b7.clicked.connect(self.show_stress)
 
     def show_quotes(self):
         widget.setCurrentIndex(6)
@@ -135,6 +136,9 @@ class HomeApp(QDialog):
 
     def p_test(self):
         widget.setCurrentIndex(5)
+
+    def show_stress(self):
+        widget.setCurrentIndex(7)
 
 # class PersonalityApp(QDialog):
 #     def __init__(self):
@@ -300,6 +304,16 @@ class QuotesApp(QDialog):
     def show_back(self):
         pass
 
+class ExercisesApp(QDialog):
+    def __init__(self):
+        super(ExercisesApp, self).__init__()
+        loadUi(r"static\exercises.ui", self)
+        
+
+
+
+
+
 
 # class RecommendationApp(QDialog):
 #     def __init__(self):
@@ -360,6 +374,7 @@ class GuestApp(QDialog):
         super(GuestApp, self).__init__()
         # pass super class GuestApp to parent class
         loadUi(r"static\guest.ui", self)
+        self.stress_btn.clicked.connect(self.show_stress)
         self.quotes_btn.clicked.connect(self.show_quotes)
         self.signupmore_btn.clicked.connect(self.show_sign_up)
 
@@ -368,6 +383,9 @@ class GuestApp(QDialog):
 
     def show_sign_up(self):
         widget.setCurrentIndex(1)
+
+    def show_stress(self):
+        widget.setCurrentIndex(7)
 
 
 class Verify:
@@ -391,6 +409,7 @@ guestform = GuestApp()
 mainMenuform = mainMenuApp()
 personalityform = PersonalityApp()
 quotes = QuotesApp()
+exercises = ExercisesApp()
 # recommendationform = RecommendationApp()
 widget.addWidget(loginform)
 widget.addWidget(registrationform)
@@ -399,6 +418,7 @@ widget.addWidget(guestform)
 widget.addWidget(mainMenuform)
 widget.addWidget(personalityform)
 widget.addWidget(quotes)
+widget.addWidget(exercises)
 # widget.addWidget(recommendationform)
 widget.setCurrentIndex(0)
 widget.setFixedWidth(1024)

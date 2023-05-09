@@ -121,7 +121,6 @@ class Ui_Form(object):
         self.tb4.setPlaceholderText(_translate("Form", "Enter password  here........."))
         self.l8.setText(_translate("Form", "Already have an account?"))
         self.b4.setText(_translate("Form", "Login"))
-import new1_rc
 
 
 if __name__ == "__main__":

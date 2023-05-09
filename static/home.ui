@@ -29,7 +29,7 @@ border-radius: 9px;</string>
    <property name="font">
     <font>
      <family>Sura</family>
-     <pointsize>1</pointsize>
+     <pointsize>-1</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -64,7 +64,7 @@ background-color: rgb(117, 71, 255);
    <property name="font">
     <font>
      <family>Sura</family>
-     <pointsize>1</pointsize>
+     <pointsize>-1</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -99,7 +99,7 @@ background-color: rgb(117, 71, 255);
    <property name="font">
     <font>
      <family>Sura</family>
-     <pointsize>1</pointsize>
+     <pointsize>-1</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -134,7 +134,7 @@ background-color: rgb(117, 71, 255);
    <property name="font">
     <font>
      <family>Sura</family>
-     <pointsize>1</pointsize>
+     <pointsize>-1</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -169,7 +169,7 @@ background-color: rgb(117, 71, 255);
    <property name="font">
     <font>
      <family>Sura</family>
-     <pointsize>1</pointsize>
+     <pointsize>-1</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -204,7 +204,7 @@ background-color: rgb(117, 71, 255);
    <property name="font">
     <font>
      <family>Sura</family>
-     <pointsize>1</pointsize>
+     <pointsize>-1</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -237,7 +237,7 @@ background-color: rgb(117, 71, 255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image:url(logo_200x200.png);</string>
+    <string notr="true">background-image:url(static/images/logo.png);</string>
    </property>
    <property name="text">
     <string/>
