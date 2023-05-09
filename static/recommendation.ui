@@ -20,7 +20,7 @@ border-radius: 9px;</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>430</x>
+     <x>416</x>
      <y>60</y>
      <width>191</width>
      <height>181</height>

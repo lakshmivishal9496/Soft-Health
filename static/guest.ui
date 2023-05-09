@@ -17,184 +17,10 @@
    <string notr="true">background-color:rgb(235, 226, 244);
 border-radius: 9px;</string>
   </property>
-  <widget class="QPushButton" name="music_btn">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>370</y>
-     <width>360</width>
-     <height>42</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Sura</family>
-     <pointsize>1</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#music_btn{
-background-color:rgb(192, 192, 192);
-color: rgb(100, 79, 130);
-font-size: 26px;
-border-radius : 7px;
-font-family:Sura;
-font-weight:400;
-}
-QPushButton#music_btn: pressed {
-background-color: rgb(117, 71, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Listen to Relaxing Music</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="quotes_btn">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>440</y>
-     <width>360</width>
-     <height>42</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Sura</family>
-     <pointsize>1</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#quotes_btn{
-background-color:rgb(192, 192, 192);
-color: rgb(100, 79, 130);
-font-size: 26px;
-border-radius : 7px;
-font-family:Sura;
-font-weight:400;
-
-}
-QPushButton#quotes_btn: pressed {
-background-color: rgb(117, 71, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Inspiring Quotes</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="stress_btn">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>510</y>
-     <width>360</width>
-     <height>42</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Sura</family>
-     <pointsize>1</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#stress_btn{
-background-color:rgb(192, 192, 192);
-color: rgb(100, 79, 130);
-font-size: 26px;
-border-radius : 7px;
-font-family:Sura;
-font-weight:400;
-
-}
-QPushButton#stress_btn: pressed {
-background-color: rgb(117, 71, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Stress Relief Exercise</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="resource_btn">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>580</y>
-     <width>360</width>
-     <height>42</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Sura</family>
-     <pointsize>1</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#resource_btn{background-color:rgb(192, 192, 192);
-background-color:rgb(192, 192, 192);
-color: rgb(100, 79, 130);
-font-size: 26px;
-border-radius : 7px;
-font-family:Sura;
-font-weight:400;
-
-}
-QPushButton#resource_btn: pressed {
-background-color: rgb(117, 71, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Mental health Resource</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="signupmore_btn">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>650</y>
-     <width>360</width>
-     <height>42</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Sura</family>
-     <pointsize>1</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#signupmore_btn{
-background-color:rgb(192, 192, 192);
-color: rgb(100, 79, 130);
-font-size: 26px;
-border-radius : 7px;
-font-family:Sura;
-font-weight:400;
-
-}
-QPushButton#signupmore_btn: pressed {
-background-color: rgb(117, 71, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Sign up for More.....</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>416</x>
      <y>60</y>
      <width>191</width>
      <height>181</height>
@@ -210,29 +36,185 @@ background-color: rgb(117, 71, 255);
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>280</y>
-     <width>221</width>
-     <height>71</height>
+     <x>260</x>
+     <y>260</y>
+     <width>500</width>
+     <height>371</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(100, 79, 130);
-font-size: 36px;
+    <string notr="true">background-color:rgba(192, 192, 192, 50);</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>0</y>
+      <width>221</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(100, 79, 130);
+font-size: 28px;
 border-radius : 7px;
 font-family:Sura;
 font-weight:400;
-line-height:1.2px;</string>
-   </property>
-   <property name="text">
-    <string>Guest Menu</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
+line-height:1.2px;
+background-color: rgba(191, 191, 191, 0)</string>
+    </property>
+    <property name="text">
+     <string>Guest Menu</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="music_btn">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>150</y>
+      <width>360</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sura</family>
+      <pointsize>1</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#music_btn{
+background-color:rgb(192, 192, 192);
+color: rgb(100, 79, 130);
+font-size: 22px;
+border-radius : 7px;
+font-family:Sura;
+font-weight:400;
+}
+QPushButton#music_btn: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Relaxing Music</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="signupmore_btn">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>290</y>
+      <width>360</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sura</family>
+      <pointsize>1</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#signupmore_btn{
+background-color:rgb(192, 192, 192);
+color: rgb(100, 79, 130);
+font-size: 22px;
+border-radius : 7px;
+font-family:Sura;
+font-weight:400;
+
+}
+QPushButton#signupmore_btn: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Sign up for More...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stress_btn">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>220</y>
+      <width>360</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sura</family>
+      <pointsize>1</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#stress_btn{
+background-color:rgb(192, 192, 192);
+color: rgb(100, 79, 130);
+font-size: 22px;
+border-radius : 7px;
+font-family:Sura;
+font-weight:400;
+
+}
+QPushButton#stress_btn: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Stress Relief Exercises</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quotes_btn">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>80</y>
+      <width>360</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sura</family>
+      <pointsize>1</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#quotes_btn{
+background-color:rgb(192, 192, 192);
+color: rgb(100, 79, 130);
+font-size: 22px;
+border-radius : 7px;
+font-family:Sura;
+font-weight:400;
+
+}
+QPushButton#quotes_btn: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Inspiring Quotes</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
