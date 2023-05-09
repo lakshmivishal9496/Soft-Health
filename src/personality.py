@@ -55,9 +55,7 @@ class Ui_PersonalityTest(object):
 "border-radius : 7px;\n"
 "\n"
 "}\n"
-"QPushButton#next_btn: pressed {\n"
-"background-color: rgb(117, 71, 255);\n"
-"}")
+)
         self.next_btn.setObjectName("next_btn")
         self.back_btn = QtWidgets.QPushButton(self.groupBox)
         self.back_btn.setGeometry(QtCore.QRect(20, 225, 175, 40))
@@ -73,9 +71,7 @@ class Ui_PersonalityTest(object):
 "border-radius : 7px;\n"
 "\n"
 "}\n"
-"QPushButton#back_btn: pressed {\n"
-"background-color: rgb(117, 71, 255);\n"
-"}")
+)
         self.back_btn.setObjectName("back_btn")
         self.main_btn = QtWidgets.QPushButton(self.groupBox)
         self.main_btn.setGeometry(QtCore.QRect(420, 225, 175, 40))

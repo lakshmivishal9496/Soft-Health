@@ -9,11 +9,11 @@ import personality_quiz
 
 
 class LoginApp(QDialog):
-    ''' Deals with login screen for the app'''
+    ''' Initialize the widget'''
 
     # load the UI file using an relative path
     def __init__(self):
-        ''' Initialize login screen for the app'''
+        ''' Initialize login screen for the login app'''
         super(LoginApp, self).__init__()
         loadUi(r"static\login.ui", self)
         self.b1.clicked.connect(self.login)
@@ -21,7 +21,7 @@ class LoginApp(QDialog):
         self.b5.clicked.connect(self.guest_login)
 
     def login(self):
-        ''' Deals with login function for the app'''
+        ''' Deals with login function for the login app'''
         un = self.tb1.text()
         pw = self.tb2.text()
         # connect to the database and
@@ -52,18 +52,18 @@ class LoginApp(QDialog):
         self.tb2.setText("")
 
     def show_register(self):
-        ''' Deals with registration screen for the app'''
+        ''' Deals with registration screen for the login app'''
         widget.setCurrentIndex(1)
 
     def guest_login(self):
-        ''' Deals with guest login screen for the app'''
+        ''' Deals with guest login screen for the login app'''
         widget.setCurrentIndex(3)
 
 
 class RegApp(QDialog):
-    ''' Deals with registration screen for the app'''
+    ''' Initialize the widget'''
     def __init__(self):
-        ''' Initialize registration screen for the app'''
+        ''' Initialize registration screen for the registration app'''
         super(RegApp, self).__init__()
         # pass super class LoginApp to parent class
         loadUi(r"static\register.ui", self)
@@ -123,14 +123,14 @@ class RegApp(QDialog):
             self.tb6.setText("")
 
     def show_login(self):
-        ''' Deals with showing login screen for the app'''
+        ''' Deals with showing login screen for the registration app'''
         widget.setCurrentIndex(0)
 
 
 class HomeApp(QDialog):
-    ''' Deals with Home screen for the app'''
+    ''' Deals with Home screen for the home app'''
     def __init__(self):
-        '''Initializes home screen for the app'''
+        ''' Initialize the widget'''
         super(HomeApp, self).__init__()
         # pass super class LoginApp to parent class
         loadUi(r"static\home.ui", self)
@@ -140,11 +140,11 @@ class HomeApp(QDialog):
         self.b7.clicked.connect(self.show_stress)
 
     def show_quotes(self):
-        ''' Deals with showing quotes for the app'''
+        ''' Deals with showing quotes for the home app'''
         widget.setCurrentIndex(6)
 
     def show_back(self):
-        ''' Deals with back button for the app'''
+        ''' Deals with back button for the home app'''
         widget.setCurrentIndex(0)
 
     def p_test(self):
@@ -152,14 +152,14 @@ class HomeApp(QDialog):
         widget.setCurrentIndex(5)
 
     def show_stress(self):
-        ''' Deals with stress relief for the app'''
+        ''' Deals with stress relief for the home app'''
         widget.setCurrentIndex(7)
 
 
 class PersonalityApp(QDialog):
     ''' Deals with personality screen for the app'''
     def __init__(self):
-        ''' Initializes personality screen for the app'''
+        ''' Initialize the widget'''
         super(PersonalityApp, self).__init__()
         loadUi(r"static\personality.ui", self)
         self.logout.clicked.connect(self.show_back)
@@ -262,14 +262,18 @@ class PersonalityApp(QDialog):
   
 
     def show_back(self):
+        ''' Show the back button    '''
         widget.setCurrentIndex(0)
 
     def show_main_menu(self):
+        ''' Show the main menu '''
         self.reset()
         widget.setCurrentIndex(4)
 
 class QuotesApp(QDialog):
+    ''' Provides the ability to interact with the Quotes'''
     def __init__(self):
+        ''' Initialize the widget'''
         super(QuotesApp, self).__init__()
         loadUi(r"static\quotes.ui", self)
         self.logout.clicked.connect(self.show_back)
@@ -286,12 +290,14 @@ class QuotesApp(QDialog):
         self.main_btn.clicked.connect(self.show_main_menu)
 
     def display_quote(self):
+        '''Display the quote'''
         quote = self.quotes[self.current_quote]
         author = self.authors[self.current_quote]
         self.quote_area.setText(quote)
         self.label_2.setText(author)
 
     def next_quote(self):
+        ''' Return the next quote'''
         if self.current_quote < len(self.quotes) - 1:
             self.current_quote += 1
             self.display_quote()
@@ -299,6 +305,7 @@ class QuotesApp(QDialog):
             QMessageBox.warning(self, "End of Quotes", "You have reached the end of the quotes.")
 
     def previous_quote(self):
+        ''' Return the previous quote'''
         if self.current_quote > 0:
             self.current_quote -= 1
             self.display_quote()
@@ -306,18 +313,24 @@ class QuotesApp(QDialog):
             QMessageBox.warning(self, "Error", "This is the first quote.")
 
     def show_main_menu(self):
+        ''' Show the main menu'''
         pass
 
     def show_back(self):
+        ''' Show the back button'''
         pass
 
 class ExercisesApp(QDialog):
+    '''Exercises App'''
     def __init__(self):
+        '''Construct instance'''
         super(ExercisesApp, self).__init__()
         loadUi(r"static\exercises.ui", self)
 
 class mainMenuApp(QDialog):
+    '''Main Menu App'''
     def __init__(self):
+        ''' Initialize the menu'''
         super(mainMenuApp, self).__init__()
         # pass super class LoginApp to parent class
         loadUi(r"static\mainmenu.ui", self)
@@ -326,18 +339,23 @@ class mainMenuApp(QDialog):
         self.b5.clicked.connect(self.show_personality)
 
     def show_personality(self):
+        ''' Show the personality'''
         personalityform.current_question = 0
         widget.setCurrentIndex(5)
 
     def show_back(self):
+        ''' Show the back button''' 
         widget.setCurrentIndex(0)
 
     def menu(self):
+        ''' Menu function'''
         widget.setCurrentIndex(2)
 
 
 class GuestApp(QDialog):
+    '''Guest User Interface'''
     def __init__(self):
+        '''Initialize the widget'''
         super(GuestApp, self).__init__()
         # pass super class GuestApp to parent class
         loadUi(r"static\guest.ui", self)
@@ -346,23 +364,30 @@ class GuestApp(QDialog):
         self.signupmore_btn.clicked.connect(self.show_sign_up)
 
     def show_quotes(self):
+        ''' Show  the quotes'''
         widget.setCurrentIndex(6)
 
     def show_sign_up(self):
+        ''' Show the sign up'''
         widget.setCurrentIndex(1)
 
     def show_stress(self):
+        ''' Show the stress'''
         widget.setCurrentIndex(7)
 
 
 class Verify:
+    ''' Verifies that the user has authorized to perform a given action'''
     def __init__(self, password):
+        ''' Initialize the verification'''
         self.password = password
 
     def compare(self, other_password):
+        ''' Compare the password'''
         return self.password == other_password
 
     def show_quotes_app(self):
+        ''' Show quotes'''
         self.quotes_app = QuotesApp()
         self.quotes_app.exec_()
         

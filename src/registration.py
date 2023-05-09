@@ -57,9 +57,6 @@ class Ui_Form(object):
             "border-radius : 7px;\n"
             "\n"
             "}\n"
-            "QPushButton#b3: pressed {\n"
-            "background-color: rgb(117, 71, 255);\n"
-            "}"
         )
         self.b3.setObjectName("b3")
         self.label_3 = QtWidgets.QLabel(self.widget)
