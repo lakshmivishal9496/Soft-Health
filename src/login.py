@@ -72,10 +72,10 @@ class Ui_Form(object):
         self.label = QtWidgets.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(150, 50, 71, 71))
         self.label.setStyleSheet(
-            "background-color:url(:/image1/images/logo_200x200.png);"
+            "background-image:url(static/images/logo.png);"
         )
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap(":/image1/images/logo_200x200.png"))
+        # self.label.setPixmap(QtGui.QPixmap(":/image1/images/logo_200x200.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.b5 = QtWidgets.QPushButton(self.widget)
