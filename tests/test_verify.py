@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
-from main import RegApp
-from main import Verify
+from src.main import RegApp
+from src.main import Verify
 
 
 class TestVerify(unittest.TestCase):
