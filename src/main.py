@@ -173,7 +173,7 @@ class PersonalityApp(QDialog):
 
         self.next_btn.clicked.connect(self.next_question)
         self.back_btn.clicked.connect(self.previous_question)
-        self.main_btn.clicked.connect(self.show_main_menu)
+        self.main_btn.clicked.connect(self.main)
 
     def reset(self):
         ''' Deals with reset option for the personality'''
@@ -264,7 +264,7 @@ color: white; font-weight: bold; padding: 5px 10px;")
         ''' Show the back button    '''
         widget.setCurrentIndex(0)
 
-    def show_main_menu(self):
+    def main(self):
         ''' Show the main menu '''
         self.reset()
         widget.setCurrentIndex(4)
@@ -389,7 +389,7 @@ class Verify:
         ''' Show quotes'''
         self.quotes_app = QuotesApp()
         self.quotes_app.exec_()
-    
+
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()
 # Connects both login and register widgets together
