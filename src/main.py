@@ -129,13 +129,13 @@ class RegApp(QDialog):
         widget.setCurrentIndex(0)
 
 
-class HomeApp(QDialog):
+class MainMenuapp(QDialog):
     ''' Deals with Home screen for the home app'''
     def __init__(self):
         ''' Initialize the widget'''
-        super(HomeApp, self).__init__()
+        super(MainMenuapp, self).__init__()
         # pass super class LoginApp to parent class
-        loadUi(r"static\home.ui", self)
+        loadUi(r"static\main_menu.ui", self)
         self.b5_2.clicked.connect(self.show_back)
         self.b5.clicked.connect(self.p_test)
         self.b8.clicked.connect(self.show_quotes)
@@ -313,7 +313,7 @@ class QuotesApp(QDialog):
             QMessageBox.warning(self, "Error", "This is the first quote.")
 
     def show_back(self):
-        ''' Show the back button''' 
+        ''' Show the back button'''
         widget.setCurrentIndex(0)
 
     def show_main_menu(self):
@@ -321,21 +321,89 @@ class QuotesApp(QDialog):
         widget.setCurrentIndex(2)
 
 
-class ExercisesApp(QDialog):
+class GuestQuotesApp(QDialog):
+    def __init__(self):
+        '''Initialize the menu'''
+        super(GuestQuotesApp, self).__init__()
+        # pass super class LoginApp to parent class
+        loadUi(r"static\guest_quotes.ui", self)
+        self.back_btn.clicked.connect(self.previous_quote)
+        self.next_btn.clicked.connect(self.next_quote)
+        self.guestMenu_btn.clicked.connect(self.show_guest_menu)
+        self.quotes = ["I'm not a product of my circumstances. I am a product of my decisions.",
+                    "It's not what we have in life, but who we have in our life that matters.",
+                    "Life is either a daring adventure or nothing at all.",
+                    "Your time is limited, don't waste it living someone else's life."]
+        self.authors = ["Stephen Covey", "Unknown", "Helen Keller", "Steve Jobs"]
+        self.current_quote = 0
+        self.display_quote()
+
+    def display_quote(self):
+        '''Display the quote'''
+        quote = self.quotes[self.current_quote]
+        author = self.authors[self.current_quote]
+        self.quote_area.setText(quote)
+        self.label_2.setText(author)
+    
+    def next_quote(self):
+        ''' Return the next quote'''
+        if self.current_quote < len(self.quotes) - 1:
+            self.current_quote += 1
+            self.display_quote()
+        else:
+            QMessageBox.warning(self, "End of Quotes", "You have reached the end of the quotes.")
+    
+    def previous_quote(self):
+        ''' Return the previous quote'''
+        if self.current_quote > 0:
+            self.current_quote -= 1
+            self.display_quote()
+        else:
+            QMessageBox.warning(self, "Error", "This is the first quote.")
+
+    def show_guest_menu(self):
+        ''' Show the guest menu'''
+        widget.setCurrentIndex(3)
+
+
+class UserExercisesApp(QDialog):
     '''Exercises App'''
     def __init__(self):
         '''Construct instance'''
-        super(ExercisesApp, self).__init__()
+        super(UserExercisesApp, self).__init__()
         loadUi(r"static\exercises.ui", self)
+        self.logout.clicked.connect(self.show_back)
+        self.main_btn.clicked.connect(self.show_main_menu)
+
+    def show_main_menu(self):
+        ''' Show the main menu'''
+        widget.setCurrentIndex(2)
+
+    def show_back(self):
+        ''' Show the back button'''
+        widget.setCurrentIndex(0)
 
 
-class mainMenuApp(QDialog):
+class GuestExerciseApp(QDialog):
+    '''Guest Exercise App'''
+    def __init__(self):
+        '''Construct instance'''
+        super(GuestExerciseApp, self).__init__()
+        loadUi(r"static\guest_exercises.ui", self)
+        self.guestMenu_btn.clicked.connect(self.show_guest_menu)
+
+    def show_guest_menu(self):
+        ''' Show the guest menu'''
+        widget.setCurrentIndex(3)
+
+
+class HomeApp(QDialog):
     '''Main Menu App'''
     def __init__(self):
         ''' Initialize the menu'''
-        super(mainMenuApp, self).__init__()
+        super(HomeApp, self).__init__()
         # pass super class LoginApp to parent class
-        loadUi(r"static\mainmenu.ui", self)
+        loadUi(r"static\home.ui", self)
         self.b9.clicked.connect(self.menu)
         self.b5_2.clicked.connect(self.show_back)
         self.b5.clicked.connect(self.show_personality)
@@ -346,7 +414,7 @@ class mainMenuApp(QDialog):
         widget.setCurrentIndex(5)
 
     def show_back(self):
-        ''' Show the back button''' 
+        ''' Show the back button'''
         widget.setCurrentIndex(0)
 
     def menu(self):
@@ -367,7 +435,7 @@ class GuestApp(QDialog):
 
     def show_quotes(self):
         ''' Show  the quotes'''
-        widget.setCurrentIndex(6)
+        widget.setCurrentIndex(9)
 
     def show_sign_up(self):
         ''' Show the sign up'''
@@ -375,7 +443,7 @@ class GuestApp(QDialog):
 
     def show_stress(self):
         ''' Show the stress'''
-        widget.setCurrentIndex(7)
+        widget.setCurrentIndex(8)
 
 
 class Verify:
@@ -399,20 +467,25 @@ widget = QtWidgets.QStackedWidget()
 # Connects both login and register widgets together
 loginform = LoginApp()
 registrationform = RegApp()
-Homeform = HomeApp()
+main_menu = MainMenuapp()
 guestform = GuestApp()
-mainMenuform = mainMenuApp()
+homeform = HomeApp()
 personalityform = PersonalityApp()
 quotes = QuotesApp()
-exercises = ExercisesApp()
-widget.addWidget(loginform)
-widget.addWidget(registrationform)
-widget.addWidget(Homeform)
-widget.addWidget(guestform)
-widget.addWidget(mainMenuform)
-widget.addWidget(personalityform)
-widget.addWidget(quotes)
-widget.addWidget(exercises)
+exercises = UserExercisesApp()
+guest_exercises = GuestExerciseApp()
+guest_quotes = GuestQuotesApp()
+
+widget.addWidget(loginform)  # 0
+widget.addWidget(registrationform)  # 1
+widget.addWidget(main_menu)   # 2
+widget.addWidget(guestform)  # 3
+widget.addWidget(homeform)  # 4
+widget.addWidget(personalityform)  # 5
+widget.addWidget(quotes)  # 6
+widget.addWidget(exercises)  # 7
+widget.addWidget(guest_exercises)   # 8
+widget.addWidget(guest_quotes)  # 9
 widget.setCurrentIndex(0)
 widget.setFixedWidth(1024)
 widget.setFixedHeight(768)

@@ -45,14 +45,14 @@ border-radius: 9px;</string>
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>260</y>
+       <y>246</y>
        <width>320</width>
        <height>40</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>1</pointsize>
+       <pointsize>-1</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -71,37 +71,17 @@ background-color: rgb(117, 71, 255);
       <string>Submit</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="tb5">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>200</y>
-       <width>320</width>
-       <height>42</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(177, 178, 181);
-color:rgb(255,255,255);
-padding-left: 10px;
-border-bottom-color: rgba(46,82,101,255);
-</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="placeholderText">
-      <string>Enter email here.........       </string>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="tb6">
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>140</y>
+       <y>176</y>
        <width>320</width>
        <height>42</height>
       </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(177, 178, 181);
@@ -117,17 +97,20 @@ border-bottom-color: rgba(46,82,101,255);
       <set>Qt::AlignCenter</set>
      </property>
      <property name="placeholderText">
-      <string>Repeat password .........   </string>
+      <string>Repeat password...</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="tb3">
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>30</y>
+       <y>36</y>
        <width>320</width>
        <height>42</height>
       </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(177, 178, 181);
@@ -139,17 +122,20 @@ border-bottom-color: rgba(46,82,101,255);</string>
       <set>Qt::AlignCenter</set>
      </property>
      <property name="placeholderText">
-      <string>Enter username here.........</string>
+      <string>Enter username here...</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="tb4">
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>80</y>
+       <y>106</y>
        <width>320</width>
        <height>42</height>
       </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(177, 178, 181);
@@ -165,7 +151,7 @@ border-bottom-color: rgba(46,82,101,255);
       <set>Qt::AlignCenter</set>
      </property>
      <property name="placeholderText">
-      <string>Enter password  here.........</string>
+      <string>Enter password here...</string>
      </property>
     </widget>
    </widget>
@@ -218,7 +204,7 @@ border-radius:2px;</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
