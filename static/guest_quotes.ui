@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(235, 226, 244);
+border-radius: 9px;</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>50</y>
+     <width>191</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image:url(static/images/logo.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>320</y>
+     <width>625</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(4, 255, 4, 50);</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QPushButton" name="next_btn">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>225</y>
+      <width>175</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sura</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#next_btn{
+background-color:rgb(102, 203, 0);
+color: white;
+font-family: Sura;
+font-size: 15px;
+border-radius : 7px;
+
+}
+QPushButton#next_btn: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Next</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="back_btn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>225</y>
+      <width>175</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sura</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#back_btn{
+background-color:rgb(102, 203, 0);
+color: white;
+font-family: Sura;
+font-size: 15px;
+border-radius : 7px;
+
+}
+QPushButton#back_btn: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="guestMenu_btn">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>225</y>
+      <width>175</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sura</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#guestMenu_btn{
+background-color:rgb(102, 203, 0);
+color: white;
+font-family: Sura;
+font-size: 15px;
+border-radius : 7px;
+
+}
+QPushButton#guestMenu_btn: pressed {
+background-color: rgb(117, 71, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Guest Menu</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Question_No">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>40</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sura</family>
+      <pointsize>-1</pointsize>
+      <weight>25</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(192, 192, 192,0);
+
+color: rgb(100, 79, 130);
+font-size: 26px;
+border-radius : 7px;
+font-family:Sura;
+font-weight:200;</string>
+    </property>
+    <property name="text">
+     <string>Inspiring Quotes</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="quote_area">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>100</y>
+      <width>521</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(192, 192, 192,0);
+
+color: rgb(100, 79, 130);
+font-size: 16px;
+border-radius : 7px;
+font-family:Sura;
+font-weight:400;</string>
+    </property>
+    <property name="text">
+     <string>The best prepartion for tommorow is doing your best today.</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>189</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(4, 255, 4, 50);</string>
+    </property>
+    <property name="text">
+     <string>H.Jackson Brwon.jr.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
