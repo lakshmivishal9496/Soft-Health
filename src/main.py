@@ -173,7 +173,7 @@ class PersonalityApp(QDialog):
 
         self.next_btn.clicked.connect(self.next_question)
         self.back_btn.clicked.connect(self.previous_question)
-        self.main_btn.clicked.connect(self.main)
+        self.main_btn.clicked.connect(self.show_main_menu)
 
     def reset(self):
         ''' Deals with reset option for the personality'''
@@ -264,10 +264,11 @@ color: white; font-weight: bold; padding: 5px 10px;")
         ''' Show the back button    '''
         widget.setCurrentIndex(0)
 
-    def main(self):
+    def show_main_menu(self):
         ''' Show the main menu '''
         self.reset()
         widget.setCurrentIndex(4)
+
 
 class QuotesApp(QDialog):
     ''' Provides the ability to interact with the Quotes'''
@@ -319,12 +320,14 @@ class QuotesApp(QDialog):
         ''' Menu function'''
         widget.setCurrentIndex(2)
 
+
 class ExercisesApp(QDialog):
     '''Exercises App'''
     def __init__(self):
         '''Construct instance'''
         super(ExercisesApp, self).__init__()
         loadUi(r"static\exercises.ui", self)
+
 
 class mainMenuApp(QDialog):
     '''Main Menu App'''
@@ -389,6 +392,7 @@ class Verify:
         ''' Show quotes'''
         self.quotes_app = QuotesApp()
         self.quotes_app.exec_()
+
 
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()
