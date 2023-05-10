@@ -20,28 +20,24 @@ border-radius: 9px;</string>
   <widget class="QPushButton" name="b5">
    <property name="geometry">
     <rect>
-     <x>332</x>
-     <y>340</y>
-     <width>360</width>
-     <height>42</height>
+     <x>337</x>
+     <y>538</y>
+     <width>320</width>
+     <height>35</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Sura</family>
      <pointsize>1</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton#b5{
 background-color:rgb(192, 192, 192);
+
 color: rgb(100, 79, 130);
-font-size: 22px;
+font-size: 19px;
 border-radius : 7px;
-font-family:Sura;
-font-weight:400;
 
 }
 QPushButton#b5: pressed {
@@ -49,112 +45,39 @@ background-color: rgb(117, 71, 255);
 }</string>
    </property>
    <property name="text">
-    <string>Personality Test</string>
+    <string>Take Personality Test</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="b6">
+  <widget class="QPushButton" name="b9">
    <property name="geometry">
     <rect>
-     <x>332</x>
-     <y>480</y>
-     <width>360</width>
-     <height>42</height>
+     <x>337</x>
+     <y>618</y>
+     <width>320</width>
+     <height>35</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Sura</family>
      <pointsize>1</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton#b6{
+    <string notr="true">QPushButton#b9{
 background-color:rgb(192, 192, 192);
+
 color: rgb(100, 79, 130);
-font-size: 22px;
+font-size: 19px;
 border-radius : 7px;
-font-family:Sura;
-font-weight:400;
+
 
 }
-QPushButton#b6: pressed {
+QPushButton#b9: pressed {
 background-color: rgb(117, 71, 255);
 }</string>
    </property>
    <property name="text">
-    <string>Relaxing Music</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="b7">
-   <property name="geometry">
-    <rect>
-     <x>332</x>
-     <y>550</y>
-     <width>360</width>
-     <height>42</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Sura</family>
-     <pointsize>1</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#b7{
-background-color:rgb(192, 192, 192);
-color: rgb(100, 79, 130);
-font-size: 22px;
-border-radius : 7px;
-font-family:Sura;
-font-weight:400;
-
-}
-QPushButton#b7: pressed {
-background-color: rgb(117, 71, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Stress Relief Exercises</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="b8">
-   <property name="geometry">
-    <rect>
-     <x>332</x>
-     <y>410</y>
-     <width>360</width>
-     <height>42</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Sura</family>
-     <pointsize>1</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#b8{
-background-color:rgb(192, 192, 192);
-color: rgb(100, 79, 130);
-font-size: 22px;
-border-radius : 7px;
-font-family:Sura;
-font-weight:400;
-
-}
-QPushButton#b8: pressed {
-background-color: rgb(117, 71, 255);
-}</string>
-   </property>
-   <property name="text">
-    <string>Inspiring Quotes</string>
+    <string>Member's Area</string>
    </property>
   </widget>
   <widget class="QPushButton" name="b5_2">
@@ -168,35 +91,58 @@ background-color: rgb(117, 71, 255);
    </property>
    <property name="font">
     <font>
-     <family>Sura</family>
      <pointsize>1</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton#b5_2{
-background-color:rgb(192, 192, 192);
+background-color:rgba(192, 192, 192,200);
+
 color: rgb(100, 79, 130);
-font-size: 26px;
+
+font-size: 18px;
 border-radius : 7px;
-font-family:Sura;
-font-weight:400;
 
 }
 QPushButton#b5_2: pressed {
 background-color: rgb(117, 71, 255);
-}</string>
+}
+</string>
    </property>
    <property name="text">
     <string>Logout</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>163</x>
+     <y>283</y>
+     <width>698</width>
+     <height>208</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(192, 192, 192,0);
+font-size: 24px;
+font-family:Sura;
+
+color: rgb(100, 79, 130);
+
+font-weight:400;</string>
+   </property>
+   <property name="text">
+    <string>Soft health is a mental health app that makes it easier for people to take care of their mental health. It helps users manage their stress and feelings in a way that works best for them. The app gives personalized advice according to personality types. This way, users can feel supported and take control of their mental health.</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>416</x>
-     <y>50</y>
+     <y>70</y>
      <width>191</width>
      <height>181</height>
     </rect>
@@ -211,55 +157,6 @@ background-color: rgb(117, 71, 255);
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>370</x>
-     <y>260</y>
-     <width>271</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(100, 79, 130);
-font-size: 28px;
-border-radius : 7px;
-font-family:Sura;
-font-weight:400;
-line-height:1.2px;
-background-color: rgba(191, 191, 191, 0)</string>
-   </property>
-   <property name="text">
-    <string>Members Menu</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QGroupBox" name="groupBox">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>260</y>
-     <width>500</width>
-     <height>371</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgba(192, 192, 192, 50);</string>
-   </property>
-   <property name="title">
-    <string/>
-   </property>
-  </widget>
-  <zorder>groupBox</zorder>
-  <zorder>b5</zorder>
-  <zorder>b6</zorder>
-  <zorder>b7</zorder>
-  <zorder>b8</zorder>
-  <zorder>b5_2</zorder>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
  </widget>
  <resources/>
  <connections/>
