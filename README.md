@@ -21,7 +21,7 @@ Receive tailored recommendations to improve your mental health, based on your pe
 
 💡 <b>Inspiring Quotes</b>
 
-Get daily inspiring quotes to boost your mood and motivate you to take positive actions towards better mental health.
+Get inspiring quotes to boost your mood and motivate you to take positive actions towards better mental health.
 
 :sweat_smile: <b>Stress Relief Exercises</b>
 
