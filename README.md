@@ -23,6 +23,14 @@ Receive tailored recommendations to improve your mental health, based on your pe
 
 Get daily inspiring quotes to boost your mood and motivate you to take positive actions towards better mental health.
 
+:sweat_smile: <b>Stress Relief Exercises</b>
+
+Discover and practice stress relief exercises tailored to your needs and preferences.
+
+:musical_note: <b>Relaxing Music</b>
+
+Enjoy a collection of relaxing music to help you unwind and reduce stress.
+
 :book: <b>References</b>
 
 SoftHealth features were built from the beginning based on actual facts and scientific research. Articles and studies supporting SoftHealth app features are found in the References document within the repository.
