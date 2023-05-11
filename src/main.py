@@ -374,6 +374,41 @@ class UserExercisesApp(QDialog):
         loadUi(r"static\exercises.ui", self)
         self.logout.clicked.connect(self.show_back)
         self.main_btn.clicked.connect(self.show_main_menu)
+        self.exercises = ["<b>Hit the pillow:</b><br><br> Locate a soft pillow, hit it for half a minute, and afterward reflect on your emotions.",
+                          "<b>Deep breathing exercises:</b><br><br> Find a quiet spot, inhale deeply, and exhale completely, focusing on your breath.",
+                          "<b>Mind-body practices:</b><br><br> Choose a peaceful space, perform easy yoga poses, and concentrate on your breathing.",
+                          "<b>Gratitude journaling:</b><br><br> Acquire a notepad, write down three things you appreciate, and spend time reflecting daily."]
+        self.images = ["static/images/001.jpg", "static/images/002.jpg", "static/images/003.jpg", "static/images/004.jpg"]
+        self.current_exercise = 0
+        self.display_exercise()
+
+        self.next_btn.clicked.connect(self.next_exercise)
+        self.back_btn.clicked.connect(self.previous_exercise)
+        self.main_btn.clicked.connect(self.show_main_menu)
+
+    def display_exercise(self):
+        exercise = self.exercises[self.current_exercise]
+        image_path = self.images[self.current_exercise]
+        self.Exercise.setText(exercise)
+        self.set_image(image_path)
+
+    def set_image(self, image_path):
+        style = f"border: 1px solid black; border-radius: 10px; padding: 0px; border-image: url({image_path}) 10 10 10 10 stretch stretch;"
+        self.picture.setStyleSheet(style)
+
+    def next_exercise(self):
+        if self.current_exercise < len(self.exercises) - 1:
+            self.current_exercise += 1
+            self.display_exercise()
+        else:
+            QMessageBox.warning(self, "End of Exercises", "You have reached the end of the exercises.")
+
+    def previous_exercise(self):
+        if self.current_exercise > 0:
+            self.current_exercise -= 1
+            self.display_exercise()
+        else:
+            QMessageBox.warning(self, "Error", "This is the first exercise.")
 
     def show_main_menu(self):
         ''' Show the main menu'''
@@ -391,7 +426,42 @@ class GuestExerciseApp(QDialog):
         super(GuestExerciseApp, self).__init__()
         loadUi(r"static\guest_exercises.ui", self)
         self.guestMenu_btn.clicked.connect(self.show_guest_menu)
+        self.exercises = ["<b>Hit the pillow:</b><br><br> Locate a soft pillow, hit it for half a minute, and afterward reflect on your emotions.",
+                          "<b>Deep breathing exercises:</b><br><br> Find a quiet spot, inhale deeply, and exhale completely, focusing on your breath.",
+                          "<b>Mind-body practices:</b><br><br> Choose a peaceful space, perform easy yoga poses, and concentrate on your breathing.",
+                          "<b>Gratitude journaling:</b><br><br> Acquire a notepad, write down three things you appreciate, and spend time reflecting daily."]
+        self.images = ["static/images/001.jpg", "static/images/002.jpg", "static/images/003.jpg", "static/images/004.jpg"]
+        self.current_exercise = 0
+        self.display_exercise()
 
+        self.next_btn.clicked.connect(self.next_exercise)
+        self.back_btn.clicked.connect(self.previous_exercise)
+        self.guestMenu_btn.clicked.connect(self.show_guest_menu)
+
+    def display_exercise(self):
+        exercise = self.exercises[self.current_exercise]
+        image_path = self.images[self.current_exercise]
+        self.Exercise.setText(exercise)
+        self.set_image(image_path)
+
+    def set_image(self, image_path):
+        style = f"border: 1px solid black; border-radius: 10px; padding: 0px; border-image: url({image_path}) 10 10 10 10 stretch stretch;"
+        self.picture.setStyleSheet(style)
+
+    def next_exercise(self):
+        if self.current_exercise < len(self.exercises) - 1:
+            self.current_exercise += 1
+            self.display_exercise()
+        else:
+            QMessageBox.warning(self, "End of Exercises", "You have reached the end of the exercises.")
+
+    def previous_exercise(self):
+        if self.current_exercise > 0:
+            self.current_exercise -= 1
+            self.display_exercise()
+        else:
+            QMessageBox.warning(self, "Sorry!", "This is the first exercise.")
+            
     def show_guest_menu(self):
         ''' Show the guest menu'''
         widget.setCurrentIndex(3)

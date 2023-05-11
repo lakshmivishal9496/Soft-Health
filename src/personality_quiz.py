@@ -163,10 +163,10 @@ personality_quote = {
     "ESFP": "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart. - Helen Keller",
     "ENFP": "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
     "ENTP": "I am not afraid of storms, for I am learning how to sail my ship. - Louisa May Alcott",
-    "ESTJ": "-",
-    "ESFJ": "-",
-    "ENFJ": "-",
-    "ENTJ": "-"
+    "ESTJ": "Success in any endeavor requires single-minded attention to detail and total concentration. - Willie Sutton",
+    "ESFJ": "We must learn to live together as brothers or perish together as fools. - Martin Luther King Jr.",
+    "ENFJ": "Leadership is not about being in charge. It's about taking care of those in your charge. - Simon Sinek",
+    "ENTJ": "If you want to go fast, go alone. If you want to go far, go together. - African proverb."
 }
 
 

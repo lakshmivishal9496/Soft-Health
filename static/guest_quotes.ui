@@ -20,8 +20,8 @@ border-radius: 9px;</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>50</y>
+     <x>416</x>
+     <y>90</y>
      <width>191</width>
      <height>181</height>
     </rect>
@@ -150,7 +150,7 @@ background-color: rgb(117, 71, 255);
    <widget class="QLineEdit" name="Question_No">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>60</x>
       <y>40</y>
       <width>201</width>
       <height>51</height>
@@ -186,7 +186,7 @@ font-weight:200;</string>
    <widget class="QLineEdit" name="quote_area">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>60</x>
       <y>100</y>
       <width>521</width>
       <height>31</height>
