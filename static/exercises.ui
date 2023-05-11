@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
+    <width>1175</width>
     <height>768</height>
    </rect>
   </property>
@@ -131,10 +131,10 @@ background-color:rgb(255, 136, 4);
    <widget class="QLabel" name="picture">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>395</x>
       <y>20</y>
-      <width>191</width>
-      <height>191</height>
+      <width>190</width>
+      <height>190</height>
      </rect>
     </property>
     <property name="font">
@@ -168,15 +168,16 @@ background-color:rgb(255, 136, 4);
    <widget class="QLabel" name="Exercise">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>20</y>
-      <width>341</width>
-      <height>191</height>
+      <width>355</width>
+      <height>190</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <family>Sura</family>
+      <pointsize>1</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -187,7 +188,13 @@ background-color:rgb(255, 136, 4);
     <property name="styleSheet">
      <string notr="true">    border: 1px ;
     padding: 15px;
-    border-radius: 10px;</string>
+    border-radius: 10px;
+
+color: rgb(100, 79, 130);
+font-size: 16px;
+border-radius : 7px;
+font-family:Sura;
+font-weight:400;</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::NoFrame</enum>
@@ -206,7 +213,7 @@ background-color:rgb(255, 136, 4);
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>416</x>
      <y>90</y>
      <width>191</width>
      <height>181</height>

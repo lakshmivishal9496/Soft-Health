@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1024</width>
-    <height>736</height>
+    <height>530</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -150,10 +150,10 @@ background-color:rgb(255, 136, 4);
    <widget class="QLabel" name="picture">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>395</x>
       <y>20</y>
-      <width>191</width>
-      <height>191</height>
+      <width>190</width>
+      <height>190</height>
      </rect>
     </property>
     <property name="font">
@@ -187,16 +187,16 @@ background-color:rgb(255, 136, 4);
    <widget class="QLabel" name="Exercise">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>20</y>
-      <width>341</width>
-      <height>191</height>
+      <width>355</width>
+      <height>190</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>MS Shell Dlg 2 0</family>
-      <pointsize>12</pointsize>
+      <family>Sura</family>
+      <pointsize>1</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -206,10 +206,16 @@ background-color:rgb(255, 136, 4);
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">border: 0px ;
-padding: 15px;
-border-radius: 10px;
-font: 12pt &quot;MS Shell Dlg 2&quot;0 rgb(100, 79, 130);</string>
+     <string notr="true">    
+    border: 0px ;
+    padding: 15px;
+    border-radius: 10px;
+    border-radius: 10px;
+    color: rgb(100, 79, 130);
+    font-size: 18px;
+    font-family:Sura;
+    font-weight:400;
+    </string>
     </property>
     <property name="frameShape">
      <enum>QFrame::NoFrame</enum>
