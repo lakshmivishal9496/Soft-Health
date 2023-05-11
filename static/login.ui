@@ -37,7 +37,7 @@ border-radius: 9px;</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -68,7 +68,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -125,7 +125,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -242,7 +242,7 @@ border-bottom-color: rgba(46,82,101,255);
      </property>
      <property name="font">
       <font>
-       <pointsize>1</pointsize>
+       <pointsize>-1</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -270,8 +270,5 @@ background-color: rgb(117, 71, 255);
    <zorder>label</zorder>
   </widget>
  </widget>
- <resources>
-  <include location="../qrc_files/test.qrc"/>
- </resources>
  <connections/>
 </ui>
