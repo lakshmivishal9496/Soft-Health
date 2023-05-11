@@ -202,7 +202,7 @@ border-bottom-color: rgba(46,82,101,255);
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
      <property name="placeholderText">
-      <string>Enter the username....</string>
+      <string>Enter username...</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="tb2">
@@ -228,7 +228,7 @@ border-bottom-color: rgba(46,82,101,255);
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
      <property name="placeholderText">
-      <string>Enter the password.....</string>
+      <string>Enter password...</string>
      </property>
     </widget>
     <widget class="QPushButton" name="b1">
