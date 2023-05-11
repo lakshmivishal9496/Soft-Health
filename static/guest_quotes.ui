@@ -63,7 +63,7 @@ border-radius: 9px;</string>
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>-1</pointsize>
+      <pointsize>1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -95,7 +95,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>-1</pointsize>
+      <pointsize>1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -127,7 +127,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>-1</pointsize>
+      <pointsize>1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -159,7 +159,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>-1</pointsize>
+      <pointsize>1</pointsize>
       <weight>25</weight>
       <bold>false</bold>
      </font>
