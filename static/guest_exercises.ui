@@ -54,7 +54,7 @@ border-radius: 9px;</string>
    <widget class="QPushButton" name="next_btn">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>220</x>
       <y>225</y>
       <width>175</width>
       <height>40</height>
@@ -118,7 +118,7 @@ background-color:rgb(255, 136, 4);
    <widget class="QPushButton" name="guestMenu_btn">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>410</x>
       <y>225</y>
       <width>175</width>
       <height>40</height>
@@ -195,8 +195,10 @@ background-color:rgb(255, 136, 4);
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <family>MS Shell Dlg 2 0</family>
+      <pointsize>12</pointsize>
       <weight>50</weight>
+      <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
@@ -204,15 +206,16 @@ background-color:rgb(255, 136, 4);
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">    border: 1px ;
-    padding: 15px;
-    border-radius: 10px;</string>
+     <string notr="true">border: 0px ;
+padding: 15px;
+border-radius: 10px;
+font: 12pt &quot;MS Shell Dlg 2&quot;0 rgb(100, 79, 130);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Exercise 1:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#644f82;&quot;&gt;Exercise 1:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#644f82;&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="wordWrap">
      <bool>true</bool>
