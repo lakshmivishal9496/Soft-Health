@@ -52,7 +52,7 @@ border-radius: 9px;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
+       <pointsize>1</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -204,7 +204,7 @@ border-radius:2px;</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>-1</pointsize>
+      <pointsize>1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
