@@ -267,7 +267,7 @@ color: white; font-weight: bold; padding: 5px 10px;")
     def show_main_menu(self):
         ''' Show the main menu '''
         self.reset()
-        widget.setCurrentIndex(4)
+        widget.setCurrentIndex(2)
 
 
 class QuotesApp(QDialog):
