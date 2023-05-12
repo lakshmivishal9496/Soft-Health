@@ -192,7 +192,7 @@ class PersonalityApp(QDialog):
         self.radioButton2.setText(question['options'][1])
 
     def next_question(self):
-        ''' Deals with next button for the personality app'''
+        '''Deals with next button for the personality app'''
         selected_answer = ""
         if self.radioButton1.isChecked():
             selected_answer = self.questions[self.current_question]['traits'][0]
@@ -217,7 +217,19 @@ class PersonalityApp(QDialog):
             else:
                 self.show_result()
         else:
-            QMessageBox.warning(self, "Error", "Please select an option.")
+            message_box = QMessageBox()
+            message_box.setWindowTitle("Error")
+            message_box.setText("Please select an option.")
+
+            # Add a custom Ok button with 3D styling and color
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(131, 53, 151);\
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
+
+            message_box.exec_()
+
 
     def previous_question(self):
         ''' Set previous question'''
@@ -255,7 +267,9 @@ class PersonalityApp(QDialog):
             # Add a custom Ok button and apply stylesheet
             ok_button = message_box.addButton(QMessageBox.Ok)
             ok_button.setStyleSheet("background-color: rgb(131, 53, 151);\
-color: white; font-weight: bold; padding: 5px 10px;")
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
             message_box.exec_()
         self.show_main_menu()
         self.current_question = 0
@@ -297,20 +311,45 @@ class QuotesApp(QDialog):
         self.label_2.setText(author)
 
     def next_quote(self):
-        ''' Return the next quote'''
+        '''Return the next quote'''
         if self.current_quote < len(self.quotes) - 1:
             self.current_quote += 1
             self.display_quote()
         else:
-            QMessageBox.warning(self, "End of Quotes", "You have reached the end of the quotes.")
+            message_box = QMessageBox()
+            message_box.setWindowTitle("End of Quotes")
+            message_box.setText("You have reached the end of the quotes.")
+
+            # Add a custom Ok button with 3D styling
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(102, 203, 0);\
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
+
+            message_box.exec_()
+
 
     def previous_quote(self):
-        ''' Return the previous quote'''
+        '''Return the previous quote'''
         if self.current_quote > 0:
             self.current_quote -= 1
             self.display_quote()
         else:
-            QMessageBox.warning(self, "Error", "This is the first quote.")
+            pass
+            """message_box = QMessageBox()
+            message_box.setWindowTitle("Error")
+            message_box.setText("This is the first quote.")
+
+            # Add a custom Ok button with 3D styling
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(102, 203, 0);\
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
+
+            message_box.exec_() """
+
 
     def show_back(self):
         ''' Show the back button'''
@@ -346,20 +385,45 @@ class GuestQuotesApp(QDialog):
         self.label_2.setText(author)
     
     def next_quote(self):
-        ''' Return the next quote'''
+        '''Return the next quote'''
         if self.current_quote < len(self.quotes) - 1:
             self.current_quote += 1
             self.display_quote()
         else:
-            QMessageBox.warning(self, "End of Quotes", "You have reached the end of the quotes.")
+            message_box = QMessageBox()
+            message_box.setWindowTitle("End of Quotes")
+            message_box.setText("You have reached the end of the quotes.")
+
+            # Add a custom Ok button with 3D styling
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(102, 203, 0);\
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
+
+            message_box.exec_()
+
     
     def previous_quote(self):
-        ''' Return the previous quote'''
+        '''Return the previous quote'''
         if self.current_quote > 0:
             self.current_quote -= 1
             self.display_quote()
         else:
-            QMessageBox.warning(self, "Error", "This is the first quote.")
+            pass
+            """ message_box = QMessageBox()
+            message_box.setWindowTitle("Error")
+            message_box.setText("This is the first quote.")
+
+            # Add a custom Ok button with 3D styling
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(102, 203, 0);\
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
+
+            message_box.exec_() """
+
 
     def show_guest_menu(self):
         ''' Show the guest menu'''
@@ -401,14 +465,38 @@ class UserExercisesApp(QDialog):
             self.current_exercise += 1
             self.display_exercise()
         else:
-            QMessageBox.warning(self, "End of Exercises", "You have reached the end of the exercises.")
+            message_box = QMessageBox()
+            message_box.setWindowTitle("End of Exercises")
+            message_box.setText("You have reached the end of the exercises.")
+
+            # Add a custom Ok button with 3D styling
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(255, 136, 4);\
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
+
+            message_box.exec_()
+
 
     def previous_exercise(self):
         if self.current_exercise > 0:
             self.current_exercise -= 1
             self.display_exercise()
         else:
-            QMessageBox.warning(self, "Error", "This is the first exercise.")
+            pass
+            """message_box = QMessageBox()
+            message_box.setWindowTitle("Error")
+            message_box.setText("This is the first exercise.")
+
+            # Add a custom Ok button with 3D styling
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(255, 136, 4);\
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
+
+            message_box.exec_() """
 
     def show_main_menu(self):
         ''' Show the main menu'''
@@ -453,14 +541,39 @@ class GuestExerciseApp(QDialog):
             self.current_exercise += 1
             self.display_exercise()
         else:
-            QMessageBox.warning(self, "End of Exercises", "You have reached the end of the exercises.")
+            message_box = QMessageBox()
+            message_box.setWindowTitle("End of Exercises")
+            message_box.setText("You have reached the end of the exercises.")
+
+            # Add a custom Ok button with 3D styling and color
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(255, 136, 4);\
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
+
+            message_box.exec_()
+
 
     def previous_exercise(self):
         if self.current_exercise > 0:
             self.current_exercise -= 1
             self.display_exercise()
         else:
-            QMessageBox.warning(self, "Sorry!", "This is the first exercise.")
+            pass
+            """ message_box = QMessageBox()
+            message_box.setWindowTitle("Sorry!")
+            message_box.setText("This is the first exercise.")
+
+            # Add a custom Ok button with 3D styling and color
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(255, 136, 4);\
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
+
+            message_box.exec_() """
+
             
     def show_guest_menu(self):
         ''' Show the guest menu'''
