@@ -350,14 +350,20 @@ class QuotesApp(QDialog):
 
             message_box.exec_() """
 
-
     def show_back(self):
         ''' Show the back button'''
+        self.reset()
         widget.setCurrentIndex(0)
 
     def show_main_menu(self):
         ''' Menu function'''
+        self.reset()
         widget.setCurrentIndex(2)
+    
+    def reset(self):
+        ''' Reset the widget'''
+        self.current_quote = 0
+        self.display_quote()
 
 
 class GuestQuotesApp(QDialog):
@@ -402,7 +408,6 @@ class GuestQuotesApp(QDialog):
                                     border-radius: 5px;")
 
             message_box.exec_()
-
     
     def previous_quote(self):
         '''Return the previous quote'''
@@ -424,10 +429,15 @@ class GuestQuotesApp(QDialog):
 
             message_box.exec_() """
 
-
     def show_guest_menu(self):
         ''' Show the guest menu'''
+        self.reset()
         widget.setCurrentIndex(3)
+    
+    def reset(self):
+        ''' Reset the widget'''
+        self.current_quote = 0
+        self.display_quote()
 
 
 class UserExercisesApp(QDialog):
@@ -478,7 +488,6 @@ class UserExercisesApp(QDialog):
 
             message_box.exec_()
 
-
     def previous_exercise(self):
         if self.current_exercise > 0:
             self.current_exercise -= 1
@@ -500,11 +509,18 @@ class UserExercisesApp(QDialog):
 
     def show_main_menu(self):
         ''' Show the main menu'''
+        self.reset()
         widget.setCurrentIndex(2)
 
     def show_back(self):
         ''' Show the back button'''
+        self.reset()
         widget.setCurrentIndex(0)
+    
+    def reset(self):
+        ''' Reset the widget'''
+        self.current_exercise = 0
+        self.display_exercise()
 
 
 class GuestExerciseApp(QDialog):
@@ -573,11 +589,16 @@ class GuestExerciseApp(QDialog):
                                     border-radius: 5px;")
 
             message_box.exec_() """
-
             
     def show_guest_menu(self):
         ''' Show the guest menu'''
+        self.reset()
         widget.setCurrentIndex(3)
+    
+    def reset(self):
+        ''' Reset the widget'''
+        self.current_exercise = 0
+        self.display_exercise()
 
 
 class HomeApp(QDialog):
