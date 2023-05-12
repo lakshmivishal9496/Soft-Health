@@ -52,7 +52,10 @@ def test_mainButton( ui_form):
     '''Test Main Button'''
     assert ui_form.main_btn.text() == "Main Menu"
     QTest.mouseClick(ui_form.main_btn, Qt.LeftButton)
-    # Add any additional assertions or behavior that you expect from the main button
+
+def test_labels(ui_form):
+    '''Test Labels'''
+    assert ui_form.Exercise is not None
 
 
 
