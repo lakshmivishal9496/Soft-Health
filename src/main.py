@@ -36,7 +36,7 @@ class LoginApp(QDialog):
         if not un or not pw:
             QMessageBox.warning(self, "Login Error",
                                 "Username and password are required")
-            QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
+            QMessageBox.setWindowIcon(QIcon('static\images\icon.png'))
             return
 
         # display an error message if the username and password are not valid
@@ -87,7 +87,6 @@ class RegApp(QDialog):
         ''' Deals with registration'''
         un = self.tb3.text()
         pw = self.tb4.text()
-        em = self.tb5.text()
         repw = self.tb6.text()
         # print(un)
         # print(pw)
@@ -97,12 +96,10 @@ class RegApp(QDialog):
         cursor.execute('''
                        CREATE TABLE IF NOT EXISTS login (
                            username TEXT,
-                           password TEXT,
-                           email TEXT)
-                       ''')
+                           password TEXT''')
 
         error_message = self.verify_password(pw)
-        if not un or not pw or not em:
+        if not un or not pw:
             QMessageBox.warning(self, "Registration Error",
                                 "Please fill in all the fields")
             QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
@@ -124,7 +121,7 @@ class RegApp(QDialog):
                 QMessageBox.information(self, "Login Output",
                                         "User registered successfully.\
                                         Please login to continue.")
-                QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
+                QMessageBox.setWindowIcon(QIcon('static\images\icon.png'))
             QApplication.processEvents()
             self.tb3.setText("")
             self.tb4.setText("")
