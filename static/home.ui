@@ -100,7 +100,7 @@ background-color:rgba(192, 192, 192,200);
 
 color: rgb(100, 79, 130);
 
-font-size: 18px;
+font-size: 12px;
 border-radius : 7px;
 
 }
@@ -124,11 +124,9 @@ background-color: rgb(117, 71, 255);
    </property>
    <property name="styleSheet">
     <string notr="true">background-color:rgba(192, 192, 192,0);
-font-size: 16px;
+font-size: 18px;
 font-family:Sura;
-
 color: rgb(100, 79, 130);
-
 font-weight:400;</string>
    </property>
    <property name="text">
@@ -136,13 +134,6 @@ font-weight:400;</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>
-   </property>
-      <property name="styleSheet">
-    <string notr="true">background-color:rgba(192, 192, 192,0);
-font-size: 18px;
-font-family:Sura;
-color: rgb(100, 79, 130);
-font-weight:400;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">

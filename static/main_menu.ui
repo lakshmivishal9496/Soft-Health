@@ -178,7 +178,7 @@ background-color: rgb(117, 71, 255);
     <string notr="true">QPushButton#b5_2{
 background-color:rgb(192, 192, 192);
 color: rgb(100, 79, 130);
-font-size: 26px;
+font-size: 12px;
 border-radius : 7px;
 font-family:Sura;
 font-weight:400;
