@@ -231,8 +231,8 @@ font-weight:400;</string>
   <widget class="QPushButton" name="logout">
    <property name="geometry">
     <rect>
-     <x>820</x>
-     <y>60</y>
+     <x>800</x>
+     <y>50</y>
      <width>175</width>
      <height>40</height>
     </rect>
