@@ -94,7 +94,7 @@ border-bottom-color: rgba(46,82,101,255);
       <enum>QLineEdit::Password</enum>
      </property>
      <property name="alignment">
-      <set>Qt::AlignLeft</set>
+      <set>Qt::AlignLeading</set>
      </property>
      <property name="placeholderText">
       <string>Repeat password...</string>
@@ -119,7 +119,7 @@ padding-left: 10px;
 border-bottom-color: rgba(46,82,101,255);</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignLeft</set>
+      <set>Qt::AlignLeading</set>
      </property>
      <property name="placeholderText">
       <string>Enter username here...</string>
@@ -148,7 +148,7 @@ border-bottom-color: rgba(46,82,101,255);
       <enum>QLineEdit::Password</enum>
      </property>
      <property name="alignment">
-      <set>Qt::AlignLeft</set>
+      <set>Qt::AlignLeading</set>
      </property>
      <property name="placeholderText">
       <string>Enter password here...</string>
@@ -178,7 +178,7 @@ border-radius:2px;</string>
     <property name="geometry">
      <rect>
       <x>416</x>
-      <y>30</y>
+      <y>50</y>
       <width>191</width>
       <height>191</height>
      </rect>

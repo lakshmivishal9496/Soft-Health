@@ -165,7 +165,7 @@ class RegApp(QDialog):
         error_message = self.verify_password(pw)
         if not un or not pw:
             self.show_custom_message(QMessageBox.Warning, "Registration Error",
-                                     "Please fill in all the fields")
+                                     "Please fill in all fields")
         else:
             if error_message:
                 self.show_custom_message(QMessageBox.Warning, "Registration Error", error_message)
@@ -821,6 +821,9 @@ widget.addWidget(quotes)  # 6
 widget.addWidget(exercises)  # 7
 widget.addWidget(guest_exercises)   # 8
 widget.addWidget(guest_quotes)  # 9
+widget.setWindowTitle("Soft Health v0.1")
+widget.setWindowIcon(QIcon('static\images\icon.png'))
+
 widget.setCurrentIndex(0)
 widget.setFixedWidth(1024)
 widget.setFixedHeight(768)
