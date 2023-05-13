@@ -3,6 +3,7 @@ import sys
 import re
 import sqlite3
 from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
 from PyQt5.uic import loadUi
 import personality_quiz
@@ -35,12 +36,14 @@ class LoginApp(QDialog):
         if not un or not pw:
             QMessageBox.warning(self, "Login Error",
                                 "Username and password are required")
+            QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
             return
 
         # display an error message if the username and password are not valid
         if user is None:
             QMessageBox.warning(self, "Login Error",
                                 "Invalid username or password")
+            QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
             return
 
         # display a message box asking the user
@@ -102,12 +105,15 @@ class RegApp(QDialog):
         if not un or not pw or not em:
             QMessageBox.warning(self, "Registration Error",
                                 "Please fill in all the fields")
+            QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
         else:
             if error_message:
                 QMessageBox.warning(self, "Registration Error", error_message)
+                QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
             elif pw != repw:
                 QMessageBox.warning(self, "Registration Error",
                                     "Passwords do not match.")
+                QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
             else:
                 cursor.execute('''
                     INSERT INTO login (username, password, email)
@@ -118,6 +124,7 @@ class RegApp(QDialog):
                 QMessageBox.information(self, "Login Output",
                                         "User registered successfully.\
                                         Please login to continue.")
+                QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
             QApplication.processEvents()
             self.tb3.setText("")
             self.tb4.setText("")
@@ -319,6 +326,7 @@ class QuotesApp(QDialog):
             message_box = QMessageBox()
             message_box.setWindowTitle("End of Quotes")
             message_box.setText("You have reached the end of the quotes.")
+            message_box.setWindowIcon(QIcon('static\images\logo.png'))
 
             # Add a custom Ok button with 3D styling
             ok_button = message_box.addButton(QMessageBox.Ok)
@@ -399,6 +407,7 @@ class GuestQuotesApp(QDialog):
             message_box = QMessageBox()
             message_box.setWindowTitle("End of Quotes")
             message_box.setText("You have reached the end of the quotes.")
+            message_box.setWindowIcon(QIcon('static\images\logo.png'))
 
             # Add a custom Ok button with 3D styling
             ok_button = message_box.addButton(QMessageBox.Ok)
@@ -478,6 +487,7 @@ class UserExercisesApp(QDialog):
             message_box = QMessageBox()
             message_box.setWindowTitle("End of Exercises")
             message_box.setText("You have reached the end of the exercises.")
+            message_box.setWindowIcon(QIcon('static\images\logo.png'))
 
             # Add a custom Ok button with 3D styling
             ok_button = message_box.addButton(QMessageBox.Ok)
@@ -560,6 +570,7 @@ class GuestExerciseApp(QDialog):
             message_box = QMessageBox()
             message_box.setWindowTitle("End of Exercises")
             message_box.setText("You have reached the end of the exercises.")
+            message_box.setWindowIcon(QIcon('static\images\logo.png'))
 
             # Add a custom Ok button with 3D styling and color
             ok_button = message_box.addButton(QMessageBox.Ok)
