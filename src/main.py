@@ -36,7 +36,7 @@ class LoginApp(QDialog):
         if not un or not pw:
             QMessageBox.warning(self, "Login Error",
                                 "Username and password are required")
-            QMessageBox.setWindowIcon(QIcon('static\images\icon.png'))
+            #QMessageBox.setWindowIcon(QIcon('static\images\icon.png'))
             return
 
         # display an error message if the username and password are not valid
@@ -90,38 +90,32 @@ class RegApp(QDialog):
         repw = self.tb6.text()
         # print(un)
         # print(pw)
-        # print(em)
         db = sqlite3.connect('softhealth.db')
         cursor = db.cursor()
-        cursor.execute('''
-                       CREATE TABLE IF NOT EXISTS login (
+        cursor.execute('''CREATE TABLE IF NOT EXISTS login (
                            username TEXT,
-                           password TEXT''')
+                           password TEXT)''')
 
         error_message = self.verify_password(pw)
         if not un or not pw:
             QMessageBox.warning(self, "Registration Error",
                                 "Please fill in all the fields")
-            QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
         else:
             if error_message:
                 QMessageBox.warning(self, "Registration Error", error_message)
-                QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
             elif pw != repw:
                 QMessageBox.warning(self, "Registration Error",
                                     "Passwords do not match.")
-                QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
             else:
                 cursor.execute('''
-                    INSERT INTO login (username, password, email)
+                    INSERT INTO login (username, password)
                     VALUES (?,?,?)
-                    ''', (un, pw, em))
+                    ''', (un, pw))
                 db.commit()
                 db.close()
                 QMessageBox.information(self, "Login Output",
                                         "User registered successfully.\
                                         Please login to continue.")
-                QMessageBox.setWindowIcon(QIcon('static\images\icon.png'))
             QApplication.processEvents()
             self.tb3.setText("")
             self.tb4.setText("")
