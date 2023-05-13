@@ -1,6 +1,7 @@
 <b>SoftHealth App</b>
-
- 
+<p align="center">
+  <img src="https://github.com/lakshmivishal9496/Soft-Health/blob/main/static/images/logo.png" alt="Soft Health Logo" width="150" height="150" />
+</p> 
 
 SoftHealth is a user-friendly application designed to help individuals better understand and manage their mental health. 
 Softhealth makes it easier for people to take care of their mental health. It helps users manage their stress and feelings in a way that works best for them. The app gives personalized advice according to personality types. This way, users can feel supported and take control of their mental health.
