@@ -152,7 +152,7 @@ font-family:Sura</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image:url(static/images/logo.png);</string>
+     <string notr="true">background-image:url(static/images/logo000.png);</string>
     </property>
     <property name="text">
      <string/>
@@ -270,5 +270,6 @@ background-color: rgb(117, 71, 255);
    <zorder>label</zorder>
   </widget>
  </widget>
+ <resources/>
  <connections/>
 </ui>
