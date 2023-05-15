@@ -42,7 +42,7 @@ border-radius: 9px;</string>
      <x>260</x>
      <y>260</y>
      <width>500</width>
-     <height>371</height>
+     <height>291</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -76,45 +76,11 @@ background-color: rgba(191, 191, 191, 0)</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="music_btn">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>150</y>
-      <width>360</width>
-      <height>42</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Sura</family>
-      <pointsize>1</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton#music_btn{
-background-color:rgb(192, 192, 192);
-color: rgb(100, 79, 130);
-font-size: 22px;
-border-radius : 7px;
-font-family:Sura;
-font-weight:400;
-}
-QPushButton#music_btn: pressed {
-background-color: rgb(117, 71, 255);
-}</string>
-    </property>
-    <property name="text">
-     <string>Relaxing Music</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="signupmore_btn">
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>290</y>
+      <y>220</y>
       <width>360</width>
       <height>42</height>
      </rect>
@@ -149,7 +115,7 @@ background-color: rgb(117, 71, 255);
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>220</y>
+      <y>150</y>
       <width>360</width>
       <height>42</height>
      </rect>

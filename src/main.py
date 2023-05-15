@@ -1,10 +1,13 @@
 '''Main program to run the application'''
 import sys
 import re
+import os
 import sqlite3
 from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtCore import QUrl
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
+from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
+from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QPushButton
 from PyQt5.uic import loadUi
 import personality_quiz
 
@@ -121,7 +124,7 @@ class LoginApp(QDialog):
         ''' Deals with guest login screen for the login app'''
         widget.setCurrentIndex(3) """
 
-class RegApp(QDialog):
+""" class RegApp(QDialog):
     ''' Initialize the widget'''
     def __init__(self):
         ''' Initialize registration screen for the registration app'''
@@ -188,9 +191,9 @@ class RegApp(QDialog):
 
     def show_login(self):
         ''' Deals with showing login screen for the registration app'''
-        widget.setCurrentIndex(0)
+        widget.setCurrentIndex(0) """
 
-""" class RegApp(QDialog):
+class RegApp(QDialog):
     ''' Initialize the widget'''
     def __init__(self):
         ''' Initialize registration screen for the registration app'''
@@ -201,13 +204,21 @@ class RegApp(QDialog):
         self.b3.clicked.connect(self.reg)
         self.b4.clicked.connect(self.show_login)
 
+    def show_custom_message(self, message_type, title, message):
+        msg = QMessageBox()
+        msg.setIcon(message_type)
+        msg.setWindowTitle(title)
+        msg.setText(message)
+        msg.setWindowIcon(QIcon('static/images/icon.png'))
+        msg.exec_()
+
     def verify_password(self, password):
         ''' Deals with password validation'''
         if len(password) < 8 and (re.search('[0-9]', password) is None or
                            re.search('[A-Z]', password) is None or
                            re.search('[a-z]', password) is None or
                            re.search('[@#&]', password) is None):
-            return "Password must contain: \n " + "*minimum 8 characters,\n " +  "*a number \n " + "*a uppercase letter \n"+ "*a lowercase letter \n"+ "*a special character \n"
+            return "Password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*a uppercase letter\n"+ "*a lowercase letter\n"+ "*a special character\n"
         return None
 
     def reg(self):
@@ -246,12 +257,11 @@ class RegApp(QDialog):
             QApplication.processEvents()
             self.tb3.setText("")
             self.tb4.setText("")
-            self.tb5.setText("")
             self.tb6.setText("")
 
     def show_login(self):
         ''' Deals with showing login screen for the registration app'''
-        widget.setCurrentIndex(0) """
+        widget.setCurrentIndex(0)
 
 
 class MainMenuapp(QDialog):
@@ -265,6 +275,7 @@ class MainMenuapp(QDialog):
         self.b5.clicked.connect(self.p_test)
         self.b8.clicked.connect(self.show_quotes)
         self.b7.clicked.connect(self.show_stress)
+        self.b6.clicked.connect(self.show_music)
 
     def show_quotes(self):
         ''' Deals with showing quotes for the home app'''
@@ -281,6 +292,10 @@ class MainMenuapp(QDialog):
     def show_stress(self):
         ''' Deals with stress relief for the home app'''
         widget.setCurrentIndex(7)
+
+    def show_music(self):
+        ''' Deals with music for the home app'''
+        widget.setCurrentIndex(10)
 
 
 class PersonalityApp(QDialog):
@@ -731,6 +746,83 @@ class GuestExerciseApp(QDialog):
         self.current_exercise = 0
         self.display_exercise()
 
+class UserMusicApp(QDialog):
+    '''User Music App'''
+
+    def __init__(self):
+        '''Construct instance'''
+        super(UserMusicApp, self).__init__()
+        loadUi(r"static\music.ui", self)
+
+        self.media_player = QMediaPlayer(self)
+        self.music_files = ['001.mp3', '002.mp3', '003.mp3', '004.mp3']
+        self.current_music_index = 0
+        self.init_music()
+        self.play_btn = self.findChild(QPushButton, 'play_btn')
+        self.pause_btn = self.findChild(QPushButton, 'pause_btn')
+        self.mute = self.findChild(QPushButton, 'mute')
+        self.plus = self.findChild(QPushButton, 'plus')
+        self.minus = self.findChild(QPushButton, 'minus')
+        self.next_btn = self.findChild(QPushButton, 'next_btn')
+        self.back_btn = self.findChild(QPushButton, 'back_btn')
+        self.logout.clicked.connect(self.show_back)
+        self.main_btn.clicked.connect(self.show_main_menu)
+
+        self.play_btn.clicked.connect(self.play_audio)
+        self.pause_btn.clicked.connect(self.pause_audio)
+        self.mute.clicked.connect(self.mute_audio)
+        self.plus.clicked.connect(self.increase_volume)
+        self.minus.clicked.connect(self.decrease_volume)
+        self.next_btn.clicked.connect(self.next_audio)
+        self.back_btn.clicked.connect(self.previous_audio)
+
+    def init_music(self):
+        self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
+
+    def load_audio(self, file_path):
+        self.media_player.setMedia(QMediaContent(QUrl.fromLocalFile(file_path)))
+
+    def play_audio(self):
+        self.media_player.play()
+
+    def pause_audio(self):
+        self.media_player.pause()
+
+    def mute_audio(self):
+        self.media_player.setVolume(0)
+
+    def increase_volume(self):
+        volume = self.media_player.volume()
+        volume += 5
+        self.media_player.setVolume(volume)
+
+    def decrease_volume(self):
+        volume = self.media_player.volume()
+        volume -= 5
+        self.media_player.setVolume(volume)
+
+    def next_audio(self):
+        self.current_music_index += 1
+        if self.current_music_index >= len(self.music_files):
+            self.current_music_index = 0
+        self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
+        self.play_audio()
+
+    def previous_audio(self):
+        self.current_music_index -= 1
+        if self.current_music_index < 0:
+            self.current_music_index = len(self.music_files) - 1
+        self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
+        self.play_audio()
+
+    def show_back(self):
+        ''' Show the back button'''
+        widget.setCurrentIndex(0)
+
+    def show_main_menu(self):
+        ''' Show the main menu'''
+        widget.setCurrentIndex(2)
+        self.media_player.stop()
 
 class HomeApp(QDialog):
     '''Main Menu App'''
@@ -810,6 +902,7 @@ quotes = QuotesApp()
 exercises = UserExercisesApp()
 guest_exercises = GuestExerciseApp()
 guest_quotes = GuestQuotesApp()
+music = UserMusicApp()
 
 widget.addWidget(loginform)  # 0
 widget.addWidget(registrationform)  # 1
@@ -821,6 +914,7 @@ widget.addWidget(quotes)  # 6
 widget.addWidget(exercises)  # 7
 widget.addWidget(guest_exercises)   # 8
 widget.addWidget(guest_quotes)  # 9
+widget.addWidget(music)  # 10
 widget.setWindowTitle("Soft Health v0.1")
 widget.setWindowIcon(QIcon('static\images\icon.png'))
 
