@@ -770,11 +770,13 @@ class UserMusicApp(QDialog):
 
         self.play_btn.clicked.connect(self.play_audio)
         self.pause_btn.clicked.connect(self.pause_audio)
-        self.mute.clicked.connect(self.mute_audio)
+        self.mute.clicked.connect(self.toggle_mute)
         self.plus.clicked.connect(self.increase_volume)
         self.minus.clicked.connect(self.decrease_volume)
         self.next_btn.clicked.connect(self.next_audio)
         self.back_btn.clicked.connect(self.previous_audio)
+
+        self.is_muted = False
 
     def init_music(self):
         self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
@@ -783,13 +785,21 @@ class UserMusicApp(QDialog):
         self.media_player.setMedia(QMediaContent(QUrl.fromLocalFile(file_path)))
 
     def play_audio(self):
+        self.media_player.setVolume(25)
         self.media_player.play()
 
     def pause_audio(self):
         self.media_player.pause()
 
-    def mute_audio(self):
-        self.media_player.setVolume(0)
+    def toggle_mute(self):
+        if self.is_muted:
+            # If currently muted, set volume to 25 and switch the flag
+            self.media_player.setVolume(25)
+            self.is_muted = False
+        else:
+            # If currently not muted, set volume to 0 and switch the flag
+            self.media_player.setVolume(0)
+            self.is_muted = True
 
     def increase_volume(self):
         volume = self.media_player.volume()

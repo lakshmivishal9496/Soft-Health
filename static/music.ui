@@ -175,9 +175,17 @@ background-color:rgb(255, 136, 4);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(35, 157, 147, 0.5);
+     <string notr="true">QPushButton#mute{
+background-color: rgba(35, 157, 147, 0.5);
 color: white;
-font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QPushButton#mute: pressed{
+background-color: rgba(25, 157, 147, 0.1);
+color: white;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+}</string>
     </property>
     <property name="text">
      <string>mute</string>
