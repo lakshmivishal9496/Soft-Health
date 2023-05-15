@@ -276,6 +276,8 @@ class MainMenuapp(QDialog):
         self.b8.clicked.connect(self.show_quotes)
         self.b7.clicked.connect(self.show_stress)
         self.b6.clicked.connect(self.show_music)
+        self.b11.clicked.connect(self.show_resources)
+
 
     def show_quotes(self):
         ''' Deals with showing quotes for the home app'''
@@ -296,6 +298,10 @@ class MainMenuapp(QDialog):
     def show_music(self):
         ''' Deals with music for the home app'''
         widget.setCurrentIndex(10)
+
+        ''' Deals with resources for the home app'''
+    def show_resources(self):
+        widget.setCurrentIndex(11)
 
 
 class PersonalityApp(QDialog):
@@ -834,6 +840,27 @@ class UserMusicApp(QDialog):
         widget.setCurrentIndex(2)
         self.media_player.stop()
 
+
+class ResourcesApp(QDialog):
+    def __init__(self):
+        '''Initialize the widget'''
+        super(ResourcesApp, self).__init__()
+        loadUi(r"static\resources.ui", self)
+        self.logout.clicked.connect(self.show_back)
+#        self.next_btn.clicked.connect(self.show_resources)
+        self.main_btn.clicked.connect(self.show_main_menu)
+
+    def show_back(self):
+        ''' Show the back button'''
+        widget.setCurrentIndex(0)
+
+#    def show_resoucres(self):
+#        pass
+
+    def show_main_menu(self):
+        ''' Show the main menu'''
+        widget.setCurrentIndex(2)
+
 class HomeApp(QDialog):
     '''Main Menu App'''
     def __init__(self):
@@ -913,6 +940,7 @@ exercises = UserExercisesApp()
 guest_exercises = GuestExerciseApp()
 guest_quotes = GuestQuotesApp()
 music = UserMusicApp()
+resources = ResourcesApp()
 
 widget.addWidget(loginform)  # 0
 widget.addWidget(registrationform)  # 1
@@ -925,6 +953,7 @@ widget.addWidget(exercises)  # 7
 widget.addWidget(guest_exercises)   # 8
 widget.addWidget(guest_quotes)  # 9
 widget.addWidget(music)  # 10
+widget.addWidget(resources)  # 11
 widget.setWindowTitle("Soft Health v0.1")
 widget.setWindowIcon(QIcon('static\images\icon.png'))
 
