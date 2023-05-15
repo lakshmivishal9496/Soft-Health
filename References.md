@@ -181,3 +181,15 @@ Lipičnik,  Iztok N.(2012)."Cognitive Styles as Reflected in Type Indicators: A 
 
 
 Wheater, David W. R. (1992). "Personality, Type A Behavior, and the Myers-Briggs Type Indicator".
+
+
+
+
+### References for these Mayers personality traits
+
+Dutton, J. E., Workman, K. M., & Hardin, A. E. (2014). Compassionate love: A framework for research on empathy, forgiveness, and altruism in organizations. Journal of Management, 40(4), 1050-1088.
+
+Kanfer, R., Meijer, E., & Zhou, L. (2015). Giving time gives you time: Experimental evidence on volunteering and subjective time pressure. Journal of Organizational Behavior, 36(2), 205-224.
+Kim, H., Lee, D. R., Lee, Y. H., & Kim, M. S. (2018). The effects of servant leadership on followers' trust in leader and follower organizational citizenship behavior: The mediating effect of perceived organizational support. Journal of Business Research, 89, 317-325. 
+
+Koster, E. H. W., Hoorelbeke, K., Onraedt, T., Owens, M., & Derakshan, N. (2011). The relationship between attentional control, anxiety, and depression: The mediating role of rumination. Cognitive Therapy and Research, 35(4), 399-408.
