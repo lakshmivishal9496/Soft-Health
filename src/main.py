@@ -845,7 +845,7 @@ class UserMusicApp(QDialog):
     def show_main_menu(self):
         ''' Show the main menu'''
         widget.setCurrentIndex(2)
-        self.media_player.stop()
+        #self.media_player.stop()
 
 
 class ResourcesApp(QDialog):
