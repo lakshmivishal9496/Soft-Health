@@ -7,7 +7,7 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import QUrl
 from PyQt5.QtGui import QIcon
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
-from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QPushButton
+from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QPushButton, QLabel
 from PyQt5.uic import loadUi
 import personality_quiz
 
@@ -761,7 +761,7 @@ class UserMusicApp(QDialog):
         loadUi(r"static\music.ui", self)
 
         self.media_player = QMediaPlayer(self)
-        self.music_files = ['001.mp3', '002.mp3', '003.mp3', '004.mp3']
+        self.music_files = ['Yoga Style - Chris Haugen.mp3', 'Lazy Walk - Cheel.mp3', 'First Dream - Brian Bolger.mp3', 'Interstellar Mood - Nico Staf.mp3']
         self.current_music_index = 0
         self.init_music()
         self.play_btn = self.findChild(QPushButton, 'play_btn')
@@ -771,6 +771,10 @@ class UserMusicApp(QDialog):
         self.minus = self.findChild(QPushButton, 'minus')
         self.next_btn = self.findChild(QPushButton, 'next_btn')
         self.back_btn = self.findChild(QPushButton, 'back_btn')
+        self.now_playing_label = self.findChild(QLabel, 'now_playing_label')
+        self.media_player.stateChanged.connect(self.update_label)
+
+
         self.logout.clicked.connect(self.show_back)
         self.main_btn.clicked.connect(self.show_main_menu)
 
@@ -781,6 +785,7 @@ class UserMusicApp(QDialog):
         self.minus.clicked.connect(self.decrease_volume)
         self.next_btn.clicked.connect(self.next_audio)
         self.back_btn.clicked.connect(self.previous_audio)
+        
 
         self.is_muted = False
         self.media_player.mediaStatusChanged.connect(self.media_status_changed)
@@ -791,6 +796,13 @@ class UserMusicApp(QDialog):
 
     def load_audio(self, file_path):
         self.media_player.setMedia(QMediaContent(QUrl.fromLocalFile(file_path)))
+        file_name, _ = os.path.splitext(os.path.basename(file_path))
+        #self.now_playing_label.setText(f"Now Playing: {file_name}")
+
+    def update_label(self, state):
+        if state == QMediaPlayer.PlayingState:
+            file_name, _ = os.path.splitext(os.path.basename(self.music_files[self.current_music_index]))
+            self.now_playing_label.setText(f"Now Playing: {file_name}")
 
     def play_audio(self):
         self.media_player.setVolume(25)

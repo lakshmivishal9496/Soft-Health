@@ -169,7 +169,7 @@ background-color:rgb(255, 136, 4);
     <property name="geometry">
      <rect>
       <x>36</x>
-      <y>160</y>
+      <y>170</y>
       <width>115</width>
       <height>40</height>
      </rect>
@@ -195,7 +195,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;
     <property name="geometry">
      <rect>
       <x>161</x>
-      <y>160</y>
+      <y>170</y>
       <width>115</width>
       <height>40</height>
      </rect>
@@ -213,7 +213,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     <property name="geometry">
      <rect>
       <x>286</x>
-      <y>160</y>
+      <y>170</y>
       <width>115</width>
       <height>40</height>
      </rect>
@@ -311,13 +311,10 @@ font: 28pt &quot;Perpetua&quot;;</string>
       <height>50</height>
      </rect>
     </property>
-       <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
     <property name="font">
      <font>
       <family>Perpetua</family>
-      <pointsize>15</pointsize>
+      <pointsize>16</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -340,8 +337,27 @@ font: 16pt &quot;Perpetua&quot;;</string>
     <property name="text">
      <string>Volume</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
     <property name="indent">
      <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="now_playing_label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>135</y>
+      <width>350</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
