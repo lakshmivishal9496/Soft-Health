@@ -862,19 +862,63 @@ class UserMusicApp(QDialog):
 
 class ResourcesApp(QDialog):
     def __init__(self):
-        '''Initialize the widget'''
+        '''Initialize the resources widget'''
         super(ResourcesApp, self).__init__()
         loadUi(r"static\resources.ui", self)
         self.logout.clicked.connect(self.show_back)
-#        self.next_btn.clicked.connect(self.show_resources)
+        self.resources = ["<b>The Science of Being Well:</b><br><br> The Science of Being Well" "by Wallace D. Wattles is a self-help book that focuses on the connection between physical health and mental well-being. It emphasizes the importance of cultivating positive thoughts and beliefs to promote well-being.",
+                          "<b>The Way of Peace:</b><br><br> The Way of Peace by James Allen is a self-help book that encourages readers to find inner peace and harmony through meditation and positive thinking. It also discusses the importance of cultivating a positive mindset to achieve success in life.",
+                          "<b>Youtube video 1:</b><br><br> This video is a self-help guide designed to help readers manage stress and anxiety through a variety of techniques, believing in yourself, self-well-being strategies, and mindfulness practices.",
+                          "<b>Youtube video 2:</b><br><br> This video explores the importance of living in the present moment and offers practical guidance for reducing stress and anxiety by focusing on the present rather than dwelling on the past or worrying about the future."]
+        self.images = ["static/images/res001.jpg", "static/images/res002.jpg", "static/images/res003.jpg", "static/images/res004.jpg"]
+
+        self.current_resource = 0
+        self.current_image = 0
+        self.display_resource()
+        self.next_btn.clicked.connect(self.show_next_resource)
+        self.back_btn.clicked.connect(self.show_previous_resource)
         self.main_btn.clicked.connect(self.show_main_menu)
+
+
+    def display_resource(self):
+        resource = self.resources[self.current_resource]
+        image_path = self.images[self.current_resource]
+        self.ResourceArea.setText(resource)
+        self.set_image(image_path)
+
+    def set_image(self, image_path):
+        style = f"border: 1px solid black; border-radius: 10px; padding: 0px; border-image: url({image_path}) 10 10 10 10 stretch stretch;"
+        self.picture.setStyleSheet(style)
+
+    def show_next_resource(self):
+        if self.current_resource < len(self.resources) - 1:
+            self.current_resource += 1
+            self.display_resource()
+        else:
+            message_box = QMessageBox()
+            message_box.setWindowTitle("End of External Resources")
+            message_box.setText("You have reached the end of the External Resources.")
+            message_box.setWindowIcon(QIcon('static\images\icon.png'))
+
+            # Add a custom Ok button with 3D styling
+            ok_button = message_box.addButton(QMessageBox.Ok)
+            ok_button.setStyleSheet("background-color: rgb(100, 79, 130);\
+                                    color: white; font-weight: bold; \
+                                    padding: 5px 10px; border: none; \
+                                    border-radius: 5px;")
+
+            message_box.exec_()
+
+    def show_previous_resource(self):
+        if self.current_resource > 0:
+            self.current_resource -= 1
+            self.display_resource()
+        else:
+            pass
 
     def show_back(self):
         ''' Show the back button'''
         widget.setCurrentIndex(0)
-
-#    def show_resoucres(self):
-#        pass
 
     def show_main_menu(self):
         ''' Show the main menu'''

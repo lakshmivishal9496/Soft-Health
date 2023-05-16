@@ -200,7 +200,7 @@ background-color:rgb(255, 136, 4);
     border-radius: 10px;
     padding: 0px;
     
-    border-image: url(static/images/001.jpg) 10 10 10 10 stretch stretch;</string>
+    border-image: url(static/images/res001.jpg) 10 10 10 10 stretch stretch;</string>
     </property>
     <property name="text">
      <string/>
