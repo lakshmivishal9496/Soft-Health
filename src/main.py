@@ -808,7 +808,7 @@ class UserMusicApp(QDialog):
             self.now_playing_label.setText(f"Now Playing: {file_name}")
 
     def play_audio(self):
-        self.media_player.setVolume(50)
+        #self.media_player.setVolume(50)
         self.media_player.play()
 
     def pause_audio(self):
@@ -833,6 +833,10 @@ class UserMusicApp(QDialog):
         volume = self.media_player.volume()
         volume += 5
         self.media_player.setVolume(volume)
+        current_file = os.path.basename(self.music_files[self.current_music_index])
+        file_name_without_extension = os.path.splitext(current_file)[0]
+        self.now_playing_label.setText(f"Now Playing: {file_name_without_extension}")
+        
 
     def decrease_volume(self):
         volume = self.media_player.volume()
