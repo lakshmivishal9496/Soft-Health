@@ -1030,7 +1030,7 @@ widget.addWidget(guest_exercises)   # 8
 widget.addWidget(guest_quotes)  # 9
 widget.addWidget(music)  # 10
 widget.addWidget(resources)  # 11
-widget.setWindowTitle("Soft Health v0.1")
+widget.setWindowTitle("Soft Health v0.9")
 widget.setWindowIcon(QIcon('static\images\icon.png'))
 
 widget.setCurrentIndex(0)
