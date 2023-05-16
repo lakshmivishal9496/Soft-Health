@@ -79,7 +79,7 @@ background-color: rgb(117, 71, 255);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgba(124, 150, 171, 0.80);</string>
+    <string notr="true">background-color:rgba(124, 150, 171, 0.3);</string>
    </property>
    <property name="title">
     <string/>
@@ -244,6 +244,8 @@ background-color:rgb(255, 136, 4);
     border-radius: 10px;
 
 color: rgb(100, 79, 130);
+
+background color: rgba(188, 190, 216, 0.1)
 font-size: 16px;
 border-radius : 7px;
 font-family:Sura;
@@ -259,7 +261,10 @@ font-weight:400;</string>
      <bool>true</bool>
     </property>
     <property name="margin">
-     <number>15</number>
+     <number>13</number>
+    </property>
+    <property name="indent">
+     <number>1</number>
     </property>
    </widget>
   </widget>

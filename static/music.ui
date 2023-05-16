@@ -266,16 +266,16 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLabel" name="main_label">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>100</x>
       <y>30</y>
-      <width>211</width>
+      <width>261</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Perpetua</family>
-      <pointsize>28</pointsize>
+      <family>Arial</family>
+      <pointsize>22</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -293,7 +293,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(0, 0, 0, 0);
 color: rgb(100, 79, 129);
-font: 28pt &quot;Perpetua&quot;;</string>
+font: 22pt &quot;Arial&quot;;</string>
     </property>
     <property name="text">
      <string>Relaxing Music</string>
@@ -313,7 +313,7 @@ font: 28pt &quot;Perpetua&quot;;</string>
     </property>
     <property name="font">
      <font>
-      <family>Perpetua</family>
+      <family>Arial</family>
       <pointsize>16</pointsize>
       <weight>50</weight>
       <italic>false</italic>
@@ -332,7 +332,7 @@ font: 28pt &quot;Perpetua&quot;;</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(0, 0, 0, 0);
 color: rgb(100, 79, 129);
-font: 16pt &quot;Perpetua&quot;;</string>
+font: 16pt &quot;Arial&quot;;</string>
     </property>
     <property name="text">
      <string>Volume</string>
@@ -353,11 +353,11 @@ font: 16pt &quot;Perpetua&quot;;</string>
       <height>20</height>
      </rect>
     </property>
-    <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

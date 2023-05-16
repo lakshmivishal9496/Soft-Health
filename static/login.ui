@@ -29,7 +29,7 @@ border-radius: 9px;</string>
    <widget class="QPushButton" name="b2">
     <property name="geometry">
      <rect>
-      <x>337</x>
+      <x>330</x>
       <y>595</y>
       <width>360</width>
       <height>42</height>
@@ -91,7 +91,7 @@ font-family:Sura;</string>
    <widget class="QPushButton" name="b5">
     <property name="geometry">
      <rect>
-      <x>337</x>
+      <x>330</x>
       <y>680</y>
       <width>360</width>
       <height>42</height>

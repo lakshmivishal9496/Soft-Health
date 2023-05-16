@@ -4,7 +4,7 @@ import re
 import os
 import sqlite3
 from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtCore import QUrl
+from PyQt5.QtCore import QUrl, Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QPushButton, QLabel
@@ -23,6 +23,9 @@ class LoginApp(QDialog):
         self.b1.clicked.connect(self.login)
         self.b2.clicked.connect(self.show_register)
         self.b5.clicked.connect(self.guest_login)
+        self.tb1.returnPressed.connect(self.login)
+        self.tb2.returnPressed.connect(self.login)
+        
 
     def show_custom_message(self, message_type, title, message):
         msg = QMessageBox()
@@ -805,21 +808,26 @@ class UserMusicApp(QDialog):
             self.now_playing_label.setText(f"Now Playing: {file_name}")
 
     def play_audio(self):
-        self.media_player.setVolume(25)
+        self.media_player.setVolume(50)
         self.media_player.play()
 
     def pause_audio(self):
         self.media_player.pause()
+        self.now_playing_label.setText("Paused")
 
     def toggle_mute(self):
         if self.is_muted:
             # If currently muted, set volume to 25 and switch the flag
-            self.media_player.setVolume(25)
+            self.media_player.setVolume(50)
             self.is_muted = False
+            current_file = os.path.basename(self.music_files[self.current_music_index])
+            file_name_without_extension = os.path.splitext(current_file)[0]
+            self.now_playing_label.setText(f"Now Playing: {file_name_without_extension}")
         else:
             # If currently not muted, set volume to 0 and switch the flag
             self.media_player.setVolume(0)
             self.is_muted = True
+            self.now_playing_label.setText("Muted")
 
     def increase_volume(self):
         volume = self.media_player.volume()
@@ -851,13 +859,20 @@ class UserMusicApp(QDialog):
 
     def show_back(self):
         ''' Show the back button'''
+        self.current_music_index = 0
+        self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
+        self.now_playing_label.setText("")
         widget.setCurrentIndex(0)
         self.media_player.stop()
 
     def show_main_menu(self):
         ''' Show the main menu'''
+        self.current_music_index = 0
+        self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
+        self.now_playing_label.setText("")
         widget.setCurrentIndex(2)
-        #self.media_player.stop()
+        self.media_player.stop()
+
 
 
 class ResourcesApp(QDialog):
