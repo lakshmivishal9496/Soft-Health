@@ -783,6 +783,8 @@ class UserMusicApp(QDialog):
         self.back_btn.clicked.connect(self.previous_audio)
 
         self.is_muted = False
+        self.media_player.mediaStatusChanged.connect(self.media_status_changed)
+
 
     def init_music(self):
         self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
@@ -825,15 +827,20 @@ class UserMusicApp(QDialog):
         self.play_audio()
 
     def previous_audio(self):
-        self.current_music_index -= 1
-        if self.current_music_index < 0:
-            self.current_music_index = len(self.music_files) - 1
-        self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
-        self.play_audio()
+        if self.current_music_index > 0:
+            self.current_music_index -= 1
+            #self.current_music_index = len(self.music_files) - 1
+            self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
+            self.play_audio()
+
+    def media_status_changed(self, status):
+        if status == QMediaPlayer.EndOfMedia:
+            self.next_audio()
 
     def show_back(self):
         ''' Show the back button'''
         widget.setCurrentIndex(0)
+        self.media_player.stop()
 
     def show_main_menu(self):
         ''' Show the main menu'''
