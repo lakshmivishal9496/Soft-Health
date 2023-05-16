@@ -879,7 +879,6 @@ class ResourcesApp(QDialog):
         self.back_btn.clicked.connect(self.show_previous_resource)
         self.main_btn.clicked.connect(self.show_main_menu)
 
-
     def display_resource(self):
         resource = self.resources[self.current_resource]
         image_path = self.images[self.current_resource]
@@ -906,7 +905,6 @@ class ResourcesApp(QDialog):
                                     color: white; font-weight: bold; \
                                     padding: 5px 10px; border: none; \
                                     border-radius: 5px;")
-
             message_box.exec_()
 
     def show_previous_resource(self):
