@@ -964,12 +964,19 @@ class ResourcesApp(QDialog):
             pass
         self.copy_link_btn.setText('Click to copy link')
 
+    def reset(self):
+        ''' Reset the widget'''
+        self.current_resource = 0
+        self.display_resource()
+
     def show_back(self):
         ''' Show the back button'''
+        self.reset()
         widget.setCurrentIndex(0)
 
     def show_main_menu(self):
         ''' Show the main menu'''
+        self.reset()
         widget.setCurrentIndex(2)
 class HomeApp(QDialog):
     '''Main Menu App'''
