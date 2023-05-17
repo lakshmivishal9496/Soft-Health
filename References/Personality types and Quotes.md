@@ -1,10 +1,10 @@
-###  Quotes related to personality type 📜
+# Quotes related to personality type 📜
 
-# ISTJ (Introverted, Sensing, Thinking, Judging):
+## ISTJ (Introverted, Sensing, Thinking, Judging):
 ●	"Integrity is doing the right thing, even when no one is watching." - C.S. Lewis
 ●	"I'm not a product of my circumstances. I am a product of my decisions." - Stephen Covey
 
-# ISFJ (Introverted, Sensing, Feeling, Judging):
+## ISFJ (Introverted, Sensing, Feeling, Judging):
 ●	"The best way to find yourself is to lose yourself in the service of others." - Mahatma Gandhi
 ●	"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart." - Helen Keller
 ●	"Love and compassion are necessities, not luxuries. Without them, humanity cannot survive." - Dalai Lama
@@ -13,43 +13,43 @@
 ●	"It's not what we have in life, but who we have in our life that matters." - Unknown
 ●	"I can't change the direction of the wind, but I can adjust my sails to always reach my destination." - Jimmy Dean
 
-# INFJ (Introverted, Intuitive, Feeling, Judging):
+## INFJ (Introverted, Intuitive, Feeling, Judging):
 ●	"The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt
 ●	"You must be the change you wish to see in the world." - Mahatma Gandhi
 
-# INTJ (Introverted, Intuitive, Thinking, Judging):
+## INTJ (Introverted, Intuitive, Thinking, Judging):
 ●	"Innovation distinguishes between a leader and a follower." - Steve Jobs
 ●	"The only way to do great work is to love what you do." - Steve Jobs
 
-# ISTP (Introverted, Sensing, Thinking, Perceiving):
+## ISTP (Introverted, Sensing, Thinking, Perceiving):
 ●	"The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt
 ●	"Success is not the key to happiness. Happiness is the key to success." - Albert Schweitzer
 
-# ISFP (Introverted, Sensing, Feeling, Perceiving):
+## ISFP (Introverted, Sensing, Feeling, Perceiving):
 ●	"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart." - Helen Keller
 ●	"Happiness is not something ready-made. It comes from your own actions." - Dalai Lama
 
-# INFP (Introverted, Intuitive, Feeling, Perceiving):
+## INFP (Introverted, Intuitive, Feeling, Perceiving):
 ●	"The purpose of life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well." - Ralph Waldo Emerson
 ●	"Your time is limited, don't waste it living someone else's life." - Steve Jobs
 
-# INTP (Introverted, Intuitive, Thinking, Perceiving):
+## INTP (Introverted, Intuitive, Thinking, Perceiving):
 ●	"Genius is one percent inspiration and ninety-nine percent perspiration." - Thomas Edison
 ●	"The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge." - Stephen Hawking
 
-# ESTP (Extroverted, Sensing, Thinking, Perceiving):
+## ESTP (Extroverted, Sensing, Thinking, Perceiving):
 ●	"Life is either a daring adventure or nothing at all." - Helen Keller
 ●	"The only way to do great work is to love what you do." - Steve Jobs
 
-# ESFP (Extroverted, Sensing, Feeling, Perceiving):
+## ESFP (Extroverted, Sensing, Feeling, Perceiving):
 ●	"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart." - Helen Keller
 ●	"Happiness is not something ready-made. It comes from your own actions." - Dalai Lama
 
-# ENFP (Extroverted, Intuitive, Feeling, Perceiving):
+## ENFP (Extroverted, Intuitive, Feeling, Perceiving):
 ●	"The purpose of life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well." - Ralph Waldo Emerson
 ●	"Your time is limited, don't waste it living someone else's life." - Steve Jobs
 
-# ENTP (Extroverted, Intuitive, Thinking, Perceiving)
+## ENTP (Extroverted, Intuitive, Thinking, Perceiving)
 ●	"The best way to predict the future is to create it." - Peter Drucker
 ●	"I never made one of my discoveries through the process of rational thinking." - Albert Einstein
 ●	"I am not afraid of storms, for I am learning how to sail my ship." - Louisa May Alcott
@@ -60,20 +60,20 @@
 ●	"The mind is not a vessel to be filled, but a fire to be kindled." - Plutarch
 
 
-# ESTJ:
+## ESTJ:
 •	"Success in any endeavor requires single-minded attention to detail and total concentration." - Willie Sutton
 •	"You can have anything you want if you are willing to give up the belief that you can't have it." - Robert Anthony
 
-# ESFJ:
+## ESFJ:
 •	"To handle yourself, use your head; to handle others, use your heart." - Eleanor Roosevelt
 •	"The greatest happiness you can have is knowing that you do not necessarily require happiness.” - William Saroyan
 •	"We must learn to live together as brothers or perish together as fools." - Martin Luther King Jr.
 
-# ENFJ:
+## ENFJ:
 •	"The best way to find yourself is to lose yourself in the service of others." - Mahatma Gandhi
 •	"Leadership is not about being in charge. It's about taking care of those in your charge." - Simon Sinek
 
-# ENTJ:
+## ENTJ:
 •	"The successful warrior is the average man, with laser-like focus." - Bruce Lee
 •	"If you want to go fast, go alone. If you want to go far, go together." - African proverb.
 •	"It's not about ideas. It's about making ideas happen." - Scott Belsky
@@ -98,7 +98,7 @@ Wheater, David W. R. (1992). "Personality, Type A Behavior, and the Myers-Briggs
 
 
 
-### References for these Mayers personality traits ❕
+## References for these Mayers personality traits ❕
 
 Dutton, J. E., Workman, K. M., & Hardin, A. E. (2014). Compassionate love: A framework for research on empathy, forgiveness, and altruism in organizations. Journal of Management, 40(4), 1050-1088.
 
