@@ -1,7 +1,11 @@
 import unittest
 from unittest.mock import patch
-from src.main import RegApp
-from src.main import Verify
+import sys
+import os
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.append(src_path)
+from main import RegApp
+from main import Verify
 
 
 class TestVerify(unittest.TestCase):

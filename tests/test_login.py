@@ -1,6 +1,10 @@
 import unittest
+import sys
+import os
 from PyQt5.QtWidgets import QApplication, QWidget
-from src.login import Ui_Form
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.append(src_path)
+from login import Ui_Form
 
 class TestUiForm(unittest.TestCase):
     '''Test the UI form'''
@@ -34,4 +38,9 @@ class TestUiForm(unittest.TestCase):
         '''Test widget geometry'''
         self.assertEqual(self.form.width(), 363)
         self.assertEqual(self.form.height(), 487)
+
+
+if __name__ == "__main__":
+    unittest.main()
+
 

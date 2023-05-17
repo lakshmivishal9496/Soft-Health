@@ -1,7 +1,10 @@
 import unittest
+import sys
+import os
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget
-
-from src.personality import Ui_PersonalityTest
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.append(src_path)
+from personality import Ui_PersonalityTest
 
 
 class TestUiPersonalityTest(unittest.TestCase):

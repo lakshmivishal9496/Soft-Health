@@ -1,7 +1,10 @@
 import sys
+import os
 import unittest
 from PyQt5.QtWidgets import QApplication, QWidget
-from src.registration import Ui_Form
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.append(src_path)
+from registration import Ui_Form
 
 class TestUiForm(unittest.TestCase):
     def setUp(self):
