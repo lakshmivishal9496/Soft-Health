@@ -886,6 +886,7 @@ class ResourcesApp(QDialog):
     def reset(self):
         ''' Reset the widget'''
         self.current_resource = 0
+        self.copy_link_btn.setText('Click to copy link')
         self.display_resource()
 
     def show_back(self):
