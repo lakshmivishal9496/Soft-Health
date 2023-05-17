@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>870</width>
+    <width>1122</width>
     <height>762</height>
    </rect>
   </property>
@@ -170,7 +170,7 @@ font-family:Sura</string>
       <x>259</x>
       <y>260</y>
       <width>500</width>
-      <height>261</height>
+      <height>291</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -259,6 +259,38 @@ background-color: rgb(117, 71, 255);
      </property>
      <property name="text">
       <string>Login</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="agreement_label">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>260</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+     </property>
+     <property name="text">
+      <string>User Agreement</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="privacy_label">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>260</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0)</string>
+     </property>
+     <property name="text">
+      <string>Privacy Policy</string>
      </property>
     </widget>
    </widget>
