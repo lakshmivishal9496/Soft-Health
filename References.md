@@ -1,5 +1,5 @@
 
-### Colors realted personality
+### 1️⃣ Colors realted personality 💜
 
 While some people believe that certain colors are associated with specific personality types, there is no scientific evidence to support this claim. Therefore, I cannot accurately associate colors with the results of the Myers-Briggs Type Indicator (MBTI) or any other personality assessment test. It's important to remember that personality is complex and multifaceted, and there is no one-size-fits-all approach to motivation or color preference. People have individual preferences and experiences that shape their personality and influence their behavior. That being said, it's possible that certain individuals may feel more motivated or energized when surrounded by certain colors that they personally find appealing or stimulating. However, this would be based on personal preference and not necessarily their MBTI type or other personality traits.
 The best colors for motivational quotes depend on the context and the emotions you want to evoke. However, here are some common color associations that can be helpful in creating motivational quotes:
@@ -22,7 +22,7 @@ The best colors for motivational quotes depend on the context and the emotions y
 17.	Maroon: Maroon is a rich and warm color that is often associated with passion, intensity, and confidence.
 Ultimately, the best color for a motivational quote will depend on the message you want to convey and the emotions you want to evoke. You may also want to consider the overall design and the color scheme of the background or surrounding elements. Remember that the emotions and feelings that different colours evoke can vary depending on the context and the individual. When creating motivational quotes, it's important to consider the overall message and tone that you want to convey, as well as the specific audience you're targeting.
 
-## References
+## References ❕
 
 1.	Yellow: happiness, optimism, positivity, warmth
 •	Reference: "The Psychological Effects of Color" by Verywell Mind
@@ -59,14 +59,14 @@ Ultimately, the best color for a motivational quote will depend on the message y
 17.	Maroon: passion, intensity, confidence, warmth
 •	Reference: "The Meaning of Colors" by Color Matters
 
-### Exercises for SoftHealth.
+### 2️⃣ Exercises for SoftHealth :muscle: :runner:
 1. Hit the pillow for 30 seconds.
 2. Deep breathing exercises.
 3. Mind-body practices (yoga).
 4. Gratitude journaling: This exercise involves writing down three things you're grateful for.
 5. Progressive muscle relaxation: This exercise involves tensing and then relaxing different muscle groups in the body to promote relaxation.
 
-## References
+## References ❕
 
 (Exercise 1) Khoury, B., Lecomte, T., Fortin, G., Masse, M., Therien, P., Bouchard, V., ... & Hofmann, S. G. (2013). Mindfulness-based therapy: A comprehensive meta-analysis. Clinical Psychology Review, 33(6), 763-771.
 (Exercise 1) Schuch, F. B., Vancampfort, D., Firth, J., Rosenbaum, S., Ward, P. B., Silva, E. S., ... & Stubbs, B. (2018). Physical activity and incident depression: a meta-analysis of prospective cohort studies. The Lancet Psychiatry, 5(9), 739-746.
@@ -85,7 +85,7 @@ Ultimately, the best color for a motivational quote will depend on the message y
 (Exercise 5) Jakobsen, M. D., Sundstrup, E., Krustrup, P., & Aagaard, P. (2017). The effect of strength training, recreational soccer and running exercise on stretch-shortening cycle muscle performance during countermovement jumping. Human Movement Science, 56, 21-27.
 
 
-### Quotes related to personality type
+### 3️⃣ Quotes related to personality type 📜
 
 # ISTJ (Introverted, Sensing, Thinking, Judging):
 ●	"Integrity is doing the right thing, even when no one is watching." - C.S. Lewis
@@ -170,7 +170,7 @@ Ultimately, the best color for a motivational quote will depend on the message y
 
 
 
-## References for the peronality qiotes
+## References for the peronality quotes ❕
 
 David J. Pittenger (2005).Is the Myers-Briggs Type Indicator Valid? .
 
@@ -185,7 +185,7 @@ Wheater, David W. R. (1992). "Personality, Type A Behavior, and the Myers-Briggs
 
 
 
-### References for these Mayers personality traits
+### References for these Mayers personality traits ❕
 
 Dutton, J. E., Workman, K. M., & Hardin, A. E. (2014). Compassionate love: A framework for research on empathy, forgiveness, and altruism in organizations. Journal of Management, 40(4), 1050-1088.
 

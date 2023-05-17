@@ -1,0 +1,52 @@
+PRIVACY POLICY: SOFT HEALTH APPLICATION
+
+IMPORTANT – PLEASE READ CAREFULLY
+
+This Privacy Policy ("Policy") describes the privacy practices of Soft Five SE 
+("Company", "we", "us", "our") for our Soft Health application ("Application",
+"App", "Service"). By using our App, you agree to the practices outlined in 
+this Policy.
+
+1. ACCEPTANCE OF POLICY
+
+By downloading, installing, accessing, or using the Soft Health App, you agree to this
+Privacy Policy. If you do not agree to this Policy, do not download, install, access,
+or use the App.
+
+2. INFORMATION WE COLLECT
+
+The only personal information we collect through the Soft Health App is your 
+username and password. This information is used solely to provide you with 
+additional features within the App and to enhance your user experience.
+
+3. HOW WE USE YOUR INFORMATION
+
+Your username and password are encrypted and stored locally on your device.
+They are used exclusively to protect your privacy, authenticate your access to 
+the Soft Health App and to unlock additional features. We do not have access 
+to your username or password, and we do not use this information for any 
+other purpose.
+
+4. INFORMATION SECURITY
+
+Your username and password are encrypted and stored securely on your own device.
+We use industry-standard encryption techniques to ensure the security of your data.
+
+5. SHARING OF YOUR INFORMATION
+
+We do not share, sell, rent, or trade your personal information with any third
+parties. We do not have access to your username or password, and we do not 
+transmit this information over the internet or any other networks.
+
+6. CHANGES TO THIS POLICY
+
+We may update this Privacy Policy from time to time. The most current version of 
+the Policy will govern our use of your information and will always be on the Soft
+Health App. If we make a change to this Policy that, in our sole discretion, 
+is material, we will notify you, for example, via an App update or email.
+By continuing to access or use the Soft Health App after those changes become 
+effective, you agree to be bound by the revised Privacy Policy.
+
+This Privacy Policy was last updated on 17/05/2023.
+
+Soft Five SE

@@ -7,11 +7,36 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import QUrl, Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
-from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QPushButton, QLabel
+from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QPushButton, QLabel, QScrollArea, QWidget, QVBoxLayout, QDialogButtonBox
 from PyQt5.uic import loadUi
 import personality_quiz
 
+class ScrollableMessageBox(QDialog):
+    def __init__(self, title, text):
+        super().__init__()
 
+        self.setWindowTitle(title)
+        self.setWindowIcon(QIcon())
+
+        scroll = QScrollArea(self)
+        scroll.setWidgetResizable(True)
+
+        widget = QWidget(self)
+        scroll.setWidget(widget)
+
+        layout = QVBoxLayout(widget)
+        label = QLabel(text, self)
+        layout.addWidget(label)
+
+        self.layout = QVBoxLayout(self)
+        self.layout.addWidget(scroll)
+
+        buttonBox = QDialogButtonBox(QDialogButtonBox.Ok, self)
+        buttonBox.button(QDialogButtonBox.Ok).setText("I Understand")
+        buttonBox.accepted.connect(self.accept)
+        self.layout.addWidget(buttonBox)
+
+        self.setMinimumSize(560, 350)
 class LoginApp(QDialog):
     ''' Initialize the widget'''
 
@@ -25,7 +50,20 @@ class LoginApp(QDialog):
         self.b5.clicked.connect(self.guest_login)
         self.tb1.returnPressed.connect(self.login)
         self.tb2.returnPressed.connect(self.login)
-        
+        self.agreement_label.mousePressEvent = self.show_user_agreement
+        self.privacy_label.mousePressEvent = self.show_privacy_policy
+
+    def show_user_agreement(self, event):
+        with open('static/text/user_agreement.txt', 'r') as file:
+            agreement_text = file.read()
+        dialog = ScrollableMessageBox("User Agreement", agreement_text)
+        dialog.exec_()
+
+    def show_privacy_policy(self, event):
+        with open('static/text/privacy_policy.txt', 'r', encoding='utf-8-sig') as file:
+            privacy_text = file.read()
+        dialog = ScrollableMessageBox("Privacy Policy", privacy_text)
+        dialog.exec_()
 
     def show_custom_message(self, message_type, title, message):
         msg = QMessageBox()
@@ -1075,8 +1113,9 @@ widget.setWindowTitle("Soft Health v0.9")
 widget.setWindowIcon(QIcon('static\images\icon.png'))
 
 widget.setCurrentIndex(0)
-widget.setFixedWidth(1024)
-widget.setFixedHeight(768)
+widget.setMinimumSize(1024, 768)
+# widget.setFixedWidth(1024)
+# widget.setFixedHeight(768)
 
 widget.show()
 sys.exit(app.exec_())
