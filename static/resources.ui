@@ -47,7 +47,7 @@ border-radius: 9px;</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>1</pointsize>
+     <pointsize>-1</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -96,7 +96,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -128,7 +128,7 @@ background-color:rgb(255, 136, 4);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -160,7 +160,7 @@ background-color:rgb(255, 136, 4);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -230,7 +230,7 @@ background-color:rgb(255, 136, 4);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -269,9 +269,9 @@ font-weight:400;</string>
    <widget class="QPushButton" name="copy_link_btn">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>280</x>
       <y>190</y>
-      <width>91</width>
+      <width>101</width>
       <height>20</height>
      </rect>
     </property>
