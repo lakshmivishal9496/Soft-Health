@@ -944,6 +944,7 @@ class ResourcesApp(QDialog):
                                     padding: 5px 10px; border: none; \
                                     border-radius: 5px;")
             message_box.exec_()
+        self.copy_link_btn.setText('Click to copy link')
 
     def next_link(self):
         # Move to the next link in the list, if available
@@ -961,6 +962,7 @@ class ResourcesApp(QDialog):
             self.display_resource()
         else:
             pass
+        self.copy_link_btn.setText('Click to copy link')
 
     def show_back(self):
         ''' Show the back button'''
@@ -969,7 +971,6 @@ class ResourcesApp(QDialog):
     def show_main_menu(self):
         ''' Show the main menu'''
         widget.setCurrentIndex(2)
-
 class HomeApp(QDialog):
     '''Main Menu App'''
     def __init__(self):
