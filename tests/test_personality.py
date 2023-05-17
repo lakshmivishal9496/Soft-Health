@@ -18,7 +18,6 @@ class TestUiPersonalityTest(unittest.TestCase):
 
     def test_setupUi(self):
         self.ui.setupUi(self.PersonalityTest)
-
         self.assertEqual(self.PersonalityTest.objectName(), "PersonalityTest")
         self.assertEqual(self.PersonalityTest.size().width(), 1024)
         self.assertEqual(self.PersonalityTest.size().height(), 768)
@@ -34,7 +33,6 @@ class TestUiPersonalityTest(unittest.TestCase):
 
     def test_retranslateUi(self):
         self.ui.retranslateUi(self.PersonalityTest)
-
         self.assertEqual(self.PersonalityTest.windowTitle(), "Form")
         self.assertEqual(self.ui.logout.text(), "Logout")
         self.assertEqual(self.ui.next_btn.text(), "Next")

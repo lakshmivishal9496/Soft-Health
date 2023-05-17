@@ -1113,9 +1113,9 @@ widget.setWindowTitle("Soft Health v0.9")
 widget.setWindowIcon(QIcon('static\images\icon.png'))
 
 widget.setCurrentIndex(0)
-widget.setMinimumSize(1024, 768)
-# widget.setFixedWidth(1024)
-# widget.setFixedHeight(768)
+# widget.setMinimumSize(1024, 768)
+widget.setFixedWidth(1024)
+widget.setFixedHeight(768)
 
 widget.show()
 sys.exit(app.exec_())
