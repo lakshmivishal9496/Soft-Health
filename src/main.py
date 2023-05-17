@@ -884,19 +884,37 @@ class ResourcesApp(QDialog):
         '''Initialize the resources widget'''
         super(ResourcesApp, self).__init__()
         loadUi(r"static\resources.ui", self)
+        self.copy_link_btn = self.findChild(QPushButton, 'copy_link_btn')
+
         self.logout.clicked.connect(self.show_back)
+        self.main_btn.clicked.connect(self.show_main_menu)
         self.resources = ["<b>The Science of Being Well:</b><br><br> The Science of Being Well" "by Wallace D. Wattles is a self-help book that focuses on the connection between physical health and mental well-being. It emphasizes the importance of cultivating positive thoughts and beliefs to promote well-being.",
                           "<b>The Way of Peace:</b><br><br> The Way of Peace by James Allen is a self-help book that encourages readers to find inner peace and harmony through meditation and positive thinking. It also discusses the importance of cultivating a positive mindset to achieve success in life.",
                           "<b>Youtube video 1:</b><br><br> This video is a self-help guide designed to help readers manage stress and anxiety through a variety of techniques, believing in yourself, self-well-being strategies, and mindfulness practices.",
                           "<b>Youtube video 2:</b><br><br> This video explores the importance of living in the present moment and offers practical guidance for reducing stress and anxiety by focusing on the present rather than dwelling on the past or worrying about the future."]
         self.images = ["static/images/res001.jpg", "static/images/res002.jpg", "static/images/res003.jpg", "static/images/res004.jpg"]
-
+        self.link_list = ["https://amzn.eu/d/5EQoG9W", "https://amzn.eu/d/hboP0rl", "https://youtu.be/R6MasOctLkY", "https://youtu.be/dFJ9csOJ_N8"]
+        self.current_link_index = 0
+        
         self.current_resource = 0
         self.current_image = 0
         self.display_resource()
         self.next_btn.clicked.connect(self.show_next_resource)
+        self.next_btn.clicked.connect(self.next_link)
         self.back_btn.clicked.connect(self.show_previous_resource)
+        self.back_btn.clicked.connect(self.previous_link)
         self.main_btn.clicked.connect(self.show_main_menu)
+        self.copy_link_btn.mousePressEvent = self.copy_link_btn_clicked
+        
+
+    def copy_link_btn_clicked(self, event):
+        # Copy the first link from the list to the clipboard
+        # Here, you can customize to select the link based on your requirement
+        link_to_copy = self.link_list[self.current_link_index]
+        cb = QApplication.clipboard()
+        cb.clear(mode=cb.Clipboard)
+        cb.setText(link_to_copy, mode=cb.Clipboard)
+
 
     def display_resource(self):
         resource = self.resources[self.current_resource]
@@ -925,6 +943,16 @@ class ResourcesApp(QDialog):
                                     padding: 5px 10px; border: none; \
                                     border-radius: 5px;")
             message_box.exec_()
+
+    def next_link(self):
+        # Move to the next link in the list, if available
+        if self.current_link_index < len(self.link_list) - 1:
+            self.current_link_index += 1
+
+    def previous_link(self):
+        # Move to the previous link in the list, if available
+        if self.current_link_index > 0:
+            self.current_link_index -= 1
 
     def show_previous_resource(self):
         if self.current_resource > 0:
