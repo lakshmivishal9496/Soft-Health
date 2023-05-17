@@ -269,9 +269,9 @@ font-weight:400;</string>
    <widget class="QPushButton" name="copy_link_btn">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>280</x>
       <y>190</y>
-      <width>91</width>
+      <width>101</width>
       <height>20</height>
      </rect>
     </property>
