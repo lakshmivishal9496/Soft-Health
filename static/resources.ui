@@ -47,7 +47,7 @@ border-radius: 9px;</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>1</pointsize>
+     <pointsize>-1</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -96,7 +96,7 @@ background-color: rgb(117, 71, 255);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -128,7 +128,7 @@ background-color:rgb(255, 136, 4);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -160,7 +160,7 @@ background-color:rgb(255, 136, 4);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -230,7 +230,7 @@ background-color:rgb(255, 136, 4);
     <property name="font">
      <font>
       <family>Sura</family>
-      <pointsize>1</pointsize>
+      <pointsize>-1</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -276,7 +276,7 @@ font-weight:400;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 7pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
      <string>Click to copy link</string>

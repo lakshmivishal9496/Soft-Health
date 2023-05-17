@@ -914,6 +914,7 @@ class ResourcesApp(QDialog):
         cb = QApplication.clipboard()
         cb.clear(mode=cb.Clipboard)
         cb.setText(link_to_copy, mode=cb.Clipboard)
+        self.copy_link_btn.setText('Link Copied!')
 
 
     def display_resource(self):
