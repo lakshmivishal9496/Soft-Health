@@ -35,7 +35,7 @@ class ScrollableMessageBox(QDialog):
         buttonBox.button(QDialogButtonBox.Ok).setText("I Understand")
         buttonBox.accepted.connect(self.accept)
         self.layout.addWidget(buttonBox)
-
+        self.setWindowIcon(QIcon('static/images/icon.png'))
         self.setMinimumSize(560, 350)
 
 
@@ -72,7 +72,7 @@ class LoginApp(QDialog):
         msg.setIcon(message_type)
         msg.setWindowTitle(title)
         msg.setText(message)
-        msg.setWindowIcon(QIcon('static/images/icon.png'))
+        #msg.setWindowIcon(QIcon('static/images/icon.png'))
         msg.exec_()
 
     def login(self):
