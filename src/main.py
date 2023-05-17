@@ -37,6 +37,8 @@ class ScrollableMessageBox(QDialog):
         self.layout.addWidget(buttonBox)
 
         self.setMinimumSize(560, 350)
+
+
 class LoginApp(QDialog):
     ''' Initialize the widget'''
 
@@ -112,127 +114,6 @@ class LoginApp(QDialog):
         ''' Deals with guest login screen for the login app'''
         widget.setCurrentIndex(3)
 
-""" class LoginApp(QDialog):
-    ''' Initialize the widget'''
-
-    # load the UI file using an relative path
-    def __init__(self):
-        ''' Initialize login screen for the login app'''
-        super(LoginApp, self).__init__()
-        loadUi(r"static\login.ui", self)
-        self.b1.clicked.connect(self.login)
-        self.b2.clicked.connect(self.show_register)
-        self.b5.clicked.connect(self.guest_login)
-
-    def login(self):
-        ''' Deals with login function for the login app'''
-        un = self.tb1.text()
-        pw = self.tb2.text()
-        # connect to the database and
-        # check if the username and password are valid
-        db = sqlite3.connect('softhealth.db')
-        cursor = db.cursor()
-        cursor.execute('SELECT * FROM login \
-                       WHERE username = ? AND password = ?', (un, pw))
-        user = cursor.fetchone()
-        # check if username and password are provided
-        if not un or not pw:
-            QMessageBox.warning(self, "Login Error",
-                                "Username and password are required")
-            #QMessageBox.setWindowIcon(QIcon('static\images\icon.png'))
-            return
-
-        # display an error message if the username and password are not valid
-        if user is None:
-            QMessageBox.warning(self, "Login Error",
-                                "Invalid username or password")
-            QMessageBox.setWindowIcon(QIcon('static\images\logo.png'))
-            return
-
-        # display a message box asking the user
-        #  if they want to take a personality assessment
-        widget.setCurrentIndex(4)
-
-        db.close()
-        self.tb1.setText("")
-        self.tb2.setText("")
-
-    def show_register(self):
-        ''' Deals with registration screen for the login app'''
-        widget.setCurrentIndex(1)
-
-    def guest_login(self):
-        ''' Deals with guest login screen for the login app'''
-        widget.setCurrentIndex(3) """
-
-""" class RegApp(QDialog):
-    ''' Initialize the widget'''
-    def __init__(self):
-        ''' Initialize registration screen for the registration app'''
-        super(RegApp, self).__init__()
-        # pass super class LoginApp to parent class
-        loadUi(r"static\register.ui", self)
-
-        self.b3.clicked.connect(self.reg)
-        self.b4.clicked.connect(self.show_login)
-
-    def show_custom_message(self, message_type, title, message):
-        msg = QMessageBox()
-        msg.setIcon(message_type)
-        msg.setWindowTitle(title)
-        msg.setText(message)
-        msg.setWindowIcon(QIcon('static/images/icon.png'))
-        msg.exec_()
-
-    def verify_password(self, password):
-        ''' Deals with password validation'''
-        if len(password) < 8 and (re.search('[0-9]', password) is None or
-                           re.search('[A-Z]', password) is None or
-                           re.search('[a-z]', password) is None or
-                           re.search('[@#&]', password) is None):
-            return "Your password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*an uppercase letter\n"+ "*a lowercase letter \n"+ "*a special character \n"
-        return None
-
-    def reg(self):
-        ''' Deals with registration'''
-        un = self.tb3.text()
-        pw = self.tb4.text()
-        repw = self.tb6.text()
-        # print(un)
-        # print(pw)
-        db = sqlite3.connect('softhealth.db')
-        cursor = db.cursor()
-        cursor.execute('''CREATE TABLE IF NOT EXISTS login (
-                           username TEXT,
-                           password TEXT)''')
-
-        error_message = self.verify_password(pw)
-        if not un or not pw:
-            self.show_custom_message(QMessageBox.Warning, "Registration Error",
-                                     "Please fill in all fields")
-        else:
-            if error_message:
-                self.show_custom_message(QMessageBox.Warning, "Registration Error", error_message)
-            elif pw != repw:
-                self.show_custom_message(QMessageBox.Warning, "Registration Error",
-                                         "Passwords do not match.")
-            else:
-                cursor.execute('''
-                    INSERT INTO login (username, password)
-                    VALUES (?,?)
-                    ''', (un, pw))
-                db.commit()
-                db.close()
-                self.show_custom_message(QMessageBox.Information, "Login Output",
-                                         "User registered successfully. Please login to continue.")
-            QApplication.processEvents()
-            self.tb3.setText("")
-            self.tb4.setText("")
-            self.tb6.setText("")
-
-    def show_login(self):
-        ''' Deals with showing login screen for the registration app'''
-        widget.setCurrentIndex(0) """
 
 class RegApp(QDialog):
     ''' Initialize the widget'''
