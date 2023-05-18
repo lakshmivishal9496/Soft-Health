@@ -39,9 +39,8 @@ Discover and practice stress relief exercises tailored to your needs and prefere
 
 Enjoy a collection of relaxing music to help you unwind and reduce stress.
 
-:book: <b>References</b>
-
-SoftHealth features were built from the beginning based on actual facts and scientific research. Articles and studies supporting SoftHealth app features are found in the References document within the repository.
+:book: <b>External Resources</b>
+Books and videos supporting mental health are found in the References document within the repository.
 
 :information_source: <b>Technologies</b>
 
