@@ -3,8 +3,15 @@
   <img src="https://github.com/lakshmivishal9496/Soft-Health/blob/main/static/images/logo.png" alt="Soft Health Logo" width="150" height="150" />
 </p> 
 
-SoftHealth is a user-friendly application designed to help individuals better understand and manage their mental health. 
-Softhealth makes it easier for people to take care of their mental health. It helps users manage their stress and feelings in a way that works best for them. The app gives personalized advice according to personality types. This way, users can feel supported and take control of their mental health.
+The Soft Health Application is intended to support and improve mental health, aligning 
+with the Sustainable Development Goal 3, specifically 3.4, of promoting mental health 
+and wellbeing. It provides scientifically validated strategies designed to promote 
+positivity and good vibes. The personality test, colors used, the exercises suggested,
+the audio provided, and the resources listed are all backed by scientific research and
+studies, ensuring an evidence-based approach to mental health wellness. It is, 
+however, not a substitute for professional mental health care, counseling, 
+or therapy. It does not provide diagnosis, treatment, or prevention of 
+any mental health disorders or conditions.
 
 <b>Features</b>
 
@@ -68,6 +75,12 @@ make install
 
 make run
 
+<b>Disclaimer of medical advice<b>
+
+Soft Health App does not provide medical advice. The contents of the App are for informational
+purposes only. The scientifically backed Content is not intended to be a substitute
+for professional medical advice, diagnosis, or treatment.
+
 <b>License:</b>
 
 This project is licensed under the MIT License. See the LICENSE file for more information.
@@ -78,4 +91,9 @@ Woman with pillow: Photo by Andrea Piacquadio on <a href="https://www.pexels.com
 Breathing woman: Photo by Mikhail Nilov on <a href="https://www.pexels.com/photo/woman-breathing-fresh-air-8455696/">Pexels</a><br>
 Journal lady: Photo by Arina Krasnikova on <a href="https://www.pexels.com/photo/a-happy-woman-working-from-home-7005607/">Pexels</a><br>
 Yoga man: Photo by Vlada Karpovich on <a href="https://www.pexels.com/photo/elderly-couple-doing-yoga-pose-8939954/">Pexels</a><br>
-Guitar & socks: Photo by Haley Powers on <a href="https://unsplash.com/photos/QESaXJBiB8Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></html>
+Guitar & socks: Photo by Haley Powers on <a href="https://unsplash.com/photos/QESaXJBiB8Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a><br>
+Yoga Style by Chris Haugen on Youtube audio library.<br>
+Lazy Walk by Cheel on Youtube audio library.<br>
+First Dream by Brian Bolger on Youtube audio library.<br>
+Interstellar Mood by Nico Staf on Youtube audio library.<br>
+</html>
