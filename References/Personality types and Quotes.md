@@ -60,20 +60,20 @@
 ●	"The mind is not a vessel to be filled, but a fire to be kindled." - Plutarch
 
 
-## ESTJ:
+## ESTJ (Extraverted, Observant, Thinking, and Judging)
 •	"Success in any endeavor requires single-minded attention to detail and total concentration." - Willie Sutton
 •	"You can have anything you want if you are willing to give up the belief that you can't have it." - Robert Anthony
 
-## ESFJ:
+## ESFJ (Extroverted, Observant, Feeling, and Judging)
 •	"To handle yourself, use your head; to handle others, use your heart." - Eleanor Roosevelt
 •	"The greatest happiness you can have is knowing that you do not necessarily require happiness.” - William Saroyan
 •	"We must learn to live together as brothers or perish together as fools." - Martin Luther King Jr.
 
-## ENFJ:
+## ENFJ (Extroverted, Intuitive, Feeling, and Judging)
 •	"The best way to find yourself is to lose yourself in the service of others." - Mahatma Gandhi
 •	"Leadership is not about being in charge. It's about taking care of those in your charge." - Simon Sinek
 
-## ENTJ:
+## ENTJ (Extroverted, Intuitive, Thinking, and Judging)
 •	"The successful warrior is the average man, with laser-like focus." - Bruce Lee
 •	"If you want to go fast, go alone. If you want to go far, go together." - African proverb.
 •	"It's not about ideas. It's about making ideas happen." - Scott Belsky
