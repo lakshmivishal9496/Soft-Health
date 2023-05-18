@@ -75,7 +75,7 @@ make install
 
 make run
 
-<b>Disclaimer of medical advice<b>
+<b>Disclaimer of medical advice</b>
 
 Soft Health App does not provide medical advice. The contents of the App are for informational
 purposes only. The scientifically backed Content is not intended to be a substitute
