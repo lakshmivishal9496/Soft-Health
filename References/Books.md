@@ -27,7 +27,7 @@ Benefits: The book provides insights and teachings that can help individuals dev
 
 ## 3️⃣ Book resource 📖
 
-###Book Name: "The Principles of Mental Hygiene" by William A. White
+### Book Name: "The Principles of Mental Hygiene" by William A. White
 
 Benefits:
 Understanding the principles of mental hygiene can help individuals recognize and address mental health concerns at an early stage. It may provide guidance on developing healthy habits, coping mechanisms, and self-care practices to prevent the onset or escalation of mental health problems.
