@@ -2,7 +2,7 @@
 
 While some people believe that certain colors are associated with specific personality types, there is no scientific evidence to support this claim. Therefore, I cannot accurately associate colors with the results of the Myers-Briggs Type Indicator (MBTI) or any other personality assessment test. It's important to remember that personality is complex and multifaceted, and there is no one-size-fits-all approach to motivation or color preference. People have individual preferences and experiences that shape their personality and influence their behavior. That being said, it's possible that certain individuals may feel more motivated or energized when surrounded by certain colors that they personally find appealing or stimulating. However, this would be based on personal preference and not necessarily their MBTI type or other personality traits.
 The best colors for motivational quotes depend on the context and the emotions you want to evoke. However, here are some common color associations that can be helpful in creating motivational quotes:
-### 1.	Yellowb💛
+### 1.	Yellow 💛
 Yellow is a bright, cheerful color that is often associated with happiness, optimism, and positivity. It can be a great choice for motivational quotes that aim to inspire or uplift.
 ### 2.	Orange 🧡
 Orange is a warm and energetic color that can evoke feelings of enthusiasm and excitement. It can be a great choice for motivational quotes that encourage action or inspire creativity.
