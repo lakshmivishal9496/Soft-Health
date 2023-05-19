@@ -103,24 +103,24 @@ test: lint coverage
 # ---------------------------------------------------------
 # Work with generating documentation.
 #
-# .PHONY: pydoc
-# pydoc:
-# 	@$(call MESSAGE,$@)
-# 	install -d doc/pydoc
-# 	$(PYTHON) -m pydoc -w src/*.py
-# 	mv *.html doc/pydoc
+.PHONY: pydoc
+pydoc:
+	@$(call MESSAGE,$@)
+	install -d doc/pydoc
+	$(PYTHON) -m pydoc -w src/main.py
+	mv *.html doc/pydoc
 
 pdoc:
 	@$(call MESSAGE,$@)
-	pdoc --force --html --output-dir doc/pdoc src/*.py
+	pdoc --force --html --output-dir doc/pdoc src/main.py
 
-# pyreverse:
-# 	@$(call MESSAGE,$@)
-# 	install -d doc/pyreverse
-# 	pyreverse src/*.py
-# 	dot -Tpng classes.dot -o doc/pyreverse/classes.png
-# 	dot -Tpng packages.dot -o doc/pyreverse/packages.png
-# 	rm -f classes.dot packages.dot
+pyreverse:
+	@$(call MESSAGE,$@)
+	install -d doc/pyreverse
+	pyreverse src/main.py
+	dot -Tpng classes.dot -o doc/pyreverse/classes.png
+	dot -Tpng packages.dot -o doc/pyreverse/packages.png
+	rm -f classes.dot packages.dot
 
 # doc: pdoc pyreverse #pydoc sphinx
 

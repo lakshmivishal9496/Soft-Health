@@ -4,12 +4,13 @@ import re
 import os
 import sqlite3
 from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtCore import QUrl, Qt
+from PyQt5.QtCore import QUrl
 from PyQt5.QtGui import QIcon
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QPushButton, QLabel, QScrollArea, QWidget, QVBoxLayout, QDialogButtonBox
 from PyQt5.uic import loadUi
 import personality_quiz
+
 
 class ScrollableMessageBox(QDialog):
     def __init__(self, title, text):
@@ -72,7 +73,6 @@ class LoginApp(QDialog):
         msg.setIcon(message_type)
         msg.setWindowTitle(title)
         msg.setText(message)
-        #msg.setWindowIcon(QIcon('static/images/icon.png'))
         msg.exec_()
 
     def login(self):
@@ -148,8 +148,7 @@ class RegApp(QDialog):
         un = self.tb3.text()
         pw = self.tb4.text()
         repw = self.tb6.text()
-        # print(un)
-        # print(pw)
+
         db = sqlite3.connect('softhealth.db')
         cursor = db.cursor()
         cursor.execute('''CREATE TABLE IF NOT EXISTS login (
@@ -199,7 +198,6 @@ class MainMenuapp(QDialog):
         self.b7.clicked.connect(self.show_stress)
         self.b6.clicked.connect(self.show_music)
         self.b11.clicked.connect(self.show_resources)
-
 
     def show_quotes(self):
         ''' Deals with showing quotes for the home app'''
@@ -298,7 +296,6 @@ class PersonalityApp(QDialog):
                                     border-radius: 5px;")
 
             message_box.exec_()
-
 
     def previous_question(self):
         ''' Set previous question'''
@@ -400,7 +397,6 @@ class QuotesApp(QDialog):
 
             message_box.exec_()
 
-
     def previous_quote(self):
         '''Return the previous quote'''
         if self.current_quote > 0:
@@ -408,18 +404,6 @@ class QuotesApp(QDialog):
             self.display_quote()
         else:
             pass
-            """message_box = QMessageBox()
-            message_box.setWindowTitle("Error")
-            message_box.setText("This is the first quote.")
-
-            # Add a custom Ok button with 3D styling
-            ok_button = message_box.addButton(QMessageBox.Ok)
-            ok_button.setStyleSheet("background-color: rgb(102, 203, 0);\
-                                    color: white; font-weight: bold; \
-                                    padding: 5px 10px; border: none; \
-                                    border-radius: 5px;")
-
-            message_box.exec_() """
 
     def show_back(self):
         ''' Show the back button'''
@@ -488,18 +472,6 @@ class GuestQuotesApp(QDialog):
             self.display_quote()
         else:
             pass
-            """ message_box = QMessageBox()
-            message_box.setWindowTitle("Error")
-            message_box.setText("This is the first quote.")
-
-            # Add a custom Ok button with 3D styling
-            ok_button = message_box.addButton(QMessageBox.Ok)
-            ok_button.setStyleSheet("background-color: rgb(102, 203, 0);\
-                                    color: white; font-weight: bold; \
-                                    padding: 5px 10px; border: none; \
-                                    border-radius: 5px;")
-
-            message_box.exec_() """
 
     def show_guest_menu(self):
         ''' Show the guest menu'''
@@ -644,7 +616,6 @@ class GuestExerciseApp(QDialog):
 
             message_box.exec_()
 
-
     def previous_exercise(self):
         if self.current_exercise > 0:
             self.current_exercise -= 1
@@ -674,6 +645,7 @@ class GuestExerciseApp(QDialog):
         self.current_exercise = 0
         self.display_exercise()
 
+
 class UserMusicApp(QDialog):
     '''User Music App'''
 
@@ -696,7 +668,6 @@ class UserMusicApp(QDialog):
         self.now_playing_label = self.findChild(QLabel, 'now_playing_label')
         self.media_player.stateChanged.connect(self.update_label)
 
-
         self.logout.clicked.connect(self.show_back)
         self.main_btn.clicked.connect(self.show_main_menu)
 
@@ -707,11 +678,9 @@ class UserMusicApp(QDialog):
         self.minus.clicked.connect(self.decrease_volume)
         self.next_btn.clicked.connect(self.next_audio)
         self.back_btn.clicked.connect(self.previous_audio)
-        
 
         self.is_muted = False
         self.media_player.mediaStatusChanged.connect(self.media_status_changed)
-
 
     def init_music(self):
         self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
@@ -719,7 +688,6 @@ class UserMusicApp(QDialog):
     def load_audio(self, file_path):
         self.media_player.setMedia(QMediaContent(QUrl.fromLocalFile(file_path)))
         file_name, _ = os.path.splitext(os.path.basename(file_path))
-        #self.now_playing_label.setText(f"Now Playing: {file_name}")
 
     def update_label(self, state):
         if state == QMediaPlayer.PlayingState:
@@ -727,7 +695,6 @@ class UserMusicApp(QDialog):
             self.now_playing_label.setText(f"Now Playing: {file_name}")
 
     def play_audio(self):
-        #self.media_player.setVolume(50)
         self.media_player.play()
 
     def pause_audio(self):
@@ -754,8 +721,7 @@ class UserMusicApp(QDialog):
         self.media_player.setVolume(volume)
         current_file = os.path.basename(self.music_files[self.current_music_index])
         file_name_without_extension = os.path.splitext(current_file)[0]
-        self.now_playing_label.setText(f"Now Playing: {file_name_without_extension}")
-        
+        self.now_playing_label.setText(f"Now Playing: {file_name_without_extension}")   
 
     def decrease_volume(self):
         volume = self.media_player.volume()
@@ -772,7 +738,6 @@ class UserMusicApp(QDialog):
     def previous_audio(self):
         if self.current_music_index > 0:
             self.current_music_index -= 1
-            #self.current_music_index = len(self.music_files) - 1
             self.load_audio(os.path.join('static', 'music', self.music_files[self.current_music_index]))
             self.play_audio()
 
@@ -797,7 +762,6 @@ class UserMusicApp(QDialog):
         self.media_player.stop()
 
 
-
 class ResourcesApp(QDialog):
     def __init__(self):
         '''Initialize the resources widget'''
@@ -814,7 +778,7 @@ class ResourcesApp(QDialog):
         self.images = ["static/images/res001.jpg", "static/images/res002.jpg", "static/images/res003.jpg", "static/images/res004.jpg"]
         self.link_list = ["https://amzn.eu/d/5EQoG9W", "https://amzn.eu/d/hboP0rl", "https://youtu.be/R6MasOctLkY", "https://youtu.be/dFJ9csOJ_N8"]
         self.current_link_index = 0
-        
+     
         self.current_resource = 0
         self.current_image = 0
         self.display_resource()
@@ -823,8 +787,7 @@ class ResourcesApp(QDialog):
         self.back_btn.clicked.connect(self.show_previous_resource)
         self.back_btn.clicked.connect(self.previous_link)
         self.main_btn.clicked.connect(self.show_main_menu)
-        self.copy_link_btn.mousePressEvent = self.copy_link_btn_clicked
-        
+        self.copy_link_btn.mousePressEvent = self.copy_link_btn_clicked  
 
     def copy_link_btn_clicked(self, event):
         # Copy the first link from the list to the clipboard
@@ -834,7 +797,6 @@ class ResourcesApp(QDialog):
         cb.clear(mode=cb.Clipboard)
         cb.setText(link_to_copy, mode=cb.Clipboard)
         self.copy_link_btn.setText('Link Copied!')
-
 
     def display_resource(self):
         resource = self.resources[self.current_resource]
@@ -897,6 +859,8 @@ class ResourcesApp(QDialog):
         ''' Show the main menu'''
         self.reset()
         widget.setCurrentIndex(2)
+
+
 class HomeApp(QDialog):
     '''Main Menu App'''
     def __init__(self):
@@ -990,11 +954,10 @@ widget.addWidget(guest_exercises)   # 8
 widget.addWidget(guest_quotes)  # 9
 widget.addWidget(music)  # 10
 widget.addWidget(resources)  # 11
-widget.setWindowTitle("Soft Health v0.9")
+widget.setWindowTitle("Soft Health v1.0")
 widget.setWindowIcon(QIcon('static\images\icon.png'))
 
 widget.setCurrentIndex(0)
-# widget.setMinimumSize(1024, 768)
 widget.setFixedWidth(1024)
 widget.setFixedHeight(768)
 
