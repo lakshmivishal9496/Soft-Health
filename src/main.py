@@ -163,22 +163,21 @@ class RegApp(QDialog):
             if error_message:
                 QMessageBox.warning(self, "Registration Error", error_message)
             elif pw != repw:
-                QMessageBox.warning(self, "Registration Error",
-                                    "Passwords do not match.")
+                QMessageBox.warning(self, "Registration Error.\nPasswords do not match.")
             else:
                 cursor.execute('''
                     INSERT INTO login (username, password)
-                    VALUES (?,?,?)
+                    VALUES (?,?)
                     ''', (un, pw))
                 db.commit()
                 db.close()
                 QMessageBox.information(self, "Login Output",
-                                        "User registered successfully.\
-                                        Please login to continue.")
+                                        "User registered successfully.\nPlease login to continue.")
             QApplication.processEvents()
             self.tb3.setText("")
             self.tb4.setText("")
             self.tb6.setText("")
+            self.show_login()
 
     def show_login(self):
         ''' Deals with showing login screen for the registration app'''
