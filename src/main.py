@@ -136,12 +136,24 @@ class RegApp(QDialog):
 
     def verify_password(self, password):
         ''' Deals with password validation'''
-        if len(password) < 8 and (re.search('[0-9]', password) is None or
-                           re.search('[A-Z]', password) is None or
-                           re.search('[a-z]', password) is None or
-                           re.search('[@#&]', password) is None):
-            return "Password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*a uppercase letter\n"+ "*a lowercase letter\n"+ "*a special character\n"
-        return None
+        char = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '}', '[', ']', '|', '\\', '/', '~', ',', '.', ':', '\"', '\'']
+        numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+        lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+        if len(password) < 8:
+            return "Password must be at least 8 characters long"
+        elif not any(char in password for char in char):
+            return  "Password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*an uppercase letter\n"+ "*a lowercase letter\n"+ "*a special character\n"
+        elif not any(num in password for num in numbers):
+            return  "Password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*an uppercase letter\n"+ "*a lowercase letter\n"+ "*a special character\n"
+        elif not any(upper_case in password for upper_case in upper):
+            return  "Password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*an uppercase letter\n"+ "*a lowercase letter\n"+ "*a special character\n"
+        elif not any(lower_case in password for lower_case in lower):
+            return  "Password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*an uppercase letter\n"+ "*a lowercase letter\n"+ "*a special character\n"
+        else:
+            return None
+
 
     def reg(self):
         ''' Deals with registration'''
@@ -173,11 +185,12 @@ class RegApp(QDialog):
                 db.close()
                 QMessageBox.information(self, "Login Output",
                                         "User registered successfully.\nPlease login to continue.")
+                self.show_login()
             QApplication.processEvents()
             self.tb3.setText("")
             self.tb4.setText("")
             self.tb6.setText("")
-            self.show_login()
+
 
     def show_login(self):
         ''' Deals with showing login screen for the registration app'''
