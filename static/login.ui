@@ -264,9 +264,9 @@ background-color: rgb(117, 71, 255);
     <widget class="QLabel" name="agreement_label">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>90</x>
        <y>260</y>
-       <width>131</width>
+       <width>130</width>
        <height>16</height>
       </rect>
      </property>
@@ -280,9 +280,9 @@ background-color: rgb(117, 71, 255);
     <widget class="QLabel" name="privacy_label">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>330</x>
        <y>260</y>
-       <width>121</width>
+       <width>130</width>
        <height>16</height>
       </rect>
      </property>
