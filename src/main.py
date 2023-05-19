@@ -1,6 +1,5 @@
 '''Main program to run the application'''
 import sys
-import re
 import os
 import sqlite3
 from PyQt5 import QtCore, QtWidgets
@@ -151,8 +150,7 @@ class RegApp(QDialog):
             return  "Password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*an uppercase letter\n"+ "*a lowercase letter\n"+ "*a special character\n"
         elif not any(lower_case in password for lower_case in lower):
             return  "Password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*an uppercase letter\n"+ "*a lowercase letter\n"+ "*a special character\n"
-        else:
-            return None
+        return "Passwords must match"
 
 
     def reg(self):
