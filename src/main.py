@@ -150,7 +150,10 @@ class RegApp(QDialog):
             return  "Password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*an uppercase letter\n"+ "*a lowercase letter\n"+ "*a special character\n"
         elif not any(lower_case in password for lower_case in lower):
             return  "Password must contain:\n" + "*minimum 8 characters,\n" + "*a number\n" + "*an uppercase letter\n"+ "*a lowercase letter\n"+ "*a special character\n"
-        return "Passwords must match"
+        if password != self.tb6.text():
+            return "Passwords must match"
+        else:
+            return None
 
 
     def reg(self):
