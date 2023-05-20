@@ -124,6 +124,13 @@ class RegApp(QDialog):
 
         self.b3.clicked.connect(self.reg)
         self.b4.clicked.connect(self.show_login)
+        
+
+        self.tb4.setTabOrder(self.tb4, self.tb6)
+        self.tb4.setTabOrder(self.tb6, self.b3)
+        self.tb3.returnPressed.connect(self.reg)
+        self.tb4.returnPressed.connect(self.reg)
+        self.tb6.returnPressed.connect(self.reg)
 
     def show_custom_message(self, message_type, title, message):
         msg = QMessageBox()
@@ -167,6 +174,13 @@ class RegApp(QDialog):
         cursor.execute('''CREATE TABLE IF NOT EXISTS login (
                            username TEXT,
                            password TEXT)''')
+        
+        # Check if username already exists
+        cursor.execute("SELECT * FROM login WHERE username=?", (un,))
+        result = cursor.fetchone()
+        if result:
+            QMessageBox.warning(self, "Registration Error", "Username already exists.")
+            return
 
         error_message = self.verify_password(pw)
         if not un or not pw:
