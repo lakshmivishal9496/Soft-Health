@@ -93,6 +93,7 @@ This project is licensed under the MIT License. See the LICENSE file for more in
 <a href="https://github.com/NaddeA">Nahed</a> - Idea & Initial work<br>
 <a href="https://github.com/lakshmivishal9496">Lakshmi</a> - Idea & Initial work<br>
   
+  <br>
   
 <b>Credits:</b>
 Woman with pillow: Photo by Andrea Piacquadio on <a href="https://www.pexels.com/photo/woman-hugging-white-pillow-beside-glass-door-935762/">Pexels</a><br>
