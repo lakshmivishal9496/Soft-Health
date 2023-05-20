@@ -85,8 +85,14 @@ for professional medical advice, diagnosis, or treatment.
 
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
-<b>Credits:</b>
 <html>
+✍️ Authors
+<a href="https://github.com/Abshir112">Abshir</a> - Idea & Initial work
+<a href="https://github.com/sams258">Abshir</a> - Idea & Initial work
+<a href="https://github.com/Ahmedradwancs">Abshir</a> - Idea & Initial work
+<a href="https://github.com/NaddeA">Abshir</a> - Idea & Initial work
+<a href="https://github.com/lakshmivishal">Abshir</a> - Idea & Initial work
+<b>Credits:</b>
 Woman with pillow: Photo by Andrea Piacquadio on <a href="https://www.pexels.com/photo/woman-hugging-white-pillow-beside-glass-door-935762/">Pexels</a><br>
 Breathing woman: Photo by Mikhail Nilov on <a href="https://www.pexels.com/photo/woman-breathing-fresh-air-8455696/">Pexels</a><br>
 Journal lady: Photo by Arina Krasnikova on <a href="https://www.pexels.com/photo/a-happy-woman-working-from-home-7005607/">Pexels</a><br>
